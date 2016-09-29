@@ -1,0 +1,42 @@
+D:\网频\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.LocatingMonitor.dll
+D:\网频\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.LocatingMonitor.pdb
+D:\网频\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\CommonLocating.dll
+D:\网频\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\CommonMonitor.dll
+D:\网频\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Assistant.dll
+D:\网频\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Common.dll
+D:\网频\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Data.dll
+D:\网频\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.LocatingService.RemotingInterface.dll
+D:\网频\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Metadata.dll
+D:\网频\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Model.dll
+D:\网频\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Web.dll
+D:\网频\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Model.pdb
+D:\网频\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\CommonMonitor.pdb
+D:\网频\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Data.xml
+D:\网频\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Web.pdb
+D:\网频\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\CommonLocating.pdb
+D:\网频\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\obj\Release\ResolveAssemblyReference.cache
+D:\网频\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\obj\Release\NetRadio.LocatingMonitor.dll
+D:\网频\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\obj\Release\NetRadio.LocatingMonitor.pdb
+D:\网频\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.DataExtension.dll
+D:\new\NetRadio.Applications 20121010\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.LocatingMonitor.dll
+D:\new\NetRadio.Applications 20121010\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.LocatingMonitor.pdb
+D:\new\NetRadio.Applications 20121010\LocatingMonitor\NetRadio.LocatingMonitor\bin\CommonLocating.dll
+D:\new\NetRadio.Applications 20121010\LocatingMonitor\NetRadio.LocatingMonitor\bin\CommonMonitor.dll
+D:\new\NetRadio.Applications 20121010\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Assistant.dll
+D:\new\NetRadio.Applications 20121010\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Common.dll
+D:\new\NetRadio.Applications 20121010\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Data.dll
+D:\new\NetRadio.Applications 20121010\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.DataExtension.dll
+D:\new\NetRadio.Applications 20121010\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.LocatingService.RemotingInterface.dll
+D:\new\NetRadio.Applications 20121010\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Metadata.dll
+D:\new\NetRadio.Applications 20121010\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Model.dll
+D:\new\NetRadio.Applications 20121010\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Web.dll
+D:\new\NetRadio.Applications 20121010\LocatingMonitor\NetRadio.LocatingMonitor\bin\Summer.xml
+D:\new\NetRadio.Applications 20121010\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Model.pdb
+D:\new\NetRadio.Applications 20121010\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Data.xml
+D:\new\NetRadio.Applications 20121010\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Web.pdb
+D:\new\NetRadio.Applications 20121010\LocatingMonitor\NetRadio.LocatingMonitor\bin\CommonMonitor.pdb
+D:\new\NetRadio.Applications 20121010\LocatingMonitor\NetRadio.LocatingMonitor\bin\CommonLocating.pdb
+D:\new\NetRadio.Applications 20121010\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Business.pdb
+D:\new\NetRadio.Applications 20121010\LocatingMonitor\NetRadio.LocatingMonitor\obj\Release\ResolveAssemblyReference.cache
+D:\new\NetRadio.Applications 20121010\LocatingMonitor\NetRadio.LocatingMonitor\obj\Release\NetRadio.LocatingMonitor.dll
+D:\new\NetRadio.Applications 20121010\LocatingMonitor\NetRadio.LocatingMonitor\obj\Release\NetRadio.LocatingMonitor.pdb

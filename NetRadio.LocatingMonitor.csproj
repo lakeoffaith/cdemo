@@ -1,0 +1,1168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D62835CF-92CF-4B44-952B-32B657893DAC}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NetRadio.LocatingMonitor</RootNamespace>
+    <AssemblyName>NetRadio.LocatingMonitor</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ajax, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\Ajax.dll</HintPath>
+    </Reference>
+    <Reference Include="AjaxPro, Version=9.2.17.1, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="NetRadio.Business, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\NetRadio.Business\obj\Debug\NetRadio.Business.dll</HintPath>
+    </Reference>
+    <Reference Include="Summer, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\Summer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core">
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+    </Reference>
+    <Reference Include="System.Data.Linq">
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\Default\css_globalTag.css" />
+    <Content Include="App_Themes\Default\css_master.css" />
+    <Content Include="Images\Menu\m1.jpg" />
+    <Content Include="Images\Menu\m2.jpg" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\AutoRefresher.ascx.cs">
+      <DependentUpon>AutoRefresher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\AutoRefresher.ascx.designer.cs">
+      <DependentUpon>AutoRefresher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\AreaNavigator.ascx.cs">
+      <DependentUpon>AreaNavigator.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\AreaNavigator.ascx.designer.cs">
+      <DependentUpon>AreaNavigator.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FacilityDropList.cs" />
+    <Compile Include="Controls\FacilityMapDropList.cs" />
+    <Compile Include="Controls\HistoryNavigator.ascx.cs">
+      <DependentUpon>HistoryNavigator.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\HistoryNavigator.ascx.designer.cs">
+      <DependentUpon>HistoryNavigator.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\HostGroupSelector.cs" />
+    <Compile Include="Controls\IForm.cs" />
+    <Compile Include="Controls\ObjectNavigator.ascx.cs">
+      <DependentUpon>ObjectNavigator.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ObjectNavigator.ascx.designer.cs">
+      <DependentUpon>ObjectNavigator.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ReportNavigator.ascx.cs">
+      <DependentUpon>ReportNavigator.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ReportNavigator.ascx.designer.cs">
+      <DependentUpon>ReportNavigator.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SelectStrongestRssiTag.ascx.cs">
+      <DependentUpon>SelectStrongestRssiTag.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\SelectStrongestRssiTag.ascx.designer.cs">
+      <DependentUpon>SelectStrongestRssiTag.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SelectTag.ascx.cs">
+      <DependentUpon>SelectTag.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\SelectTag.ascx.designer.cs">
+      <DependentUpon>SelectTag.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SelectTagUser.ascx.cs">
+      <DependentUpon>SelectTagUser.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\SelectTagUser.ascx.designer.cs">
+      <DependentUpon>SelectTagUser.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SysConfigNavigator.ascx.cs">
+      <DependentUpon>SysConfigNavigator.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\SysConfigNavigator.ascx.designer.cs">
+      <DependentUpon>SysConfigNavigator.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TagFilter.ascx.cs">
+      <DependentUpon>TagFilter.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\TagFilter.ascx.designer.cs">
+      <DependentUpon>TagFilter.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TagGroupSelector.cs" />
+    <Compile Include="Controls\TagLogFilter.ascx.cs">
+      <DependentUpon>TagLogFilter.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\TagLogFilter.ascx.designer.cs">
+      <DependentUpon>TagLogFilter.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TagSelector.ascx.cs">
+      <DependentUpon>TagSelector.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\TagSelector.ascx.designer.cs">
+      <DependentUpon>TagSelector.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TagUserSelector.ascx.cs">
+      <DependentUpon>TagUserSelector.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\TagUserSelector.ascx.designer.cs">
+      <DependentUpon>TagUserSelector.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TaskGeneralProperty.ascx.cs">
+      <DependentUpon>TaskGeneralProperty.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\TaskGeneralProperty.ascx.designer.cs">
+      <DependentUpon>TaskGeneralProperty.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ProcessAlert.ascx.cs">
+      <DependentUpon>ProcessAlert.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ProcessAlert.ascx.designer.cs">
+      <DependentUpon>ProcessAlert.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\RoutePoliceAndCulprit.ascx.cs">
+      <DependentUpon>RoutePoliceAndCulprit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\RoutePoliceAndCulprit.ascx.designer.cs">
+      <DependentUpon>RoutePoliceAndCulprit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\RoutePolice.ascx.cs">
+      <DependentUpon>RoutePolice.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\RoutePolice.ascx.designer.cs">
+      <DependentUpon>RoutePolice.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Flash\Xml\AP.ashx.cs">
+      <DependentUpon>AP.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Flash\Xml\Camera.ashx.cs">
+      <DependentUpon>Camera.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Flash\Xml\HostGroup.ashx.cs">
+      <DependentUpon>HostGroup.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Flash\Xml\LatestEvents.ashx.cs">
+      <DependentUpon>LatestEvents.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Flash\Xml\Map.ashx.cs">
+      <DependentUpon>Map.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Flash\Xml\MapArea.ashx.cs">
+      <DependentUpon>MapArea.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Flash\Xml\MapList.ashx.cs">
+      <DependentUpon>MapList.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Flash\Xml\ReplayRoute.ashx.cs">
+      <DependentUpon>ReplayRoute.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Flash\Xml\Route.ashx.cs">
+      <DependentUpon>Route.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Flash\Xml\TagCoordinates.ashx.cs">
+      <DependentUpon>TagCoordinates.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="History\AbsenceLog.aspx.cs">
+      <DependentUpon>AbsenceLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="History\AbsenceLog.aspx.designer.cs">
+      <DependentUpon>AbsenceLog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="History\AlertProcessed.aspx.cs">
+      <DependentUpon>AlertProcessed.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="History\AlertProcessed.aspx.designer.cs">
+      <DependentUpon>AlertProcessed.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="History\APLocatorLog.aspx.cs">
+      <DependentUpon>APLocatorLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="History\APLocatorLog.aspx.designer.cs">
+      <DependentUpon>APLocatorLog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="History\AreaEventLog.aspx.cs">
+      <DependentUpon>AreaEventLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="History\AreaEventLog.aspx.designer.cs">
+      <DependentUpon>AreaEventLog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="History\BatteryResetLog.aspx.cs">
+      <DependentUpon>BatteryResetLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="History\BatteryResetLog.aspx.designer.cs">
+      <DependentUpon>BatteryResetLog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="History\ButtonPressedLog.aspx.cs">
+      <DependentUpon>ButtonPressedLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="History\ButtonPressedLog.aspx.designer.cs">
+      <DependentUpon>ButtonPressedLog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="History\InterrogationLog.aspx.cs">
+      <DependentUpon>InterrogationLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="History\InterrogationLog.aspx.designer.cs">
+      <DependentUpon>InterrogationLog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="History\LowBatteryLog.aspx.cs">
+      <DependentUpon>LowBatteryLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="History\LowBatteryLog.aspx.designer.cs">
+      <DependentUpon>LowBatteryLog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="History\PositionAlert.aspx.cs">
+      <DependentUpon>PositionAlert.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="History\PositionAlert.aspx.designer.cs">
+      <DependentUpon>PositionAlert.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="History\PositionLog.aspx.cs">
+      <DependentUpon>PositionLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="History\PositionLog.aspx.designer.cs">
+      <DependentUpon>PositionLog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="History\SystemSecurityLog.aspx.cs">
+      <DependentUpon>SystemSecurityLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="History\SystemSecurityLog.aspx.designer.cs">
+      <DependentUpon>SystemSecurityLog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="History\WristletBrokenLog.aspx.cs">
+      <DependentUpon>WristletBrokenLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="History\WristletBrokenLog.aspx.designer.cs">
+      <DependentUpon>WristletBrokenLog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home0.aspx.cs">
+      <DependentUpon>Home0.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home0.aspx.designer.cs">
+      <DependentUpon>Home0.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Member\Action.aspx.cs">
+      <DependentUpon>Action.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Member\Action.aspx.designer.cs">
+      <DependentUpon>Action.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Member\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Member\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Member\LoginYangZhou.aspx.cs">
+      <DependentUpon>LoginYangZhou.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Member\LoginYangZhou.aspx.designer.cs">
+      <DependentUpon>LoginYangZhou.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Member\EditUser.aspx.cs">
+      <DependentUpon>EditUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Member\EditUser.aspx.designer.cs">
+      <DependentUpon>EditUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Member\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Member\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Member\UserList.aspx.cs">
+      <DependentUpon>UserList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Member\UserList.aspx.designer.cs">
+      <DependentUpon>UserList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Message\ShowMessage.aspx.cs">
+      <DependentUpon>ShowMessage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Message\ShowMessage.aspx.designer.cs">
+      <DependentUpon>ShowMessage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Monitor\AlertHostInfo.aspx.cs">
+      <DependentUpon>AlertHostInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Monitor\AlertHostInfo.aspx.designer.cs">
+      <DependentUpon>AlertHostInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Monitor\APList.aspx.cs">
+      <DependentUpon>APList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Monitor\APList.aspx.designer.cs">
+      <DependentUpon>APList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Monitor\AreaReport.aspx.cs">
+      <DependentUpon>AreaReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Monitor\AreaReport.aspx.designer.cs">
+      <DependentUpon>AreaReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Monitor\LatestEvents.aspx.cs">
+      <DependentUpon>LatestEvents.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Monitor\LatestEvents.aspx.designer.cs">
+      <DependentUpon>LatestEvents.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Monitor\LocatingMap.aspx.cs">
+      <DependentUpon>LocatingMap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Monitor\LocatingMap.aspx.designer.cs">
+      <DependentUpon>LocatingMap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Monitor\NewLocatingMap.aspx.cs">
+      <DependentUpon>NewLocatingMap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Monitor\NewLocatingMap.aspx.designer.cs">
+      <DependentUpon>NewLocatingMap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Monitor\ObjectTagList.aspx.cs">
+      <DependentUpon>ObjectTagList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Monitor\ObjectTagList.aspx.designer.cs">
+      <DependentUpon>ObjectTagList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Monitor\PatrolReport.aspx.cs">
+      <DependentUpon>PatrolReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Monitor\PatrolReport.aspx.designer.cs">
+      <DependentUpon>PatrolReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Monitor\PopupEventWindowWithVedio.aspx.cs">
+      <DependentUpon>PopupEventWindowWithVedio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Monitor\PopupEventWindowWithVedio.aspx.designer.cs">
+      <DependentUpon>PopupEventWindowWithVedio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Monitor\PorterPeopleList.aspx.cs">
+      <DependentUpon>PorterPeopleList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Monitor\PorterPeopleList.aspx.designer.cs">
+      <DependentUpon>PorterPeopleList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Monitor\ReplayRoute.aspx.cs">
+      <DependentUpon>ReplayRoute.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Monitor\ReplayRoute.aspx.designer.cs">
+      <DependentUpon>ReplayRoute.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Monitor\ReplayRoute_Display.aspx.cs">
+      <DependentUpon>ReplayRoute_Display.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Monitor\ReplayRoute_Display.aspx.designer.cs">
+      <DependentUpon>ReplayRoute_Display.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Monitor\RoutePatrol.aspx.cs">
+      <DependentUpon>RoutePatrol.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Monitor\RoutePatrol.aspx.designer.cs">
+      <DependentUpon>RoutePatrol.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Monitor\TagAlertProcess0.aspx.cs">
+      <DependentUpon>TagAlertProcess0.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Monitor\TagAlertProcess0.aspx.designer.cs">
+      <DependentUpon>TagAlertProcess0.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Monitor\TagAlertProcess.aspx.cs">
+      <DependentUpon>TagAlertProcess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Monitor\TagAlertProcess.aspx.designer.cs">
+      <DependentUpon>TagAlertProcess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Objects\AlertTag.aspx.cs">
+      <DependentUpon>AlertTag.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Objects\AlertTag.aspx.designer.cs">
+      <DependentUpon>AlertTag.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Objects\CameraList.aspx.cs">
+      <DependentUpon>CameraList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Objects\CameraList.aspx.designer.cs">
+      <DependentUpon>CameraList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Objects\MapFile.ashx.cs">
+      <DependentUpon>MapFile.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Objects\Tag.aspx.cs">
+      <DependentUpon>Tag.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Objects\Tag.aspx.designer.cs">
+      <DependentUpon>Tag.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organize\RoutePoliceList.aspx.cs">
+      <DependentUpon>RoutePoliceList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organize\RoutePoliceList.aspx.designer.cs">
+      <DependentUpon>RoutePoliceList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organize\Facility.aspx.cs">
+      <DependentUpon>Facility.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organize\Facility.aspx.designer.cs">
+      <DependentUpon>Facility.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organize\MapAreaGroup.aspx.cs">
+      <DependentUpon>MapAreaGroup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organize\MapAreaGroup.aspx.designer.cs">
+      <DependentUpon>MapAreaGroup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organize\MapAreaGroup0.ascx.cs">
+      <DependentUpon>MapAreaGroup0.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organize\MapAreaGroup0.ascx.designer.cs">
+      <DependentUpon>MapAreaGroup0.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Organize\MapAreaList.aspx.cs">
+      <DependentUpon>MapAreaList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organize\MapAreaList.aspx.designer.cs">
+      <DependentUpon>MapAreaList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organize\MapAreaRule.aspx.cs">
+      <DependentUpon>MapAreaRule.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organize\MapAreaRule.aspx.designer.cs">
+      <DependentUpon>MapAreaRule.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organize\MapAreaRules.aspx.cs">
+      <DependentUpon>MapAreaRules.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organize\MapAreaRules.aspx.designer.cs">
+      <DependentUpon>MapAreaRules.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organize\TagGroup.aspx.cs">
+      <DependentUpon>TagGroup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organize\TagGroup.aspx.designer.cs">
+      <DependentUpon>TagGroup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organize\TagGroupList.aspx.cs">
+      <DependentUpon>TagGroupList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organize\TagGroupList.aspx.designer.cs">
+      <DependentUpon>TagGroupList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organize\RoutePoliceAndCulpritList.aspx.cs">
+      <DependentUpon>RoutePoliceAndCulpritList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organize\RoutePoliceAndCulpritList.aspx.designer.cs">
+      <DependentUpon>RoutePoliceAndCulpritList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Pager.ascx.cs">
+      <DependentUpon>Pager.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Pager.ascx.designer.cs">
+      <DependentUpon>Pager.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Report\AreaStayTimeReportViewer.aspx.cs">
+      <DependentUpon>AreaStayTimeReportViewer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\AreaStayTimeReportViewer.aspx.designer.cs">
+      <DependentUpon>AreaStayTimeReportViewer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\PoliceAreaInOut.aspx.cs">
+      <DependentUpon>PoliceAreaInOut.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\PoliceAreaInOut.aspx.designer.cs">
+      <DependentUpon>PoliceAreaInOut.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\PoliceJobSize.aspx.cs">
+      <DependentUpon>PoliceJobSize.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\PoliceJobSize.aspx.designer.cs">
+      <DependentUpon>PoliceJobSize.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\PoliceStayTimeUI.aspx.cs">
+      <DependentUpon>PoliceStayTimeUI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\PoliceStayTimeUI.aspx.designer.cs">
+      <DependentUpon>PoliceStayTimeUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportAreaInOut.aspx.cs">
+      <DependentUpon>ReportAreaInOut.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\ReportAreaInOut.aspx.designer.cs">
+      <DependentUpon>ReportAreaInOut.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportIndex.aspx.cs">
+      <DependentUpon>ReportIndex.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\ReportIndex.aspx.designer.cs">
+      <DependentUpon>ReportIndex.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Patrol_ShangHai.aspx.cs">
+      <DependentUpon>Patrol_ShangHai.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\Patrol_ShangHai.aspx.designer.cs">
+      <DependentUpon>Patrol_ShangHai.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\TagAlertUI.aspx.cs">
+      <DependentUpon>TagAlertUI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\TagAlertUI.aspx.designer.cs">
+      <DependentUpon>TagAlertUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\BackupLog.aspx.cs">
+      <DependentUpon>BackupLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Settings\BackupLog.aspx.designer.cs">
+      <DependentUpon>BackupLog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\LocatingManager.aspx.cs">
+      <DependentUpon>LocatingManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Settings\LocatingManager.aspx.designer.cs">
+      <DependentUpon>LocatingManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TagUsers\Culprit.aspx.cs">
+      <DependentUpon>Culprit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TagUsers\Culprit.aspx.designer.cs">
+      <DependentUpon>Culprit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TagUsers\Police.aspx.cs">
+      <DependentUpon>Police.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TagUsers\Police.aspx.designer.cs">
+      <DependentUpon>Police.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TagUsers\Position.aspx.cs">
+      <DependentUpon>Position.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TagUsers\Position.aspx.designer.cs">
+      <DependentUpon>Position.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TagUsers\TagPositionList.aspx.cs">
+      <DependentUpon>TagPositionList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TagUsers\TagPositionList.aspx.designer.cs">
+      <DependentUpon>TagPositionList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TagUsers\TagUser.aspx.cs">
+      <DependentUpon>TagUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TagUsers\TagUser.aspx.designer.cs">
+      <DependentUpon>TagUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TagUsers\TagUserList.aspx.cs">
+      <DependentUpon>TagUserList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TagUsers\TagUserList.aspx.designer.cs">
+      <DependentUpon>TagUserList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TagUsers\TagUserList0.ascx.cs">
+      <DependentUpon>TagUserList0.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TagUsers\TagUserList0.ascx.designer.cs">
+      <DependentUpon>TagUserList0.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="TagUsers\TagUserList1.ascx.cs">
+      <DependentUpon>TagUserList1.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TagUsers\TagUserList1.ascx.designer.cs">
+      <DependentUpon>TagUserList1.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="TagUsers\TagUser_Add.aspx.cs">
+      <DependentUpon>TagUser_Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TagUsers\TagUser_Add.aspx.designer.cs">
+      <DependentUpon>TagUser_Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TagUsers\UserPhoto.ashx.cs">
+      <DependentUpon>UserPhoto.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="test.aspx.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test.aspx.designer.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Utils.cs" />
+    <Compile Include="Default.Master.cs">
+      <DependentUpon>Default.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.Master.designer.cs">
+      <DependentUpon>Default.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Master\WebItem.Master.cs">
+      <DependentUpon>WebItem.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\WebItem.Master.designer.cs">
+      <DependentUpon>WebItem.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\Default\Images\frame_menu_bg.gif" />
+    <Content Include="App_Themes\Default\Images\frame_top_bg2.jpg" />
+    <Content Include="Member\Login.aspx" />
+    <Content Include="Default.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Assistant\NetRadio.Assistant.csproj">
+      <Project>{ACF8B080-AC37-4D88-93CF-33E0C3919DB3}</Project>
+      <Name>NetRadio.Assistant</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CommonLocating\CommonLocating.csproj">
+      <Project>{A8FFF454-8D59-45FF-B777-6BFB39A863D2}</Project>
+      <Name>CommonLocating</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CommonMonitor\CommonMonitor.csproj">
+      <Project>{4FC83C88-9307-4B19-967F-D278B57A59DD}</Project>
+      <Name>CommonMonitor</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\Common.csproj">
+      <Project>{39D36763-7C6E-4677-A955-31ABD5E0979C}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\DataExtension\DataExtensionPrison.csproj">
+      <Project>{AA9527A2-A793-448F-AE59-24C8EA868BCA}</Project>
+      <Name>DataExtensionPrison</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Data\Data.csproj">
+      <Project>{D3B394B1-94FC-4397-B76A-5CE46D9FA77F}</Project>
+      <Name>Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Metadata\Metadata.csproj">
+      <Project>{C1C39175-162E-4155-9554-8A32FEB9EEF9}</Project>
+      <Name>Metadata</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\RemotingEntry\RemotingEntry.csproj">
+      <Project>{FE62BE36-5AEA-40BB-B70B-DD259DB1E7AD}</Project>
+      <Name>RemotingEntry</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NetRadio.Model\NetRadio.Model.csproj">
+      <Project>{1A0DB6B0-169C-4292-93D8-EE101F98DFEB}</Project>
+      <Name>NetRadio.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NetRadio.Web\NetRadio.Web.csproj">
+      <Project>{2BC39428-C0B5-4741-8FA1-87FF0E7A99FC}</Project>
+      <Name>NetRadio.Web</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Script\master.js" />
+    <Content Include="App_Themes\Default\Images\bg_top0.jpg" />
+    <Content Include="App_Themes\Default\Images\bg_top.jpg" />
+    <Content Include="App_Themes\Default\Images\l1.gif" />
+    <Content Include="App_Themes\Default\Images\l2.gif" />
+    <Content Include="App_Themes\Default\Images\l3.gif" />
+    <Content Include="App_Themes\Prison\cssPre\Main.css" />
+    <Content Include="App_Themes\Prison\cssPre\Template.css" />
+    <Content Include="App_Themes\Prison\cssPre\Weixing.Assistant.css" />
+    <Content Include="App_Themes\Prison\css_globalClass.css" />
+    <Content Include="App_Themes\Prison\css_globalTag.css" />
+    <Content Include="App_Themes\Prison\css_master.css" />
+    <Content Include="App_Themes\Prison\Images\Control\cv_collapsed.gif" />
+    <Content Include="App_Themes\Prison\Images\Control\cv_expanded.gif" />
+    <Content Include="App_Themes\Prison\Images\Control\remind_error.gif" />
+    <Content Include="App_Themes\Prison\Images\Control\remind_prompt.gif" />
+    <Content Include="App_Themes\Prison\Images\Control\remind_warning.gif" />
+    <Content Include="App_Themes\Prison\Images\Control\tabs_back.gif" />
+    <Content Include="App_Themes\Prison\Images\Control\tabs_bottom.gif" />
+    <Content Include="App_Themes\Prison\Images\Control\terminator.gif" />
+    <Content Include="App_Themes\Prison\Images\frame_menu_bg.gif" />
+    <Content Include="App_Themes\Prison\Images\Icons\bullet_add.gif" />
+    <Content Include="App_Themes\Prison\Images\Icons\bullet_app.gif" />
+    <Content Include="App_Themes\Prison\Images\Icons\bullet_company.gif" />
+    <Content Include="App_Themes\Prison\Images\Icons\loading.gif" />
+    <Content Include="App_Themes\Prison\Images\Icons\treeview_collapsed.gif" />
+    <Content Include="App_Themes\Prison\Images\Icons\treeview_expanded.gif" />
+    <Content Include="App_Themes\Prison\Images\Icons\treeview_nadir.gif" />
+    <Content Include="App_Themes\Prison\Images\Icons\validate_fail.gif" />
+    <Content Include="App_Themes\Prison\Images\Icons\validate_ok.gif" />
+    <Content Include="App_Themes\Default\css_globalClass.css" />
+    <Content Include="App_Themes\Default\cssPre\Main.css" />
+    <Content Include="App_Themes\Default\cssPre\Template.css" />
+    <Content Include="App_Themes\Default\cssPre\Weixing.Assistant.css" />
+    <Content Include="App_Themes\Default\Images\Control\cv_collapsed.gif" />
+    <Content Include="App_Themes\Default\Images\Control\cv_expanded.gif" />
+    <Content Include="App_Themes\Default\Images\Control\remind_error.gif" />
+    <Content Include="App_Themes\Default\Images\Control\remind_prompt.gif" />
+    <Content Include="App_Themes\Default\Images\Control\remind_warning.gif" />
+    <Content Include="App_Themes\Default\Images\Control\tabs_back.gif" />
+    <Content Include="App_Themes\Default\Images\Control\tabs_bottom.gif" />
+    <Content Include="App_Themes\Default\Images\Control\terminator.gif" />
+    <Content Include="App_Themes\Default\Images\Icons\bullet_add.gif" />
+    <Content Include="App_Themes\Default\Images\Icons\bullet_app.gif" />
+    <Content Include="App_Themes\Default\Images\Icons\bullet_company.gif" />
+    <Content Include="App_Themes\Default\Images\Icons\loading.gif" />
+    <Content Include="App_Themes\Default\Images\Icons\treeview_collapsed.gif" />
+    <Content Include="App_Themes\Default\Images\Icons\treeview_expanded.gif" />
+    <Content Include="App_Themes\Default\Images\Icons\treeview_nadir.gif" />
+    <Content Include="App_Themes\Default\Images\Icons\validate_fail.gif" />
+    <Content Include="App_Themes\Default\Images\Icons\validate_ok.gif" />
+    <Content Include="Global.asax" />
+    <Content Include="Images\loginbg.jpg" />
+    <Content Include="Images\loginbtn.jpg" />
+    <Content Include="Images\loginform2.jpg" />
+    <Content Include="App_Script\func.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Flash\MapRealTime.swf" />
+    <Content Include="Flash\ReplayRoute.swf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Flash\Xml\AP.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Flash\Xml\HostGroup.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Flash\Xml\LatestEvents.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Flash\Xml\Map.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Flash\Xml\MapArea.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Flash\Xml\MapList.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Flash\Xml\ReplayRoute.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Flash\Xml\Route.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Script\Common.js" />
+    <Content Include="App_Script\Project.js" />
+    <Content Include="App_Script\UI\AlertHostInfo.aspx.js" />
+    <Content Include="App_Script\UI\AutoRefresher.ascx.js" />
+    <Content Include="App_Script\UI\LocatingManager.aspx.js" />
+    <Content Include="App_Script\UI\ReplayRoute.aspx.js" />
+    <Content Include="App_Script\UI\ReportFindUser.aspx.js" />
+    <Content Include="App_Script\UI\ReportIndex.aspx.js" />
+    <Content Include="App_Script\UI\TagFilter.ascx.js" />
+    <Content Include="App_Script\UI\TagGroupList.aspx.js" />
+    <Content Include="App_Script\UI\TagGroupSelector.ctl.js" />
+    <Content Include="App_Script\UI\TagLogFilter.ascx.js" />
+    <Content Include="App_Script\UI\TagSelector.ascx.js" />
+    <Content Include="App_Script\UI\TagUser.aspx.js" />
+    <Content Include="App_Script\UI\TagUserSelector.ascx.js" />
+    <Content Include="App_Script\UI\UserList.aspx.js" />
+    <Content Include="Controls\AutoRefresher.ascx" />
+    <Content Include="Controls\HistoryNavigator.ascx" />
+    <Content Include="Controls\ObjectNavigator.ascx" />
+    <Content Include="Controls\ReportNavigator.ascx" />
+    <Content Include="Controls\TagFilter.ascx" />
+    <Content Include="Controls\TagLogFilter.ascx" />
+    <Content Include="Controls\TagSelector.ascx" />
+    <Content Include="Controls\TagUserSelector.ascx" />
+    <Content Include="Controls\TaskGeneralProperty.ascx" />
+    <Content Include="Flash\Xml\TagCoordinates.ashx" />
+    <Content Include="History\AbsenceLog.aspx" />
+    <Content Include="History\AlertProcessed.aspx" />
+    <Content Include="History\APLocatorLog.aspx" />
+    <Content Include="History\AreaEventLog.aspx" />
+    <Content Include="History\BatteryResetLog.aspx" />
+    <Content Include="History\ButtonPressedLog.aspx" />
+    <Content Include="History\InterrogationLog.aspx" />
+    <Content Include="History\LowBatteryLog.aspx" />
+    <Content Include="History\PositionLog.aspx" />
+    <Content Include="History\SystemSecurityLog.aspx" />
+    <Content Include="Member\Action.aspx" />
+    <Content Include="Member\ChangePassword.aspx" />
+    <Content Include="Member\EditUser.aspx" />
+    <Content Include="Member\UserList.aspx" />
+    <Content Include="Monitor\AlertHostInfo.aspx" />
+    <Content Include="Monitor\APList.aspx" />
+    <Content Include="Monitor\AreaReport.aspx" />
+    <Content Include="Monitor\LatestEvents.aspx" />
+    <Content Include="Monitor\LocatingMap.aspx" />
+    <Content Include="Monitor\ReplayRoute.aspx" />
+    <Content Include="Monitor\ReplayRoute_Display.aspx" />
+    <Content Include="Monitor\TagAlertProcess0.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Objects\AlertTag.aspx" />
+    <Content Include="Objects\CameraList.aspx" />
+    <Content Include="Objects\MapFile.ashx" />
+    <Content Include="Objects\Tag.aspx" />
+    <Content Include="Organize\Facility.aspx" />
+    <Content Include="Organize\MapAreaList.aspx" />
+    <Content Include="Organize\MapAreaRules.aspx" />
+    <Content Include="Organize\TagGroup.aspx" />
+    <Content Include="Organize\TagGroupList.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Home0.aspx" />
+    <Content Include="Report\AreaStayTimeReportViewer.aspx" />
+    <Content Include="Report\PoliceAreaInOut.aspx" />
+    <Content Include="Report\PoliceStayTimeUI.aspx" />
+    <Content Include="Report\ReportIndex.aspx" />
+    <Content Include="Report\TagAlertUI.aspx" />
+    <Content Include="Settings\LocateParameters.xml" />
+    <Content Include="Settings\LocatingManager.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Root.js" />
+    <Content Include="Sounds\beep.wav" />
+    <Content Include="TagUsers\Culprit.aspx" />
+    <Content Include="TagUsers\Police.aspx" />
+    <Content Include="TagUsers\TagUser.aspx" />
+    <Content Include="TagUsers\TagUserList.aspx" />
+    <Content Include="TagUsers\TagUser_Add.aspx" />
+    <Content Include="TagUsers\UserPhoto.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\ClassMapping.xml" />
+    <Content Include="App_Data\DataBaseMapping.xml" />
+    <Content Include="App_Data\photo\police\20100128_161212_ECC4C3.jpg" />
+    <Content Include="App_Data\photo\police\20100128_161427_1D6236.jpg" />
+    <Content Include="App_Data\photo\police\20100204_093152_B47CD8.jpg" />
+    <Content Include="App_Data\photo\police\20100204_103201_A80D5B.jpg" />
+    <Content Include="App_Data\photo\police\20100204_155845_07872D.jpg" />
+    <Content Include="App_Data\photo\police\20100221_130218_35426F.jpg" />
+    <Content Include="App_Data\photo\police\20100312_144403_18B1A0.jpg" />
+    <Content Include="App_Script\Control.js" />
+    <Content Include="App_Script\Global.js" />
+    <Content Include="App_Script\UI\SelectStrongestRssiTag.ascx.js" />
+    <Content Include="App_Script\UI\SelectTag.ascx.js" />
+    <Content Include="App_Script\UI\SelectTagUser.ascx.js" />
+    <Content Include="bin\Ajax.dll" />
+    <Content Include="bin\CommonLocating.dll" />
+    <Content Include="bin\CommonLocating.pdb" />
+    <Content Include="bin\CommonMonitor.dll" />
+    <Content Include="bin\CommonMonitor.pdb" />
+    <Content Include="bin\LocatingAction.dll" />
+    <Content Include="bin\LocatingAction.pdb" />
+    <Content Include="bin\Summer.dll" />
+    <Content Include="bin\Summer.xml" />
+    <Content Include="bin\TheftPrevention.dll" />
+    <Content Include="bin\TheftPrevention.pdb" />
+    <Content Include="Controls\SelectStrongestRssiTag.ascx" />
+    <Content Include="Controls\SelectTag.ascx" />
+    <Content Include="Controls\SelectTagUser.ascx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Images\alert1.jpg" />
+    <Content Include="Images\alert2.jpg" />
+    <Content Include="Images\bindTag.gif" />
+    <Content Include="Images\blank.gif" />
+    <Content Include="Images\calendar_today.gif" />
+    <Content Include="Images\culprit.gif" />
+    <Content Include="Images\disappeared.jpg" />
+    <Content Include="Images\frame_menu_bg.gif" />
+    <Content Include="Images\frame_menu_display.gif" />
+    <Content Include="Images\frame_menu_hide.gif" />
+    <Content Include="Images\frame_top_bg.gif" />
+    <Content Include="Images\frame_top_bg2.jpg" />
+    <Content Include="Images\frame_top_bg_2.jpg" />
+    <Content Include="Images\loading.gif" />
+    <Content Include="Images\loginform.jpg" />
+    <Content Include="Images\menuheader.jpg" />
+    <Content Include="Images\Menu\m1.gif" />
+    <Content Include="Images\Menu\m2.gif" />
+    <Content Include="Images\mesbg1.jpg" />
+    <Content Include="Images\mesbg2.jpg" />
+    <Content Include="Images\mesbg3.jpg" />
+    <Content Include="Images\police.gif" />
+    <Content Include="Images\tag_small.gif" />
+    <Content Include="Images\text_warningMessage.gif" />
+    <Content Include="Images\title.png" />
+    <Content Include="Images\title_white.png" />
+    <Content Include="Images\z1.gif" />
+    <Content Include="Images\z2.jpg" />
+    <Content Include="Master\WebItem.Master" />
+    <Content Include="Message\ShowMessage.aspx" />
+    <Content Include="Monitor\NewLocatingMap.aspx" />
+    <Content Include="Monitor\ObjectTagList.aspx" />
+    <Content Include="Monitor\PopupEventWindowWithVedio.aspx" />
+    <Content Include="Monitor\PorterPeopleList.aspx" />
+    <Content Include="Organize\MapAreaGroup.aspx" />
+    <Content Include="Organize\MapAreaGroup0.ascx" />
+    <Content Include="Report\PoliceJobSize.aspx" />
+    <Content Include="Report\ReportAreaInOut.aspx" />
+    <Content Include="Settings\BackupLog.aspx" />
+    <Content Include="TagUsers\Position.aspx" />
+    <Content Include="TagUsers\TagPositionList.aspx" />
+    <Content Include="TagUsers\TagUserList0.ascx" />
+    <Content Include="TagUsers\TagUserList1.ascx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\Default\Images\bg1.jpg" />
+    <Content Include="App_Themes\Prison\Images\bg1.jpg" />
+    <Content Include="App_Themes\Prison\Images\bgbottom.jpg" />
+    <Content Include="App_Themes\Prison\Images\bginput.gif" />
+    <Content Include="App_Themes\Prison\Images\bgleft.jpg" />
+    <Content Include="Controls\AreaNavigator.ascx" />
+    <Content Include="Flash\Xml\Camera.ashx" />
+    <Content Include="Images\bg2.jpg" />
+    <Content Include="Images\bgbottom.jpg" />
+    <Content Include="Images\camera.gif" />
+    <Content Include="Images\frame_top_bg21.jpg" />
+    <Content Include="Images\frame_top_bg_21.jpg" />
+    <Content Include="Images\left.jpg" />
+    <Content Include="Images\lginput.gif" />
+    <Content Include="Images\lsing.gif" />
+    <Content Include="Images\lsstop.gif" />
+    <Content Include="Images\right.jpg" />
+    <Content Include="Monitor\PatrolReport.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\Prison\Images\center1.jpg" />
+    <Content Include="App_Themes\Prison\Images\map1.jpg" />
+    <Content Include="bin\NetRadio.Assistant.dll" />
+    <Content Include="bin\NetRadio.Business.dll" />
+    <Content Include="bin\NetRadio.Business.pdb" />
+    <Content Include="bin\NetRadio.Common.dll" />
+    <Content Include="bin\NetRadio.Common.pdb" />
+    <Content Include="bin\NetRadio.Data.dll" />
+    <Content Include="bin\NetRadio.Data.pdb" />
+    <Content Include="bin\NetRadio.Data.xml" />
+    <Content Include="bin\NetRadio.DataExtension.dll" />
+    <Content Include="bin\NetRadio.LocatingService.RemotingInterface.dll" />
+    <Content Include="bin\NetRadio.LocatingService.RemotingInterface.pdb" />
+    <Content Include="bin\NetRadio.Metadata.dll" />
+    <Content Include="bin\NetRadio.Metadata.pdb" />
+    <Content Include="bin\NetRadio.Model.dll" />
+    <Content Include="bin\NetRadio.Model.pdb" />
+    <Content Include="bin\NetRadio.Web.dll" />
+    <Content Include="bin\NetRadio.Web.pdb" />
+    <Content Include="bin\NetRadio.YangzhouJail.DataExtension.dll" />
+    <Content Include="Controls\home0.htm" />
+    <Content Include="Controls\home1.htm" />
+    <Content Include="History\WristletBrokenLog.aspx" />
+    <Content Include="Images\center1.jpg" />
+    <Content Include="App_Themes\Prison\Images\center1bg.jpg" />
+    <Content Include="App_Themes\Prison\Images\frame_top_bg2.jpg" />
+    <Content Include="App_Themes\Prison\Images\menuBg1.jpg" />
+    <Content Include="Controls\SysConfigNavigator.ascx" />
+    <Content Include="Controls\ProcessAlert.ascx" />
+    <Content Include="Controls\RoutePoliceAndCulprit.ascx" />
+    <Content Include="Controls\RoutePolice.ascx" />
+    <Content Include="History\PositionAlert.aspx" />
+    <Content Include="Images\center1bg.jpg" />
+    <Content Include="Images\home1.jpg" />
+    <Content Include="Images\home2.jpg" />
+    <Content Include="Images\home3.jpg" />
+    <Content Include="Images\home4.jpg" />
+    <Content Include="Images\home5.jpg" />
+    <Content Include="Images\home6.jpg" />
+    <Content Include="Images\homebg.jpg" />
+    <Content Include="Images\indexBG.jpg" />
+    <Content Include="Images\indexlog.jpg" />
+    <Content Include="Images\left1.jpg" />
+    <Content Include="Images\map1.jpg" />
+    <Content Include="Images\right1.jpg" />
+    <Content Include="Member\LoginYangZhou.aspx" />
+    <Content Include="Monitor\RoutePatrol.aspx" />
+    <Content Include="Monitor\TagAlertProcess.aspx" />
+    <Content Include="Organize\RoutePoliceList.aspx" />
+    <Content Include="Organize\MapAreaRule.aspx" />
+    <Content Include="Home.aspx" />
+    <Content Include="Organize\RoutePoliceAndCulpritList.aspx" />
+    <Content Include="Controls\Pager.ascx" />
+    <Content Include="Report\Patrol_ShangHai.aspx" />
+    <Content Include="test.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>3738</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+    <MonoDevelop>
+      <Properties>
+        <XspParameters Port="8080" Address="127.0.0.1" SslMode="None" SslProtocol="Default" KeyType="None" CertFile="" KeyFile="" PasswordOptions="None" Password="" Verbose="True" />
+      </Properties>
+    </MonoDevelop>
+  </ProjectExtensions>
+</Project>

@@ -1,0 +1,160 @@
+﻿
+#bodyDefaultMaster
+{
+	background-color: #F2FBFE;
+}
+#topHeader
+{
+	height: 100px;
+	background-image: url(Images/bg_top.jpg);
+}
+#leftTD
+{
+	float: left;
+	width: 160px;
+	padding: 10px 0px 10px 0px;
+	vertical-align: top;
+	overflow: hidden; /*background-color: #F2FBFE;FILTER: progid:DXImageTransform.Microsoft.Gradient(startColorStr='#F2FBFE', endColorStr='#BBD9F0', gradientType='0');*/
+}
+
+#rightTD
+{
+	vertical-align: top; /*background-color: #F2FBFE; FILTER: progid:DXImageTransform.Microsoft.Gradient(startColorStr='#F2FBFE', endColorStr='#BBD9F0', gradientType='0');*/
+	padding: 10px 5px 0px 5px;
+ margin:0px;
+}
+#bottomTD
+{
+	display: none;
+}
+.sysName
+{
+	color: White;
+	font-weight: bold;
+	margin-left: 152px;
+	float: left;
+	position: relative;
+	top: 10px;
+	height: 40px;
+	overflow: hidden;
+	font-size: 18px;
+}
+.sysName table
+{
+	height: 34px;
+}
+
+#locatingServerInfo
+{
+	color: #0563CC;
+	margin-right: 30px;
+	float: right;
+	position: relative;
+	top: 30px;
+	height: 20px;
+	overflow: hidden;
+	clear: right;
+	width:190px;
+	text-align:right;
+}
+
+
+#userInfo
+{
+	color: #0563CC;
+	margin-right: 30px;
+	float: right;
+	position: relative;
+	top: -25px;
+	left: 0px;
+	height: 20px;
+	overflow: hidden;
+}
+#userInfo a
+{
+	color: #0563CC;
+}
+#DivInLeftMenu
+{
+	filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr='#F6F6F6', endColorStr='#F6F6F6', gradientType='1');
+	border: solid 1px #cccccc; /*EBEBEB*/
+	height: 100%;
+	width: 138px;
+	margin-left: 10px;
+	color: #2F5489;
+}
+
+
+.sysName1
+{
+	background-image: url(images/l1.gif);
+	background-repeat: no-repeat;
+	height: 34px;
+	width: 20px;
+}
+.sysName2
+{
+	background-image: url(images/l3.gif);
+	background-repeat: repeat-x;
+	height: 34px;
+}
+.sysName3
+{
+	background-image: url(images/l2.gif);
+	background-repeat: no-repeat;
+	height: 34px;
+	width: 20px;
+}
+
+
+#hotkeys
+{
+	color: White;
+	font-weight: bold;
+	margin-right: 30px;
+	float: left;
+	position: relative;
+	top: 47px;
+	height: 20px;
+}
+.hotkeysinput
+{
+	font-weight: normal;
+	color: #003399;
+	border: solid 0px gray;
+	margin-left: 5px;
+	cursor: pointer;
+	width: 75px;
+	height: 19px;
+	line-height: 21px;
+	padding: 0px;
+	background-repeat: no-repeat;
+	background-image: url(Images/bginput.gif);
+	float: left;
+	cursor: pointer;
+	text-align: center;
+	vertical-align: baseline;
+}
+
+.hotkeysinput1
+{
+	font-weight: bold;
+	color: #FF9900;
+	border: solid 0px gray;
+	margin-left: 5px;
+	cursor: pointer;
+	width: 75px;
+	height: 19px;
+	line-height: 21px;
+	padding: 0px;
+	background-repeat: no-repeat;
+	background-image: url(Images/bginput.gif);
+	float: left;
+	cursor: pointer;
+	text-align: center;
+	vertical-align: baseline;
+}
+
+
+
+

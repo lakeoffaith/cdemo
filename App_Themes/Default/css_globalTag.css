@@ -1,0 +1,67 @@
+﻿html
+{
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+body
+{
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+body, input, textarea, select
+{
+	font-family: Segoe UI, Microsoft YaHei,Tahoma, Simsun, Sans-Serif;
+	font-size: 12px;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+	margin: 0;
+	font-size: 12px;
+}
+
+img
+{
+	border: 0;
+}
+
+form
+{
+	margin: 0;
+}
+
+ol, ul, li
+{
+	margin: 0;
+	padding: 0;
+}
+
+label
+{
+	cursor: pointer;
+}
+
+a:link
+{
+	color: #0066FF;
+	text-decoration: underline;
+}
+a:visited
+{
+	color: #0066FF;
+	text-decoration: underline;
+}
+a:hover
+{
+	color: #FF9900;
+	text-decoration: underline;
+}
+a:active
+{
+	color: #0066FF;
+	text-decoration: underline;
+}

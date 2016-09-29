@@ -1,0 +1,169 @@
+﻿.bold {
+	font-weight: bold;
+}
+.italic {
+	font-style: italic;
+}
+.underline {
+	text-decoration: underline;
+}
+
+.bigger {
+	font-size: 14px;
+}
+.small {
+	font-size: 11px;
+}
+
+.fl {
+	float: left;
+	text-align: left;
+}
+.fr {
+	float: right;
+	text-align: right;
+}
+.clear {
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	visibility: hidden;
+	clear: both;
+}
+
+.left {
+	text-align: left;
+}
+.right {
+	text-align: right;
+}
+.center {
+	text-align: center;
+}
+
+.inline {
+	display: inline;
+}
+
+.fixed {
+	table-layout: fixed;
+	overflow: hidden;
+}
+.fixed td {
+	overflow: hidden;
+}
+
+.button {
+	width: 70px;
+	height: 24px;
+}
+.checkbox {
+	vertical-align: middle;
+	position: relative;
+	top: -1px;
+}
+
+.lineBreak {
+	width: 0;
+	height: 4px;
+	overflow: hidden;
+	visibility: hidden;
+}
+.vspace {
+	width: 0;
+	height: 8px;
+	overflow: hidden;
+	visibility: hidden;
+}
+
+#js_tooltip {
+	font-family: Simsun, Segoe UI, Tahoma, Sans-Serif; 
+	font-size: 12px;
+	text-align: left; 
+	background: #ffffae;
+	line-height: 17px;
+	padding: 1px 5px 2px 5px; 
+	border: 1px #666666 solid; 
+	overflow: hidden;
+	-moz-opacity: 0.85;
+	filter: alpha(opacity=85) progid:DXImageTransform.Microsoft.shadow(direction=135,color=#9f9f9f,strength=2);
+}
+.shadow, #js_dropmenu {
+	font-family: Simsun, Segoe UI, Tahoma, Sans-Serif; 
+	border-width: 1px;
+	border-style: solid;
+	border-color: #ddd #aaa #aaa #ddd;
+	background: #fafbfe;
+	position: absolute;
+	z-index: 9999;	
+	padding: 1px;
+	/*filter: progid:DXImageTransform.Microsoft.shadow(direction=135,color=#B0B0B0,strength=2);*/
+}
+#js_dropmenu td a { display: block; line-height: 15px; padding: 3px 18px 2px 8px; border: 1px solid #fafbfe; color: black; text-decoration: none; }
+#js_dropmenu td a:hover { border: 1px solid #aaa; background: #e9e9e9; color: black; text-decoration: none; }
+#js_dropmenu td div.separator { height: 1px; background: #ccc; border-bottom: 1px solid white; margin: 5px 7px 4px 7px; }
+
+.hostList
+{
+	border:solid 1px #cccccc;
+	padding:5px;
+	width:90%;
+	 
+}
+#divSelectTagUser table tr td
+{
+    border-width:0px;
+}
+#divSelectTag table tr td
+{
+	border-width:0px;
+	height:20px;
+	margin:0px;
+	padding:0px;
+}
+
+
+#logbg
+{	
+	  width: 100%;
+	  height: 240px;
+	  margin-top:100px; 
+	  background-image: url(Images/bg1.jpg);
+      background-position: center; 
+      background-repeat: no-repeat;
+}
+
+.popWinBody
+{
+	border:solid 4px red;
+	margin:0px;
+	padding:0px;
+	position:absolute;
+	left:0px;
+	top:0px;
+}
+
+
+.inTable 
+{
+border:solid 1px #E8E8E8;
+}
+.inTable tr td
+{
+border:solid 0px gray;
+}
+
+ .boldTD
+        {
+            font-weight: bold;
+        }
+        
+         .tdRed
+        {
+            color: #FF0000;
+        }
+        .tablegroups tr td
+        {
+            border-bottom: dashed 1px #CFCFCF;
+            height:25px;
+        }

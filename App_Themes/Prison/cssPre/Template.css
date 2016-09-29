@@ -1,0 +1,66 @@
+
+
+#pageheader
+{
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-bottom: 12px;
+	border-bottom: 0px solid #111111;
+	height: 40px;
+	overflow: hidden;
+}
+#website
+{
+	float: left;
+	padding-left: 20px;
+	font-size: 14px;
+	font-family: @Î¢ÈíÑÅºÚ;
+	font-weight: bold;
+	color:White;
+	background-image:url(../Images/map1.jpg);
+	background-position: bottom;
+	background-repeat: repeat-x;
+	width:100%;
+	line-height: 30px;
+	height:30px;
+	overflow: hidden;
+	vertical-align:baseline;
+}
+#pagetemplate
+{
+	
+	border: solid 1px #ffffff;
+	color: #2F5489;
+	margin: 0px;
+	overflow: hidden;
+	padding: 5px 5px 5px 5px;
+}
+#pagecontent
+{
+	height: 100%;
+	margin: 0px 0px 0px 0px;
+	padding: 5px 5px 5px 5px;
+}
+/*
+#pageheader .left
+{
+}
+#pageheader .left h2
+{
+	padding: 0;
+	margin: 0;
+	font-size: 14px;
+}
+#pageheader .right
+{
+	float: right;
+	background: transparent;
+	font-size: 11px;
+	margin-top: 16px;
+}
+*/
+#pagebody
+{
+	margin-left: 10px;
+	margin-right: 10px;
+}

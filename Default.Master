@@ -1,0 +1,166 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Default.Master.cs" Inherits="NetRadio.LocatingMonitor.__Default" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+</head>
+<body id="bodyDefaultMaster">
+    <form id="form1" runat="server">
+
+    <script>
+        var gTheme = "<%= NetRadio.Business.BusSystemConfig.GetDefaultTheme()%>";
+        var gVideoType=<%= NetRadio.Business.BusSystemConfig.GetVedioType()%>;
+
+        var menuBgColor = ""; //菜单项的背景颜色
+        var menuBorder = ""; //菜单项的边框#D8F0FA
+        var menuBgColor_No = ""; //菜单项的背景颜色（没有）
+        var menuBorder_No = ""; //菜单项的边框（没有）  
+        var menuTextColorOut = ""; //菜单字体颜色 鼠标离开时
+        var menuTextColorOn = ""; //菜单字体颜色 鼠标对准时
+
+        if (gTheme == "Prison") {
+            menuBgColor = "#ffffff"; //菜单项的背景颜色
+            menuBorder = "solid 1px #5194D2"; //菜单项的边框#D8F0FA
+            menuBgColor_No = "#F2FBFE"; //菜单项的背景颜色（没有）
+            menuBorder_No = "solid 1px #F2FBFE"; //菜单项的边框（没有）
+            menuTextColorOut = "#082E7F"; //菜单字体颜色 鼠标离开时
+            menuTextColorOn = "#FF6600"; //菜单字体颜色 鼠标对准时
+        }
+        else {
+            menuBgColor = "#ffffff"; //菜单项的背景颜色
+            menuBorder = "solid 1px #5194D2"; //菜单项的边框#D8F0FA
+            menuBgColor_No = "#F2FBFE"; //菜单项的背景颜色（没有）
+            menuBorder_No = "solid 1px #F2FBFE"; //菜单项的边框（没有）
+            menuTextColorOut = "#000000"; //菜单字体颜色 鼠标离开时
+            menuTextColorOn = "#0066CC"; //菜单字体颜色 鼠标对准时
+        }
+    </script>
+
+    <div>
+        <input id="hidTitle" runat="server" type="hidden" sign="false" />
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td colspan="2" id="topHeader">
+                    <div id="eventRemind">
+                    </div>
+                    <div class="sysName">
+                        <table cellpadding="0" cellspacing="0" border="0">
+                            <tr>
+                                <td class="sysName1">
+                                </td>
+                                <td class="sysName2" id="sysName" runat="server">
+                                </td>
+                                <td class="sysName3">
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div id="hotkeys">
+                    </div>
+                    <div id="userInfo">
+                        当前用户:
+                        <asp:Label ID="labUserName" runat="server" Text="Label"></asp:Label>
+                        &nbsp; &nbsp; &nbsp;<a href="../Member/ChangePassword.aspx">修改密码</a>&nbsp; |&nbsp;
+                        <a href="/Home.aspx">首页</a>&nbsp; |&nbsp; <a href="../Member/Action.aspx?behavior=logout">
+                            退出登录</a>
+                    </div>
+                    <div id="locatingServerInfo">
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <div style="margin: 0px; padding: 0px;">
+            <div id="leftTD">
+                <div id="DivInLeftMenu">
+                </div>
+            </div>
+            <%--<div id="seprateTD"><img id="imgShowMasterMenu" onclick="showMasterMenu()" style="position:relative; top:200px; cursor:pointer;"/></div>--%>
+            <div id="rightTD">
+                <div id="pageheader">
+                    <div id="website">
+                        <asp:Label ID="labWebSite" runat="server" Text="Label" Sign="false"></asp:Label>
+                    </div>
+                </div>
+                <div id="pagetemplate">
+                    <div id="pagecontent">
+                        <asp:ContentPlaceHolder ID="CphRight" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </form>
+
+    <script>
+
+        /* function showMasterMenu()
+        {
+        document.getElementById("leftTD").style.display="block";
+        NetRadio.LocatingMonitor.__Default.GetTreeNodes(callBack_Master);
+        if (_window_Load != null) {
+        window.setTimeout(function() { _window_Load(); }, 1);
+        }
+        if (typeof (page_Load) != "undefined") {
+        window.setTimeout(function() { page_Load(); }, 1);
+        }
+        //window.setInterval("setleftTDHEIGHT()", 100);
+        setleftTDHEIGHT();    
+        }*/
+
+
+        var lsing = '<img src="/Images/lsing.gif" width="16" height="16" align="absmiddle" />&nbsp;&nbsp;<font color="#333333">定位服务器正在运行</font>';
+        var lsstop = '<img src="/Images/lsstop.gif" width="16" height="16" align="absmiddle" />&nbsp;&nbsp;<font color="red">定位服务器已停止</font>';
+        var islscomplete = true;
+
+        function isonline() {
+            if (islscomplete == false) {
+                return;
+            }
+            NetRadio.LocatingMonitor.__Default.LocatingServerIsOnline(function(r) {
+
+                if (r.value) {
+                    if (gTheme == "Default")
+                        $("locatingServerInfo").innerHTML = lsing;
+                    if ($("homePageLSstatus") != null) {
+                        $("homePageLSstatus").innerHTML = "运行中";
+                    }
+                }
+                else {
+                    if (gTheme == "Default")
+                        $("locatingServerInfo").innerHTML = lsstop;
+                    if ($("homePageLSstatus") != null) {
+                        $("homePageLSstatus").innerHTML = "<font color=red>已停止</font>";
+                    }
+                }
+
+                islscomplete = true;
+            }
+                        );
+        }
+
+
+
+
+        var _window_Load = window.onload;
+        window.onload = function() {
+            NetRadio.LocatingMonitor.__Default.GetTreeNodes(callBack_Master);
+            if (_window_Load != null) {
+                window.setTimeout(function() { _window_Load(); }, 1);
+            }
+            if (typeof (page_Load) != "undefined") {
+                window.setTimeout(function() { page_Load(); }, 1);
+            }
+            window.setInterval("setleftTDHEIGHT()", 50);
+            //setleftTDHEIGHT();
+
+            //ls是否在线
+            $("locatingServerInfo").innerHTML = "";
+            isonline();
+            window.setInterval("isonline()", 1000 * 5);
+
+        }
+    </script>
+
+</body>
+</html>

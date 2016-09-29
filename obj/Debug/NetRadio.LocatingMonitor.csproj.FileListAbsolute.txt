@@ -1,0 +1,148 @@
+E:\网频\网频RFID\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.LocatingMonitor.dll
+E:\网频\网频RFID\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.LocatingMonitor.pdb
+E:\网频\网频RFID\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\CommonLocating.dll
+E:\网频\网频RFID\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\CommonMonitor.dll
+E:\网频\网频RFID\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Common.dll
+E:\网频\网频RFID\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Data.dll
+E:\网频\网频RFID\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.LocatingService.RemotingInterface.dll
+E:\网频\网频RFID\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Metadata.dll
+E:\网频\网频RFID\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Model.dll
+E:\网频\网频RFID\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Web.dll
+E:\网频\网频RFID\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.YangzhouJail.DataExtension.dll
+E:\网频\网频RFID\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\Summer.xml
+E:\网频\网频RFID\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Model.pdb
+E:\网频\网频RFID\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Common.pdb
+E:\网频\网频RFID\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\CommonMonitor.pdb
+E:\网频\网频RFID\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Data.pdb
+E:\网频\网频RFID\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Web.pdb
+E:\网频\网频RFID\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.LocatingService.RemotingInterface.pdb
+E:\网频\网频RFID\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Metadata.pdb
+E:\网频\网频RFID\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\CommonLocating.pdb
+E:\网频\网频RFID\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Business.pdb
+E:\网频\网频RFID\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\obj\Debug\ResolveAssemblyReference.cache
+E:\网频\网频RFID\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\obj\Debug\NetRadio.LocatingMonitor.dll
+E:\网频\网频RFID\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\obj\Debug\NetRadio.LocatingMonitor.pdb
+E:\网频\网频RFID\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Assistant.dll
+C:\Documents and Settings\Administrator\桌面\新建文件夹\网频RTLSv1.0\网频RFID\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.LocatingMonitor.dll
+C:\Documents and Settings\Administrator\桌面\新建文件夹\网频RTLSv1.0\网频RFID\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.LocatingMonitor.pdb
+C:\Documents and Settings\Administrator\桌面\新建文件夹\网频RTLSv1.0\网频RFID\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\CommonLocating.dll
+C:\Documents and Settings\Administrator\桌面\新建文件夹\网频RTLSv1.0\网频RFID\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\CommonMonitor.dll
+C:\Documents and Settings\Administrator\桌面\新建文件夹\网频RTLSv1.0\网频RFID\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Assistant.dll
+C:\Documents and Settings\Administrator\桌面\新建文件夹\网频RTLSv1.0\网频RFID\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Common.dll
+C:\Documents and Settings\Administrator\桌面\新建文件夹\网频RTLSv1.0\网频RFID\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Data.dll
+C:\Documents and Settings\Administrator\桌面\新建文件夹\网频RTLSv1.0\网频RFID\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.LocatingService.RemotingInterface.dll
+C:\Documents and Settings\Administrator\桌面\新建文件夹\网频RTLSv1.0\网频RFID\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Metadata.dll
+C:\Documents and Settings\Administrator\桌面\新建文件夹\网频RTLSv1.0\网频RFID\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Model.dll
+C:\Documents and Settings\Administrator\桌面\新建文件夹\网频RTLSv1.0\网频RFID\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Web.dll
+C:\Documents and Settings\Administrator\桌面\新建文件夹\网频RTLSv1.0\网频RFID\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.YangzhouJail.DataExtension.dll
+C:\Documents and Settings\Administrator\桌面\新建文件夹\网频RTLSv1.0\网频RFID\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\Summer.xml
+C:\Documents and Settings\Administrator\桌面\新建文件夹\网频RTLSv1.0\网频RFID\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Model.pdb
+C:\Documents and Settings\Administrator\桌面\新建文件夹\网频RTLSv1.0\网频RFID\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Common.pdb
+C:\Documents and Settings\Administrator\桌面\新建文件夹\网频RTLSv1.0\网频RFID\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\CommonMonitor.pdb
+C:\Documents and Settings\Administrator\桌面\新建文件夹\网频RTLSv1.0\网频RFID\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Data.pdb
+C:\Documents and Settings\Administrator\桌面\新建文件夹\网频RTLSv1.0\网频RFID\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Web.pdb
+C:\Documents and Settings\Administrator\桌面\新建文件夹\网频RTLSv1.0\网频RFID\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.LocatingService.RemotingInterface.pdb
+C:\Documents and Settings\Administrator\桌面\新建文件夹\网频RTLSv1.0\网频RFID\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Metadata.pdb
+C:\Documents and Settings\Administrator\桌面\新建文件夹\网频RTLSv1.0\网频RFID\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\CommonLocating.pdb
+C:\Documents and Settings\Administrator\桌面\新建文件夹\网频RTLSv1.0\网频RFID\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Business.pdb
+C:\Documents and Settings\Administrator\桌面\新建文件夹\网频RTLSv1.0\网频RFID\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\桌面\新建文件夹\网频RTLSv1.0\网频RFID\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\obj\Debug\NetRadio.LocatingMonitor.dll
+C:\Documents and Settings\Administrator\桌面\新建文件夹\网频RTLSv1.0\网频RFID\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\obj\Debug\NetRadio.LocatingMonitor.pdb
+F:\yuanma\WIFI-RFID\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.LocatingMonitor.dll
+F:\yuanma\WIFI-RFID\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.LocatingMonitor.pdb
+F:\yuanma\WIFI-RFID\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\CommonLocating.dll
+F:\yuanma\WIFI-RFID\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\CommonMonitor.dll
+F:\yuanma\WIFI-RFID\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Assistant.dll
+F:\yuanma\WIFI-RFID\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Common.dll
+F:\yuanma\WIFI-RFID\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Data.dll
+F:\yuanma\WIFI-RFID\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.LocatingService.RemotingInterface.dll
+F:\yuanma\WIFI-RFID\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Metadata.dll
+F:\yuanma\WIFI-RFID\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Model.dll
+F:\yuanma\WIFI-RFID\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Web.dll
+F:\yuanma\WIFI-RFID\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.YangzhouJail.DataExtension.dll
+F:\yuanma\WIFI-RFID\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\Summer.xml
+F:\yuanma\WIFI-RFID\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Model.pdb
+F:\yuanma\WIFI-RFID\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Common.pdb
+F:\yuanma\WIFI-RFID\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.LocatingService.RemotingInterface.pdb
+F:\yuanma\WIFI-RFID\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Data.pdb
+F:\yuanma\WIFI-RFID\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Web.pdb
+F:\yuanma\WIFI-RFID\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\CommonMonitor.pdb
+F:\yuanma\WIFI-RFID\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\CommonLocating.pdb
+F:\yuanma\WIFI-RFID\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Metadata.pdb
+F:\yuanma\WIFI-RFID\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Business.pdb
+F:\yuanma\WIFI-RFID\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\obj\Debug\ResolveAssemblyReference.cache
+F:\yuanma\WIFI-RFID\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\obj\Debug\NetRadio.LocatingMonitor.dll
+F:\yuanma\WIFI-RFID\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\obj\Debug\NetRadio.LocatingMonitor.pdb
+D:\网频\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.LocatingMonitor.dll
+D:\网频\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.LocatingMonitor.pdb
+D:\网频\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\CommonLocating.dll
+D:\网频\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\CommonMonitor.dll
+D:\网频\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Assistant.dll
+D:\网频\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Common.dll
+D:\网频\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Data.dll
+D:\网频\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.DataExtension.dll
+D:\网频\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.LocatingService.RemotingInterface.dll
+D:\网频\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Metadata.dll
+D:\网频\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Model.dll
+D:\网频\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Web.dll
+D:\网频\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\Summer.xml
+D:\网频\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Model.pdb
+D:\网频\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Common.pdb
+D:\网频\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\CommonMonitor.pdb
+D:\网频\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Data.pdb
+D:\网频\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Web.pdb
+D:\网频\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.LocatingService.RemotingInterface.pdb
+D:\网频\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\CommonLocating.pdb
+D:\网频\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Metadata.pdb
+D:\网频\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Business.pdb
+D:\网频\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\obj\Debug\ResolveAssemblyReference.cache
+D:\网频\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\obj\Debug\NetRadio.LocatingMonitor.dll
+D:\网频\NetRadio.Applications\LocatingMonitor\NetRadio.LocatingMonitor\obj\Debug\NetRadio.LocatingMonitor.pdb
+D:\new\NetRadio.Applications 20121010\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.LocatingMonitor.dll
+D:\new\NetRadio.Applications 20121010\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.LocatingMonitor.pdb
+D:\new\NetRadio.Applications 20121010\LocatingMonitor\NetRadio.LocatingMonitor\bin\CommonLocating.dll
+D:\new\NetRadio.Applications 20121010\LocatingMonitor\NetRadio.LocatingMonitor\bin\CommonMonitor.dll
+D:\new\NetRadio.Applications 20121010\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Assistant.dll
+D:\new\NetRadio.Applications 20121010\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Common.dll
+D:\new\NetRadio.Applications 20121010\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Data.dll
+D:\new\NetRadio.Applications 20121010\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.DataExtension.dll
+D:\new\NetRadio.Applications 20121010\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.LocatingService.RemotingInterface.dll
+D:\new\NetRadio.Applications 20121010\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Metadata.dll
+D:\new\NetRadio.Applications 20121010\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Model.dll
+D:\new\NetRadio.Applications 20121010\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Web.dll
+D:\new\NetRadio.Applications 20121010\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Model.pdb
+D:\new\NetRadio.Applications 20121010\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Common.pdb
+D:\new\NetRadio.Applications 20121010\LocatingMonitor\NetRadio.LocatingMonitor\bin\CommonMonitor.pdb
+D:\new\NetRadio.Applications 20121010\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Data.pdb
+D:\new\NetRadio.Applications 20121010\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Web.pdb
+D:\new\NetRadio.Applications 20121010\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.LocatingService.RemotingInterface.pdb
+D:\new\NetRadio.Applications 20121010\LocatingMonitor\NetRadio.LocatingMonitor\bin\CommonLocating.pdb
+D:\new\NetRadio.Applications 20121010\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Metadata.pdb
+D:\new\NetRadio.Applications 20121010\LocatingMonitor\NetRadio.LocatingMonitor\obj\Debug\ResolveAssemblyReference.cache
+D:\new\NetRadio.Applications 20121010\LocatingMonitor\NetRadio.LocatingMonitor\obj\Debug\NetRadio.LocatingMonitor.dll
+D:\new\NetRadio.Applications 20121010\LocatingMonitor\NetRadio.LocatingMonitor\obj\Debug\NetRadio.LocatingMonitor.pdb
+D:\RTLS_ADDRSSI15db\NetRadio.Applications 20140411\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.LocatingMonitor.dll
+D:\RTLS_ADDRSSI15db\NetRadio.Applications 20140411\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.LocatingMonitor.pdb
+D:\RTLS_ADDRSSI15db\NetRadio.Applications 20140411\LocatingMonitor\NetRadio.LocatingMonitor\bin\CommonLocating.dll
+D:\RTLS_ADDRSSI15db\NetRadio.Applications 20140411\LocatingMonitor\NetRadio.LocatingMonitor\bin\CommonMonitor.dll
+D:\RTLS_ADDRSSI15db\NetRadio.Applications 20140411\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Assistant.dll
+D:\RTLS_ADDRSSI15db\NetRadio.Applications 20140411\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Common.dll
+D:\RTLS_ADDRSSI15db\NetRadio.Applications 20140411\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Data.dll
+D:\RTLS_ADDRSSI15db\NetRadio.Applications 20140411\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.DataExtension.dll
+D:\RTLS_ADDRSSI15db\NetRadio.Applications 20140411\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.LocatingService.RemotingInterface.dll
+D:\RTLS_ADDRSSI15db\NetRadio.Applications 20140411\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Metadata.dll
+D:\RTLS_ADDRSSI15db\NetRadio.Applications 20140411\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Model.dll
+D:\RTLS_ADDRSSI15db\NetRadio.Applications 20140411\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Web.dll
+D:\RTLS_ADDRSSI15db\NetRadio.Applications 20140411\LocatingMonitor\NetRadio.LocatingMonitor\bin\Summer.xml
+D:\RTLS_ADDRSSI15db\NetRadio.Applications 20140411\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Model.pdb
+D:\RTLS_ADDRSSI15db\NetRadio.Applications 20140411\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Common.pdb
+D:\RTLS_ADDRSSI15db\NetRadio.Applications 20140411\LocatingMonitor\NetRadio.LocatingMonitor\bin\CommonMonitor.pdb
+D:\RTLS_ADDRSSI15db\NetRadio.Applications 20140411\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Data.pdb
+D:\RTLS_ADDRSSI15db\NetRadio.Applications 20140411\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Web.pdb
+D:\RTLS_ADDRSSI15db\NetRadio.Applications 20140411\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.LocatingService.RemotingInterface.pdb
+D:\RTLS_ADDRSSI15db\NetRadio.Applications 20140411\LocatingMonitor\NetRadio.LocatingMonitor\bin\CommonLocating.pdb
+D:\RTLS_ADDRSSI15db\NetRadio.Applications 20140411\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Metadata.pdb
+D:\RTLS_ADDRSSI15db\NetRadio.Applications 20140411\LocatingMonitor\NetRadio.LocatingMonitor\bin\NetRadio.Business.pdb
+D:\RTLS_ADDRSSI15db\NetRadio.Applications 20140411\LocatingMonitor\NetRadio.LocatingMonitor\obj\Debug\ResolveAssemblyReference.cache
+D:\RTLS_ADDRSSI15db\NetRadio.Applications 20140411\LocatingMonitor\NetRadio.LocatingMonitor\obj\Debug\NetRadio.LocatingMonitor.dll
+D:\RTLS_ADDRSSI15db\NetRadio.Applications 20140411\LocatingMonitor\NetRadio.LocatingMonitor\obj\Debug\NetRadio.LocatingMonitor.pdb

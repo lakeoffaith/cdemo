@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Parameters>
+	<!-- 定位方式： 1=采样定位  2=三角定位 -->
+	<LocatingMode>1</LocatingMode>
+	
+	<!-- 采样组ID号 -->
+	<SurveyGroup>1</SurveyGroup>
+	
+	<!-- 扫描方式  1=标签扫AP  2=AP扫标签 -->
+	<ScanMode>2</ScanMode>
+	
+	<!-- 扫描对象枚举 0=所有AP 1=指定SSID AP  -->
+	<ScanTarget>0</ScanTarget>
+	
+	<!-- 上面为1时，需要填写SSID -->
+	<ScanSsid></ScanSsid>
+	
+	<!-- 扫描信道 -->
+	<ScanChannels>11</ScanChannels>
+	
+	<!-- 返回RSSI个数 -->
+	<RssiBackCount>3</RssiBackCount>
+	
+	<!-- 间隔 -->
+	<ScanInterval>2</ScanInterval>
+</Parameters>

@@ -1,0 +1,5 @@
+SCC = This is a Source Code Control file
+
+[NetRadio.LocatingMonitor.csproj]
+SCC_Aux_Path = "\\Beijing\Source"
+SCC_Project_Name = "$/Release/RFID/NetRadio.Applications.root/NetRadio.Applications/LocatingMonitor/NetRadio.LocatingMonitor", BDTBAAAA

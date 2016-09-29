@@ -1,0 +1,140 @@
+﻿#topHeader
+{
+	height: 90px;
+	background-image: url(Images/frame_top_bg2.jpg);
+}
+#leftTD
+{
+	display:none;
+	float: left;
+	width: 160px;
+	padding: 10px 0px 20px 0px;
+	vertical-align: top;
+	overflow: hidden;
+	/*filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr='#F2FBFE', endColorStr='#9AD0FF', gradientType='0'); *//*FILTER: progid:DXImageTransform.Microsoft.Gradient(startColorStr='#F2FBFE', endColorStr='#BBD9F0', gradientType='0');*/
+    
+    background-position:top;
+	background-repeat:no-repeat;
+	/*background-image:url(Images/bgleft.jpg);*/
+	background-color:#E3EFFB;
+	color:#ffffff;
+
+}
+#seprateTD
+{
+	float: left;
+	width: 1px;
+	overflow: hidden;
+}
+#rightTD
+{
+	vertical-align: top;
+	padding: 10px 5px 0px 5px;
+}
+#bottomTD
+{
+	display: none;
+}
+.sysName
+{
+	color: White;
+	font-weight: bold;
+	margin-left: 100px;
+	float: left;
+	position: relative;
+	top: -20px;
+	height: 30px;
+	overflow: hidden;
+	font-size: 26px; 
+}
+
+#userInfo
+{
+	color: White;
+	font-weight: bold;
+	margin-right: 30px;
+	float: right;
+	position: relative;
+	top:30px;
+	height: 20px;
+	overflow: hidden;
+}
+
+#locatingServerInfo
+{
+	 
+}
+
+
+
+#userInfo a
+{
+	color: White;
+}
+#DivInLeftMenu
+{
+	width:150px;
+}
+
+
+#hotkeys
+{
+	color: White;
+	font-weight: bold;
+	margin-right: 30px;
+	float: left;
+	position:absolute;
+	top: 56px;
+	height: 20px; 
+	left:100px;
+	background-color:Red;
+}
+.hotkeysinput
+{
+	font-size:12px;
+	font-weight:bold;	
+	color:#ffffff;
+	border: solid 0px #003399;
+	margin-left: 5px;
+	cursor: pointer;
+	width:84px;
+	height:31px;	 
+	line-height:31px;
+	padding:0px;
+	background-repeat:no-repeat;
+	background-image:url(Images/center1.jpg);
+	float:left;
+	cursor:pointer;
+	text-align:center;
+	vertical-align:baseline;
+	
+}
+
+
+.hotkeysinput1
+{
+	font-size:12px;
+	font-weight:bold;	
+	color:#ffffff;
+	border: solid 0px #003399;
+	margin-left: 5px;
+	cursor: pointer;
+	width:84px;
+	height:31px;	 
+	line-height:31px;
+	padding:0px;
+	background-repeat:no-repeat;
+	background-image:url(Images/center1.jpg);
+	float:left;
+	cursor:pointer;
+	text-align:center;
+	vertical-align:baseline;
+	
+}
+
+.tdMenu
+{
+	background-image:url(Images/menuBg1.jpg);
+	border:solid 1px #0066CC;
+	height:20px;
+}

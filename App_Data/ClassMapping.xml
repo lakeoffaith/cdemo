@@ -1,0 +1,846 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<summer-mapping>
+  <class name="NetRadio.Model.config_SurveyGroup" table="config_SurveyGroup">
+    <property name="Id" column="Id" null="false" type="int" length="4" key="PrimaryKey" >
+    </property>
+    <property name="SurveyGroupName" column="SurveyGroupName" null="false" type="string" length="50" key="NoneKey" />
+    <property name="UpdateTime" column="UpdateTime" null="false" type="datetime" length="8" key="NoneKey" />
+  </class>
+  <class name="NetRadio.Model.config_TagGroup" table="config_TagGroup">
+    <property name="Id" column="Id" null="false" type="int" length="4" key="PrimaryKey" >
+      <generator class="identity">
+      </generator>
+    </property>
+    <property name="GroupName" column="GroupName" null="false" type="string" length="32" key="NoneKey" />
+    <property name="GroupIcon" column="GroupIcon" null="true" type="string" length="100" key="NoneKey" />
+    <property name="GroupDescription" column="GroupDescription" null="true" type="string" length="200" key="NoneKey" />
+    <property name="CreateTime" column="CreateTime" null="false" type="datetime" length="8" key="NoneKey" />
+  </class>
+  <class name="NetRadio.Model.config_TagGroupCoverage" table="config_TagGroupCoverage">
+    <property name="TagId" column="TagId" null="false" type="int" length="4" key="PrimaryKey" >
+    </property>
+    <property name="TagGroupId" column="TagGroupId" null="false" type="int" length="4" key="PrimaryKey" >
+    </property>
+  </class>
+  <class name="NetRadio.Model.config_TagLocateSetting" table="config_TagLocateSetting">
+    <property name="TagId" column="TagId" null="false" type="int" length="4" key="PrimaryKey" >
+    </property>
+    <property name="LocatingMode" column="LocatingMode" null="false" type="byte" length="1" key="NoneKey" />
+    <property name="ScanMode" column="ScanMode" null="false" type="byte" length="1" key="NoneKey" />
+    <property name="ScanTarget" column="ScanTarget" null="false" type="byte" length="1" key="NoneKey" />
+    <property name="ScanSsid" column="ScanSsid" null="false" type="string" length="32" key="NoneKey" />
+    <property name="ScanChannels" column="ScanChannels" null="false" type="string" length="32" key="NoneKey" />
+    <property name="ScanInterval" column="ScanInterval" null="false" type="int" length="4" key="NoneKey" />
+    <property name="SurveyGroupId" column="SurveyGroupId" null="false" type="int" length="4" key="NoneKey" />
+    <property name="RssiBackCount" column="RssiBackCount" null="false" type="int" length="4" key="NoneKey" />
+    <property name="UpdateTime" column="UpdateTime" null="false" type="datetime" length="8" key="NoneKey" />
+    <property name="CommandState" column="CommandState" null="false" type="byte" length="1" key="NoneKey" />
+  </class>
+  <class name="NetRadio.Model.device_AP" table="device_AP">
+    <property name="Id" column="Id" null="false" type="int" length="4" key="NoneKey" />
+    <property name="CoordinatesId" column="CoordinatesId" null="false" type="int" length="4" key="NoneKey" />
+    <property name="APMac" column="APMac" null="false" type="string" length="17" key="NoneKey" />
+    <property name="APName" column="APName" null="false" type="string" length="50" key="NoneKey" />
+    <property name="SelfIP" column="SelfIP" null="false" type="string" length="15" key="NoneKey" />
+    <property name="LoginName" column="LoginName" null="false" type="string" length="25" key="NoneKey" />
+    <property name="LoginPassword" column="LoginPassword" null="false" type="string" length="32" key="NoneKey" />
+    <property name="Manufacturer" column="Manufacturer" null="true" type="string" length="50" key="NoneKey" />
+    <property name="APModel" column="APModel" null="true" type="string" length="50" key="NoneKey" />
+    <property name="ProductType" column="ProductType" null="false" type="byte" length="1" key="NoneKey" />
+    <property name="SerialNo" column="SerialNo" null="true" type="string" length="100" key="NoneKey" />
+    <property name="Desciption" column="Desciption" null="true" type="string" length="200" key="NoneKey" />
+    <property name="MaxRssiValueByAP" column="MaxRssiValueByAP" null="false" type="int" length="4" key="NoneKey" />
+    <property name="MaxRssivalueByTag" column="MaxRssivalueByTag" null="false" type="int" length="4" key="NoneKey" />
+    <property name="WriteTime" column="WriteTime" null="false" type="datetime" length="8" key="NoneKey" />
+  </class>
+  <class name="NetRadio.Model.device_APSetting" table="device_APSetting">
+    <property name="APId" column="APId" null="false" type="int" length="4" key="PrimaryKey" >
+    </property>
+    <property name="APMode" column="APMode" null="false" type="byte" length="1" key="NoneKey" />
+    <property name="Ssid" column="Ssid" null="false" type="string" length="50" key="NoneKey" />
+    <property name="Channel" column="Channel" null="false" type="byte" length="1" key="NoneKey" />
+    <property name="Security" column="Security" null="false" type="byte" length="1" key="NoneKey" />
+    <property name="Encrypt" column="Encrypt" null="false" type="byte" length="1" key="NoneKey" />
+    <property name="Password" column="Password" null="true" type="string" length="64" key="NoneKey" />
+    <property name="LocatingEnabled" column="LocatingEnabled" null="false" type="boolean" length="1" key="NoneKey" />
+    <property name="LocatingScanDuration" column="LocatingScanDuration" null="false" type="byte" length="1" key="NoneKey" />
+    <property name="LocatingScanType" column="LocatingScanType" null="false" type="byte" length="1" key="NoneKey" />
+    <property name="LocatingMacFilterEnabled" column="LocatingMacFilterEnabled" null="false" type="boolean" length="1" key="NoneKey" />
+    <property name="LocatingMacFilter" column="LocatingMacFilter" null="true" type="string" length="25" key="NoneKey" />
+    <property name="TempFileSize" column="TempFileSize" null="false" type="int" length="4" key="NoneKey" />
+    <property name="ServerIP" column="ServerIP" null="true" type="string" length="15" key="NoneKey" />
+    <property name="ServerPort" column="ServerPort" null="false" type="int" length="4" key="NoneKey" />
+    <property name="NtpEnabled" column="NtpEnabled" null="false" type="boolean" length="1" key="NoneKey" />
+    <property name="TimeZone" column="TimeZone" null="false" type="float" length="8" key="NoneKey" />
+    <property name="SummerTime" column="SummerTime" null="false" type="byte" length="1" key="NoneKey" />
+    <property name="NtpServer" column="NtpServer" null="true" type="string" length="50" key="NoneKey" />
+    <property name="WebRemoteEnabled" column="WebRemoteEnabled" null="false" type="boolean" length="1" key="NoneKey" />
+    <property name="WebRemotePort" column="WebRemotePort" null="false" type="int" length="4" key="NoneKey" />
+    <property name="WanMode" column="WanMode" null="false" type="byte" length="1" key="NoneKey" />
+    <property name="WanStaticIp" column="WanStaticIp" null="true" type="string" length="15" key="NoneKey" />
+    <property name="WanNetMask" column="WanNetMask" null="true" type="string" length="15" key="NoneKey" />
+    <property name="WanGateWay" column="WanGateWay" null="true" type="string" length="15" key="NoneKey" />
+    <property name="WanDns" column="WanDns" null="true" type="string" length="50" key="NoneKey" />
+    <property name="LanStaticIp" column="LanStaticIp" null="true" type="string" length="15" key="NoneKey" />
+    <property name="LanNetMask" column="LanNetMask" null="true" type="string" length="15" key="NoneKey" />
+    <property name="LanGateWay" column="LanGateWay" null="true" type="string" length="15" key="NoneKey" />
+    <property name="LanDns" column="LanDns" null="true" type="string" length="15" key="NoneKey" />
+    <property name="APMacFilterStatus" column="APMacFilterStatus" null="false" type="byte" length="1" key="NoneKey" />
+    <property name="APMacFilter" column="APMacFilter" null="true" type="string" length="2400" key="NoneKey" />
+    <property name="WirelessNetworkMode" column="WirelessNetworkMode" null="false" type="byte" length="1" key="NoneKey" />
+    <property name="UpdateTime" column="UpdateTime" null="false" type="datetime" length="8" key="NoneKey" />
+    <property name="WizardEnabled" column="WizardEnabled" null="false" type="boolean" length="1" key="NoneKey" />
+    <property name="WizardPort" column="WizardPort" null="false" type="int" length="4" key="NoneKey" />
+    <property name="CacheFileEnabled" column="CacheFileEnabled" null="false" type="boolean" length="1" key="NoneKey" />
+    <property name="CacheFileSize" column="CacheFileSize" null="false" type="int" length="4" key="NoneKey" />
+    <property name="MisCodeEnabled" column="MisCodeEnabled" null="false" type="boolean" length="1" key="NoneKey" />
+  </class>
+  <class name="NetRadio.Model.device_Tag" table="device_Tag">
+    <property name="Id" column="Id" null="false" type="int" length="4" key="PrimaryKey" >
+      <generator class="identity">
+      </generator>
+    </property>
+    <property name="TagMac" column="TagMac" null="false" type="string" length="17" key="UniqueKey" />
+    <property name="TagName" column="TagName" null="false" type="string" length="50" key="NoneKey" />
+    <property name="SerialNo" column="SerialNo" null="true" type="string" length="100" key="NoneKey" />
+    <property name="ProductType" column="ProductType" null="false" type="byte" length="1" key="NoneKey" />
+    <property name="WriteTime" column="WriteTime" null="false" type="datetime" length="8" key="NoneKey" />
+  </class>
+  <class name="NetRadio.Model.device_TagHost" table="device_TagHost">
+    <property name="TagId" column="TagId" null="false" type="int" length="4" key="PrimaryKey" >
+    </property>
+    <property name="HostType" column="HostType" null="false" type="string" length="50" key="NoneKey" />
+    <property name="HostName" column="HostName" null="false" type="string" length="50" key="NoneKey" />
+    <property name="Description" column="Description" null="true" type="string" length="200" key="NoneKey" />
+    <property name="ImagePath" column="ImagePath" null="true" type="string" length="100" key="NoneKey" />
+    <property name="WriteTime" column="WriteTime" null="false" type="datetime" length="8" key="NoneKey" />
+  </class>
+  <class name="NetRadio.Model.device_TagSetting" table="device_TagSetting">
+    <property name="TagId" column="TagId" null="false" type="int" length="4" key="PrimaryKey" >
+    </property>
+    <property name="FirmwareVersion" column="FirmwareVersion" null="true" type="string" length="50" key="NoneKey" />
+    <property name="WorkingStatus" column="WorkingStatus" null="false" type="byte" length="1" key="NoneKey" />
+    <property name="CurrentIP" column="CurrentIP" null="true" type="string" length="15" key="NoneKey" />
+    <property name="HelloInterval" column="HelloInterval" null="false" type="byte" length="1" key="NoneKey" />
+    <property name="ServerIP" column="ServerIP" null="true" type="string" length="15" key="NoneKey" />
+    <property name="ServerPort" column="ServerPort" null="false" type="int" length="4" key="NoneKey" />
+    <property name="IsAutoConnectToAP" column="IsAutoConnectToAP" null="false" type="boolean" length="1" key="NoneKey" />
+    <property name="APSsid" column="APSsid" null="true" type="string" length="50" key="NoneKey" />
+    <property name="APChannel" column="APChannel" null="false" type="byte" length="1" key="NoneKey" />
+    <property name="APSecurity" column="APSecurity" null="false" type="byte" length="1" key="NoneKey" />
+    <property name="APEncryption" column="APEncryption" null="false" type="byte" length="1" key="NoneKey" />
+    <property name="APPassword" column="APPassword" null="true" type="string" length="64" key="NoneKey" />
+    <property name="APMaxConnection" column="APMaxConnection" null="false" type="int" length="4" key="NoneKey" />
+    <property name="APChangeMinRssi" column="APChangeMinRssi" null="false" type="int" length="4" key="NoneKey" />
+    <property name="DhcpEnabled" column="DhcpEnabled" null="false" type="boolean" length="1" key="NoneKey" />
+    <property name="DhcpStaticIP" column="DhcpStaticIP" null="true" type="string" length="15" key="NoneKey" />
+    <property name="DhcpGateWay" column="DhcpGateWay" null="true" type="string" length="15" key="NoneKey" />
+    <property name="DhcpMask" column="DhcpMask" null="true" type="string" length="15" key="NoneKey" />
+    <property name="ButtonMessageEnabled" column="ButtonMessageEnabled" null="false" type="boolean" length="1" key="NoneKey" />
+    <property name="ButtonMessageBody" column="ButtonMessageBody" null="true" type="string" length="150" key="NoneKey" />
+    <property name="MotionMessageEnabled" column="MotionMessageEnabled" null="false" type="boolean" length="1" key="NoneKey" />
+    <property name="MotionMessageInterval" column="MotionMessageInterval" null="false" type="int" length="4" key="NoneKey" />
+    <property name="TemperatureEnabled" column="TemperatureEnabled" null="false" type="boolean" length="1" key="NoneKey" />
+    <property name="TemperatureMinValue" column="TemperatureMinValue" null="false" type="float" length="8" key="NoneKey" />
+    <property name="TemperatureMaxValue" column="TemperatureMaxValue" null="false" type="float" length="8" key="NoneKey" />
+    <property name="TemperatureMessageInterval" column="TemperatureMessageInterval" null="false" type="int" length="4" key="NoneKey" />
+    <property name="ScanEnabled" column="ScanEnabled" null="false" type="boolean" length="1" key="NoneKey" />
+    <property name="ScanType" column="ScanType" null="false" type="byte" length="1" key="NoneKey" />
+    <property name="ScanSsid" column="ScanSsid" null="true" type="string" length="50" key="NoneKey" />
+    <property name="ScanInterval" column="ScanInterval" null="false" type="byte" length="1" key="NoneKey" />
+    <property name="ScanChannel" column="ScanChannel" null="true" type="string" length="32" key="NoneKey" />
+    <property name="ScanBackCount" column="ScanBackCount" null="false" type="byte" length="1" key="NoneKey" />
+    <property name="RssiCalculateMethod" column="RssiCalculateMethod" null="false" type="byte" length="1" key="NoneKey" />
+    <property name="ScanMinTime" column="ScanMinTime" null="false" type="int" length="4" key="NoneKey" />
+    <property name="ScanMaxTime" column="ScanMaxTime" null="false" type="int" length="4" key="NoneKey" />
+    <property name="LowBatteryValue" column="LowBatteryValue" null="false" type="float" length="8" key="NoneKey" />
+    <property name="CurrentBatteryValue" column="CurrentBatteryValue" null="false" type="float" length="8" key="NoneKey" />
+    <property name="PowerSaverModeEnabled" column="PowerSaverModeEnabled" null="false" type="boolean" length="1" key="NoneKey" />
+    <property name="PowerSaverModeTimer" column="PowerSaverModeTimer" null="false" type="int" length="4" key="NoneKey" />
+    <property name="BeepEnabled" column="BeepEnabled" null="false" type="boolean" length="1" key="NoneKey" />
+    <property name="BeeperInterval" column="BeeperInterval" null="false" type="int" length="4" key="NoneKey" />
+    <property name="BeeperHoldTime" column="BeeperHoldTime" null="false" type="int" length="4" key="NoneKey" />
+    <property name="BeeperCount" column="BeeperCount" null="false" type="int" length="4" key="NoneKey" />
+    <property name="LedColor" column="LedColor" null="false" type="int" length="4" key="NoneKey" />
+    <property name="LedCount" column="LedCount" null="false" type="int" length="4" key="NoneKey" />
+    <property name="LedHoldTime" column="LedHoldTime" null="false" type="int" length="4" key="NoneKey" />
+    <property name="LedInterval" column="LedInterval" null="false" type="int" length="4" key="NoneKey" />
+    <property name="LedEnabled" column="LedEnabled" null="false" type="boolean" length="1" key="NoneKey" />
+    <property name="UpdateTime" column="UpdateTime" null="false" type="datetime" length="8" key="NoneKey" />
+    <property name="ScanMarkEnable" column="ScanMarkEnable" null="false" type="boolean" length="1" key="NoneKey" />
+    <property name="ScanMarkDetectInterval" column="ScanMarkDetectInterval" null="false" type="int" length="4" key="NoneKey" />
+    <property name="ScanMarkScanTime" column="ScanMarkScanTime" null="false" type="int" length="4" key="NoneKey" />
+    <property name="ScanMarkScanInterval" column="ScanMarkScanInterval" null="false" type="int" length="4" key="NoneKey" />
+    <property name="ScanMarkScanCount" column="ScanMarkScanCount" null="false" type="int" length="4" key="NoneKey" />
+    <property name="ScanMarkGoodSignal" column="ScanMarkGoodSignal" null="false" type="int" length="4" key="NoneKey" />
+    <property name="ScanMarkLocatingInterval" column="ScanMarkLocatingInterval" null="false" type="int" length="4" key="NoneKey" />
+  </class>
+  <class name="NetRadio.Model.history_AlertProcessLog" table="history_AlertProcessLog">
+    <property name="Id" column="Id" null="false" type="int" length="4" key="PrimaryKey" >
+      <generator class="identity">
+      </generator>
+    </property>
+    <property name="AlertId" column="AlertId" null="false" type="int" length="4" key="NoneKey" />
+    <property name="UserId" column="UserId" null="false" type="int" length="4" key="NoneKey" />
+    <property name="AlertStatus" column="AlertStatus" null="false" type="byte" length="1" key="NoneKey" />
+    <property name="ChangeReason" column="ChangeReason" null="true" type="string" length="50" key="NoneKey" />
+    <property name="UpdateTime" column="UpdateTime" null="false" type="datetime" length="8" key="NoneKey" />
+  </class>
+  <class name="NetRadio.Model.history_APLocatorLog" table="history_APLocatorLog">
+    <property name="Id" column="Id" null="false" type="int" length="4" key="PrimaryKey" >
+      <generator class="identity">
+      </generator>
+    </property>
+    <property name="APLocatorId" column="APLocatorId" null="false" type="int" length="4" key="NoneKey" />
+    <property name="APLocatorStatus" column="APLocatorStatus" null="false" type="byte" length="1" key="NoneKey" />
+    <property name="WriteTime" column="WriteTime" null="false" type="datetime" length="8" key="NoneKey" />
+  </class>
+  <class name="NetRadio.Model.history_AreaEventLog" table="history_AreaEventLog">
+    <property name="Id" column="Id" null="false" type="int" length="4" key="PrimaryKey" >
+      <generator class="identity">
+      </generator>
+    </property>
+    <property name="HostId" column="HostId" null="false" type="int" length="4" key="NoneKey" />
+    <property name="TagId" column="TagId" null="false" type="int" length="4" key="NoneKey" />
+    <property name="AreaId" column="AreaId" null="false" type="int" length="4" key="NoneKey" />
+    <property name="AreaEventType" column="AreaEventType" null="false" type="byte" length="1" key="NoneKey" />
+    <property name="WriteTime" column="WriteTime" null="false" type="datetime" length="8" key="NoneKey" />
+  </class>
+  <class name="NetRadio.Model.history_GenericEventLog" table="history_GenericEventLog">
+    <property name="Id" column="Id" null="false" type="int" length="4" key="PrimaryKey" >
+      <generator class="identity">
+      </generator>
+    </property>
+    <property name="HostId" column="HostId" null="false" type="int" length="4" key="NoneKey" />
+    <property name="TagId" column="TagId" null="false" type="int" length="4" key="NoneKey" />
+    <property name="MapId" column="MapId" null="false" type="int" length="4" key="NoneKey" />
+    <property name="CoordinatesId" column="CoordinatesId" null="false" type="int" length="4" key="NoneKey" />
+    <property name="GenericEventType" column="GenericEventType" null="false" type="int" length="4" key="NoneKey" />
+    <property name="WriteTime" column="WriteTime" null="false" type="datetime" length="8" key="NoneKey" />
+  </class>
+  <class name="NetRadio.Model.history_GetAllRecords" table="history_GetAllRecords">
+    <property name="ID" column="ID" null="false" type="int" length="4" key="NoneKey" >
+      <generator class="identity">
+      </generator>
+    </property>
+    <property name="TableName" column="TableName" null="true" type="string" length="50" key="NoneKey" />
+    <property name="Records" column="Records" null="true" type="int" length="4" key="NoneKey" />
+  </class>
+  <class name="NetRadio.Model.history_TagPositionLog" table="history_TagPositionLog">
+    <property name="Id" column="Id" null="false" type="int" length="4" key="PrimaryKey" >
+      <generator class="identity">
+      </generator>
+    </property>
+    <property name="HostId" column="HostId" null="false" type="int" length="4" key="NoneKey" />
+    <property name="TagId" column="TagId" null="false" type="int" length="4" key="NoneKey" />
+    <property name="MapId" column="MapId" null="false" type="int" length="4" key="NoneKey" />
+    <property name="CoordinatesId" column="CoordinatesId" null="false" type="int" length="4" key="NoneKey" />
+    <property name="X" column="X" null="false" type="float" length="8" key="NoneKey" />
+    <property name="Y" column="Y" null="false" type="float" length="8" key="NoneKey" />
+    <property name="Z" column="Z" null="false" type="float" length="8" key="NoneKey" />
+    <property name="WriteTime" column="WriteTime" null="false" type="datetime" length="8" key="NoneKey" />
+  </class>
+  <class name="NetRadio.Model.map_APCoverage" table="map_APCoverage">
+    <property name="APId" column="APId" null="false" type="int" length="4" key="PrimaryKey" >
+    </property>
+    <property name="MapId" column="MapId" null="false" type="int" length="4" key="PrimaryKey" >
+    </property>
+  </class>
+  <class name="NetRadio.Model.map_APNearArea" table="map_APNearArea">
+    <property name="Id" column="Id" null="false" type="int" length="4" key="NoneKey" >
+      <generator class="identity">
+      </generator>
+    </property>
+    <property name="AreaId" column="AreaId" null="false" type="int" length="4" key="NoneKey" />
+    <property name="LeftId" column="LeftId" null="false" type="int" length="4" key="NoneKey" />
+    <property name="RightId" column="RightId" null="false" type="int" length="4" key="NoneKey" />
+  </class>
+  <class name="NetRadio.Model.map_Coordinates" table="map_Coordinates">
+    <property name="Id" column="Id" null="false" type="int" length="4" key="PrimaryKey" >
+    </property>
+    <property name="MapId" column="MapId" null="false" type="int" length="4" key="NoneKey" />
+    <property name="ParentId" column="ParentId" null="false" type="int" length="4" key="NoneKey" />
+    <property name="CoordinatesName" column="CoordinatesName" null="false" type="string" length="50" key="NoneKey" />
+    <property name="X" column="X" null="false" type="float" length="8" key="NoneKey" />
+    <property name="Y" column="Y" null="false" type="float" length="8" key="NoneKey" />
+    <property name="Z" column="Z" null="false" type="float" length="8" key="NoneKey" />
+    <property name="CoordinatesUsage" column="CoordinatesUsage" null="false" type="byte" length="1" key="NoneKey" />
+  </class>
+  <class name="NetRadio.Model.map_Facility" table="map_Facility">
+    <property name="Id" column="Id" null="false" type="int" length="4" key="PrimaryKey" >
+    </property>
+    <property name="ParentFacilityId" column="ParentFacilityId" null="false" type="int" length="4" key="NoneKey" />
+    <property name="FacilityName" column="FacilityName" null="false" type="string" length="50" key="NoneKey" />
+    <property name="MapId" column="MapId" null="false" type="int" length="4" key="NoneKey" />
+    <property name="WriteTime" column="WriteTime" null="false" type="datetime" length="8" key="NoneKey" />
+  </class>
+  <class name="NetRadio.Model.map_FacilityMap" table="map_FacilityMap">
+    <property name="Id" column="Id" null="false" type="int" length="4" key="PrimaryKey" >
+    </property>
+    <property name="MapFileName" column="MapFileName" null="false" type="string" length="200" key="NoneKey" />
+    <property name="MapWidth" column="MapWidth" null="false" type="int" length="4" key="NoneKey" />
+    <property name="MapHeight" column="MapHeight" null="false" type="int" length="4" key="NoneKey" />
+    <property name="FacilitySouthNorth" column="FacilitySouthNorth" null="false" type="float" length="8" key="NoneKey" />
+    <property name="FacilityEastWest" column="FacilityEastWest" null="false" type="float" length="8" key="NoneKey" />
+    <property name="FacilityFloorHeight" column="FacilityFloorHeight" null="false" type="float" length="8" key="NoneKey" />
+    <property name="FacilityCeilingHeight" column="FacilityCeilingHeight" null="false" type="float" length="8" key="NoneKey" />
+    <property name="IsDisabled" column="IsDisabled" null="false" type="boolean" length="1" key="NoneKey" />
+    <property name="WriteTime" column="WriteTime" null="false" type="datetime" length="8" key="NoneKey" />
+  </class>
+  <class name="NetRadio.Model.map_LocationGroup" table="map_LocationGroup">
+    <property name="LocationId" column="LocationId" null="false" type="int" length="4" key="PrimaryKey" >
+    </property>
+    <property name="GroupId" column="GroupId" null="false" type="int" length="4" key="PrimaryKey" >
+    </property>
+    <property name="AreaId" column="AreaId" null="false" type="int" length="4" key="PrimaryKey" >
+    </property>
+  </class>
+  <class name="NetRadio.Model.map_LocationGroupInfo" table="map_LocationGroupInfo">
+    <property name="LocationGroupId" column="LocationGroupId" null="false" type="int" length="4" key="PrimaryKey" >
+    </property>
+    <property name="LocationGroupName" column="LocationGroupName" null="false" type="string" length="50" key="NoneKey" />
+  </class>
+  <class name="NetRadio.Model.map_LocationRelation" table="map_LocationRelation">
+    <property name="FromCoordinatesId" column="FromCoordinatesId" null="false" type="int" length="4" key="PrimaryKey" >
+    </property>
+    <property name="ToCoordinatesId" column="ToCoordinatesId" null="false" type="int" length="4" key="PrimaryKey" >
+    </property>
+    <property name="NextCoordinatesId" column="NextCoordinatesId" null="false" type="int" length="4" key="NoneKey" />
+  </class>
+  <class name="NetRadio.Model.map_MapArea" table="map_MapArea">
+    <property name="Id" column="Id" null="false" type="int" length="4" key="PrimaryKey" >
+    </property>
+    <property name="MapId" column="MapId" null="false" type="int" length="4" key="NoneKey" />
+    <property name="AreaName" column="AreaName" null="false" type="string" length="50" key="NoneKey" />
+    <property name="CoordinatesArray" column="CoordinatesArray" null="false" type="string" length="1000" key="NoneKey" />
+    <property name="LinkedMapId" column="LinkedMapId" null="false" type="int" length="4" key="NoneKey" />
+  </class>
+  <class name="NetRadio.Model.map_MapAreaCoverage" table="map_MapAreaCoverage">
+    <property name="AreaId" column="AreaId" null="false" type="int" length="4" key="PrimaryKey" >
+    </property>
+    <property name="CoordinatesId" column="CoordinatesId" null="false" type="int" length="4" key="PrimaryKey" >
+    </property>
+  </class>
+  <class name="NetRadio.Model.map_MapAreaGroup" table="map_MapAreaGroup">
+    <property name="AreaId" column="AreaId" null="false" type="int" length="4" key="PrimaryKey" >
+    </property>
+    <property name="AreaGroupId" column="AreaGroupId" null="false" type="int" length="4" key="PrimaryKey" >
+      <many-to-one parent="map_MapAreaGroupInfo.GroupID" />
+    </property>
+  </class>
+  <class name="NetRadio.Model.map_MapAreaGroupInfo" table="map_MapAreaGroupInfo">
+    <property name="GroupID" column="GroupID" null="false" type="int" length="4" key="PrimaryKey" >
+      <one-to-many child="map_MapAreaGroup.AreaGroupId" />
+    </property>
+    <property name="GroupName" column="GroupName" null="true" type="string" length="20" key="NoneKey" />
+  </class>
+  <class name="NetRadio.Model.map_MapRoute" table="map_MapRoute">
+    <property name="Id" column="Id" null="false" type="int" length="4" key="NoneKey" >
+      <generator class="identity">
+      </generator>
+    </property>
+    <property name="MapId" column="MapId" null="false" type="int" length="4" key="NoneKey" />
+    <property name="Endpoint1" column="Endpoint1" null="false" type="int" length="4" key="PrimaryKey" >
+    </property>
+    <property name="Endpoint2" column="Endpoint2" null="false" type="int" length="4" key="PrimaryKey" >
+    </property>
+    <property name="RouteName" column="RouteName" null="true" type="string" length="50" key="NoneKey" />
+    <property name="CoordinatesArray" column="CoordinatesArray" null="false" type="string" length="1000" key="NoneKey" />
+    <property name="TotalDistance" column="TotalDistance" null="false" type="float" length="8" key="NoneKey" />
+  </class>
+  <class name="NetRadio.Model.map_NeighborRoute" table="map_NeighborRoute">
+    <property name="Id" column="Id" null="false" type="int" length="4" key="NoneKey" >
+      <generator class="identity">
+      </generator>
+    </property>
+    <property name="MapId" column="MapId" null="false" type="int" length="4" key="NoneKey" />
+    <property name="EndPoint1" column="EndPoint1" null="false" type="int" length="4" key="PrimaryKey" >
+    </property>
+    <property name="EndPoint2" column="EndPoint2" null="false" type="int" length="4" key="PrimaryKey" >
+    </property>
+    <property name="PointArray" column="PointArray" null="false" type="string" length="500" key="NoneKey" />
+    <property name="CoordinatesArray" column="CoordinatesArray" null="false" type="string" length="1000" key="NoneKey" />
+    <property name="TotalDistance" column="TotalDistance" null="false" type="float" length="8" key="NoneKey" />
+  </class>
+  <class name="NetRadio.Model.monitor_APStatus" table="monitor_APStatus">
+    <property name="APId" column="APId" null="false" type="int" length="4" key="PrimaryKey" >
+    </property>
+    <property name="PingStatus" column="PingStatus" null="false" type="byte" length="1" key="NoneKey" />
+    <property name="Http80Status" column="Http80Status" null="false" type="byte" length="1" key="NoneKey" />
+    <property name="Telnet23Status" column="Telnet23Status" null="false" type="byte" length="1" key="NoneKey" />
+    <property name="APLocatorStatus" column="APLocatorStatus" null="false" type="byte" length="1" key="NoneKey" />
+    <property name="IPMacMatchingStatus" column="IPMacMatchingStatus" null="false" type="byte" length="1" key="NoneKey" />
+    <property name="UpdateTime" column="UpdateTime" null="false" type="datetime" length="8" key="NoneKey" />
+  </class>
+  <class name="NetRadio.Model.monitor_TagAlert" table="monitor_TagAlert">
+    <property name="AlertId" column="AlertId" null="false" type="int" length="4" key="PrimaryKey" >
+      <generator class="identity">
+      </generator>
+    </property>
+    <property name="HostId" column="HostId" null="false" type="int" length="4" key="NoneKey" />
+    <property name="TagId" column="TagId" null="false" type="int" length="4" key="NoneKey" />
+    <property name="MasterUserId" column="MasterUserId" null="false" type="int" length="4" key="NoneKey" />
+    <property name="AlertType" column="AlertType" null="false" type="byte" length="1" key="NoneKey" />
+    <property name="AlertStatus" column="AlertStatus" null="false" type="byte" length="1" key="NoneKey" />
+    <property name="AlertLevel" column="AlertLevel" null="false" type="byte" length="1" key="NoneKey" />
+    <property name="CoordinatesId" column="CoordinatesId" null="false" type="int" length="4" key="NoneKey" />
+    <property name="HistoryLogId" column="HistoryLogId" null="false" type="int" length="4" key="NoneKey" />
+    <property name="WriteTime" column="WriteTime" null="false" type="datetime" length="8" key="NoneKey" />
+  </class>
+  <class name="NetRadio.Model.monitor_TagEventStatus" table="monitor_TagEventStatus">
+    <property name="TagId" column="TagId" null="false" type="int" length="4" key="PrimaryKey" >
+    </property>
+    <property name="EventType" column="EventType" null="false" type="byte" length="1" key="PrimaryKey" >
+    </property>
+    <property name="EventStatus" column="EventStatus" null="false" type="byte" length="1" key="NoneKey" />
+    <property name="UpdateTime" column="UpdateTime" null="false" type="datetime" length="8" key="NoneKey" />
+  </class>
+  <class name="NetRadio.Model.monitor_TagPositionStatus" table="monitor_TagPositionStatus">
+    <property name="TagId" column="TagId" null="false" type="int" length="4" key="PrimaryKey" >
+    </property>
+    <property name="MapId" column="MapId" null="false" type="int" length="4" key="NoneKey" />
+    <property name="CoordinatesId" column="CoordinatesId" null="false" type="int" length="4" key="NoneKey" />
+    <property name="X" column="X" null="false" type="float" length="8" key="NoneKey" />
+    <property name="Y" column="Y" null="false" type="float" length="8" key="NoneKey" />
+    <property name="Z" column="Z" null="false" type="float" length="8" key="NoneKey" />
+    <property name="UpdateTime" column="UpdateTime" null="false" type="datetime" length="8" key="NoneKey" />
+  </class>
+  <class name="NetRadio.Model.object_HostGroup" table="object_HostGroup">
+    <property name="HostId" column="HostId" null="false" type="int" length="4" key="PrimaryKey" >
+    </property>
+    <property name="HostGroupId" column="HostGroupId" null="false" type="int" length="4" key="PrimaryKey" >
+    </property>
+  </class>
+  <class name="NetRadio.Model.object_HostGroupInfo" table="object_HostGroupInfo">
+    <property name="HostGroupId" column="HostGroupId" null="false" type="int" length="4" key="PrimaryKey" >
+    </property>
+    <property name="HostGroupName" column="HostGroupName" null="true" type="string" length="10" key="NoneKey" />
+    <property name="Description" column="Description" null="true" type="string" length="50" key="NoneKey" />
+    <property name="ParentGroupId" column="ParentGroupId" null="false" type="int" length="4" key="NoneKey" />
+  </class>
+  <class name="NetRadio.Model.object_HostStatus" table="object_HostStatus">
+    <property name="HostId" column="HostId" null="false" type="int" length="4" key="PrimaryKey" >
+    </property>
+    <property name="HostStatusType" column="HostStatusType" null="false" type="byte" length="1" key="NoneKey" />
+  </class>
+  <class name="NetRadio.Model.object_HostTag" table="object_HostTag">
+    <property name="HostId" column="HostId" null="false" type="int" length="4" key="PrimaryKey" >
+    </property>
+    <property name="TagId" column="TagId" null="false" type="int" length="4" key="NoneKey" />
+    <property name="HostExternalId" column="HostExternalId" null="true" type="string" length="50" key="NoneKey" />
+    <property name="HostType" column="HostType" null="false" type="byte" length="1" key="NoneKey" />
+    <property name="HostName" column="HostName" null="false" type="string" length="50" key="NoneKey" />
+    <property name="Description" column="Description" null="true" type="string" length="200" key="NoneKey" />
+    <property name="ImagePath" column="ImagePath" null="true" type="string" length="100" key="NoneKey" />
+    <property name="WriteTime" column="WriteTime" null="false" type="datetime" length="8" key="NoneKey" />
+  </class>
+  <class name="NetRadio.Model.plugin_AreaWarningRule" table="plugin_AreaWarningRule">
+    <property name="Id" column="Id" null="false" type="int" length="4" key="PrimaryKey" >
+      <generator class="identity">
+      </generator>
+    </property>
+    <property name="AreaId" column="AreaId" null="false" type="int" length="4" key="NoneKey" />
+    <property name="EnableToAllTags" column="EnableToAllTags" null="false" type="boolean" length="1" key="NoneKey" />
+    <property name="AreaEventType" column="AreaEventType" null="false" type="byte" length="1" key="NoneKey" />
+    <property name="IsDisabled" column="IsDisabled" null="false" type="boolean" length="1" key="NoneKey" />
+  </class>
+  <class name="NetRadio.Model.plugin_AreaWarningRuleCoverage" table="plugin_AreaWarningRuleCoverage">
+    <property name="RuleId" column="RuleId" null="false" type="int" length="4" key="PrimaryKey" >
+    </property>
+    <property name="TagId" column="TagId" null="false" type="int" length="4" key="PrimaryKey" >
+    </property>
+  </class>
+  <class name="NetRadio.Model.plugin_CoordinatesCamera" table="plugin_CoordinatesCamera">
+    <property name="CoordinatesId" column="CoordinatesId" null="false" type="int" length="4" key="PrimaryKey" >
+    </property>
+    <property name="CameraIP" column="CameraIP" null="false" type="string" length="50" key="NoneKey" />
+    <property name="iChannel" column="iChannel" null="false" type="int" length="4" key="NoneKey" />
+    <property name="CameraIPlref" column="CameraIPlref" null="true" type="string" length="50" key="NoneKey" />
+    <property name="iChannelref" column="iChannelref" null="false" type="int" length="4" key="NoneKey" />
+  </class>
+  <class name="NetRadio.Model.plugin_CulpritRoomReference" table="plugin_CulpritRoomReference">
+    <property name="CulpritId" column="CulpritId" null="false" type="int" length="4" key="PrimaryKey" >
+    </property>
+    <property name="JailRoomId" column="JailRoomId" null="false" type="int" length="4" key="PrimaryKey" >
+    </property>
+  </class>
+  <class name="NetRadio.Model.plugin_InterrogationLog" table="plugin_InterrogationLog">
+    <property name="id" column="id" null="false" type="int" length="4" key="PrimaryKey" >
+      <generator class="identity">
+      </generator>
+    </property>
+    <property name="PoliceId" column="PoliceId" null="false" type="int" length="4" key="NoneKey" />
+    <property name="CulpritId" column="CulpritId" null="false" type="int" length="4" key="NoneKey" />
+    <property name="StartTime" column="StartTime" null="false" type="datetime" length="8" key="NoneKey" />
+    <property name="EndTime" column="EndTime" null="true" type="datetime" length="8" key="NoneKey" />
+    <property name="Status" column="Status" null="false" type="boolean" length="1" key="NoneKey" />
+  </class>
+  <class name="NetRadio.Model.plugin_Menu" table="plugin_Menu">
+    <property name="ID" column="ID" null="false" type="string" length="50" key="PrimaryKey" >
+    </property>
+    <property name="PID" column="PID" null="true" type="string" length="50" key="NoneKey" />
+    <property name="MenuText" column="MenuText" null="false" type="string" length="50" key="NoneKey" />
+    <property name="MenuImgSrc" column="MenuImgSrc" null="true" type="string" length="200" key="NoneKey" />
+    <property name="SortNum" column="SortNum" null="true" type="int" length="4" key="NoneKey" />
+    <property name="pcID" column="pcID" null="true" type="string" length="4" key="ForeignKey" >
+      <many-to-one parent="plugin_PageConfig.ID" />
+    </property>
+    <property name="IsAvailable" column="IsAvailable" null="true" type="boolean" length="1" key="NoneKey" />
+    <property name="IsAvailableInTab" column="IsAvailableInTab" null="true" type="boolean" length="1" key="NoneKey" />
+  </class>
+  <class name="NetRadio.Model.plugin_MenuGroup" table="plugin_MenuGroup">
+    <property name="Id" column="Id" null="false" type="int" length="4" key="NoneKey" >
+      <generator class="identity">
+      </generator>
+    </property>
+    <property name="GroupName" column="GroupName" null="false" type="string" length="50" key="NoneKey" />
+    <property name="IsAvailable" column="IsAvailable" null="false" type="boolean" length="1" key="NoneKey" />
+  </class>
+  <class name="NetRadio.Model.plugin_MenuLink" table="plugin_MenuLink">
+    <property name="Id" column="Id" null="false" type="int" length="4" key="NoneKey" >
+      <generator class="identity">
+      </generator>
+    </property>
+    <property name="GroupId" column="GroupId" null="false" type="int" length="4" key="NoneKey" />
+    <property name="LinkText" column="LinkText" null="false" type="string" length="50" key="NoneKey" />
+    <property name="Url" column="Url" null="false" type="string" length="100" key="NoneKey" />
+    <property name="OrderNo" column="OrderNo" null="false" type="int" length="4" key="NoneKey" />
+    <property name="IsAvailable" column="IsAvailable" null="false" type="boolean" length="1" key="NoneKey" />
+  </class>
+  <class name="NetRadio.Model.plugin_PageConfig" table="plugin_PageConfig">
+    <property name="ID" column="ID" null="false" type="string" length="4" key="PrimaryKey" >
+      <one-to-many child="sys_DefaultDisabledAccess.pcID" />
+      <one-to-many child="sys_DisabledAccess.pcID" />
+      <one-to-many child="plugin_Menu.pcID" />
+    </property>
+    <property name="GroupName" column="GroupName" null="true" type="string" length="20" key="NoneKey" />
+    <property name="Source" column="Source" null="false" type="string" length="200" key="UniqueKey" />
+    <property name="Title" column="Title" null="true" type="string" length="50" key="NoneKey" />
+    <property name="SiteMap" column="SiteMap" null="true" type="string" length="200" key="NoneKey" />
+    <property name="ClassFullName" column="ClassFullName" null="true" type="string" length="100" key="NoneKey" />
+  </class>
+  <class name="NetRadio.Model.plugin_PositionRecord" table="plugin_PositionRecord">
+    <property name="Id" column="Id" null="false" type="int" length="4" key="PrimaryKey" >
+      <generator class="identity">
+      </generator>
+    </property>
+    <property name="ObjectTagMac" column="ObjectTagMac" null="false" type="string" length="20" key="NoneKey" />
+    <property name="LocationTagMac" column="LocationTagMac" null="false" type="string" length="20" key="NoneKey" />
+    <property name="SignalQuality" column="SignalQuality" null="false" type="int" length="4" key="NoneKey" />
+    <property name="Distance" column="Distance" null="false" type="float" length="8" key="NoneKey" />
+    <property name="UpdateTime" column="UpdateTime" null="false" type="datetime" length="8" key="NoneKey" />
+  </class>
+  <class name="NetRadio.Model.plugin_SecurityLog" table="plugin_SecurityLog">
+    <property name="Id" column="Id" null="false" type="int" length="4" key="PrimaryKey" >
+      <generator class="identity">
+      </generator>
+    </property>
+    <property name="UserId" column="UserId" null="false" type="int" length="4" key="NoneKey" />
+    <property name="UserName" column="UserName" null="false" type="string" length="24" key="NoneKey" />
+    <property name="TagId" column="TagId" null="false" type="int" length="4" key="NoneKey" />
+    <property name="TagUserId" column="TagUserId" null="false" type="int" length="4" key="NoneKey" />
+    <property name="Description" column="Description" null="false" type="string" length="500" key="NoneKey" />
+    <property name="IP" column="IP" null="true" type="string" length="15" key="NoneKey" />
+    <property name="Priority" column="Priority" null="false" type="byte" length="1" key="NoneKey" />
+    <property name="WriteTime" column="WriteTime" null="false" type="datetime" length="8" key="NoneKey" />
+    <property name="IsDeleted" column="IsDeleted" null="false" type="boolean" length="1" key="NoneKey" />
+  </class>
+  <class name="NetRadio.Model.plugin_TagUser" table="plugin_TagUser">
+    <property name="Id" column="Id" null="false" type="int" length="4" key="PrimaryKey" >
+      <generator class="identity">
+      </generator>
+    </property>
+    <property name="TagId" column="TagId" null="false" type="int" length="4" key="NoneKey" />
+    <property name="UserType" column="UserType" null="false" type="byte" length="1" key="NoneKey" />
+    <property name="Name" column="Name" null="false" type="string" length="16" key="NoneKey" />
+    <property name="Number" column="Number" null="false" type="string" length="16" key="NoneKey" />
+    <property name="PhotoUrl" column="PhotoUrl" null="true" type="string" length="200" key="NoneKey" />
+    <property name="Memo" column="Memo" null="true" type="string" length="1000" key="NoneKey" />
+  </class>
+  <class name="NetRadio.Model.plugin_TagUserType" table="plugin_TagUserType">
+    <property name="TypeNum" column="TypeNum" null="false" type="int" length="4" key="PrimaryKey" >
+    </property>
+    <property name="TypeName" column="TypeName" null="false" type="string" length="20" key="NoneKey" />
+  </class>
+  <class name="NetRadio.Model.plugin_WarningRecord" table="plugin_WarningRecord">
+    <property name="Id" column="Id" null="false" type="int" length="4" key="PrimaryKey" >
+      <generator class="identity">
+      </generator>
+    </property>
+    <property name="ObjectTagMac" column="ObjectTagMac" null="false" type="string" length="20" key="NoneKey" />
+    <property name="WarningType" column="WarningType" null="false" type="int16" length="2" key="NoneKey" />
+    <property name="UpdateTime" column="UpdateTime" null="false" type="datetime" length="8" key="NoneKey" />
+  </class>
+  <class name="NetRadio.Model.Report_AlertStatus_Type" table="Report_AlertStatus_Type">
+    <property name="ID" column="ID" null="false" type="int" length="4" key="NoneKey" >
+      <generator class="identity">
+      </generator>
+    </property>
+    <property name="Status" column="Status" null="false" type="int" length="4" key="PrimaryKey" >
+    </property>
+    <property name="tAreaEvent" column="tAreaEvent" null="true" type="int" length="4" key="NoneKey" />
+    <property name="tAbsent" column="tAbsent" null="true" type="int" length="4" key="NoneKey" />
+    <property name="tBatteryInsufficient" column="tBatteryInsufficient" null="true" type="int" length="4" key="NoneKey" />
+    <property name="tBatteryReset" column="tBatteryReset" null="true" type="int" length="4" key="NoneKey" />
+    <property name="tButtonPressed" column="tButtonPressed" null="true" type="int" length="4" key="NoneKey" />
+    <property name="tWristletBroken" column="tWristletBroken" null="true" type="int" length="4" key="NoneKey" />
+    <property name="tAPLocatorDown" column="tAPLocatorDown" null="true" type="int" length="4" key="NoneKey" />
+  </class>
+  <class name="NetRadio.Model.Report_AlertType_Status" table="Report_AlertType_Status">
+    <property name="ID" column="ID" null="false" type="int" length="4" key="NoneKey" >
+      <generator class="identity">
+      </generator>
+    </property>
+    <property name="tType" column="tType" null="false" type="int" length="4" key="PrimaryKey" >
+    </property>
+    <property name="sNew" column="sNew" null="true" type="int" length="4" key="NoneKey" />
+    <property name="sProcessing" column="sProcessing" null="true" type="int" length="4" key="NoneKey" />
+    <property name="sResolved" column="sResolved" null="true" type="int" length="4" key="NoneKey" />
+  </class>
+  <class name="NetRadio.Model.Report_TotalCount" table="Report_TotalCount">
+    <property name="ID" column="ID" null="false" type="int" length="4" key="PrimaryKey" >
+      <generator class="identity">
+      </generator>
+    </property>
+    <property name="sNew" column="sNew" null="true" type="int" length="4" key="NoneKey" />
+    <property name="sProcessing" column="sProcessing" null="true" type="int" length="4" key="NoneKey" />
+    <property name="sResolved" column="sResolved" null="true" type="int" length="4" key="NoneKey" />
+    <property name="sTotal" column="sTotal" null="true" type="int" length="4" key="NoneKey" />
+    <property name="tAreaEvent" column="tAreaEvent" null="true" type="int" length="4" key="NoneKey" />
+    <property name="tAbsent" column="tAbsent" null="true" type="int" length="4" key="NoneKey" />
+    <property name="tBatteryInsufficient" column="tBatteryInsufficient" null="true" type="int" length="4" key="NoneKey" />
+    <property name="tBatteryReset" column="tBatteryReset" null="true" type="int" length="4" key="NoneKey" />
+    <property name="tButtonPressed" column="tButtonPressed" null="true" type="int" length="4" key="NoneKey" />
+    <property name="tWristletBroken" column="tWristletBroken" null="true" type="int" length="4" key="NoneKey" />
+    <property name="tAPLocatorDown" column="tAPLocatorDown" null="true" type="int" length="4" key="NoneKey" />
+    <property name="tTotal" column="tTotal" null="true" type="int" length="4" key="NoneKey" />
+  </class>
+  <class name="NetRadio.Model.sys_BackupLogConfig" table="sys_BackupLogConfig">
+    <property name="FieldType" column="FieldType" null="false" type="string" length="50" key="NoneKey" />
+    <property name="FieldValue" column="FieldValue" null="false" type="string" length="100" key="NoneKey" />
+    <property name="DateFieldName" column="DateFieldName" null="true" type="string" length="50" key="NoneKey" />
+    <property name="Description" column="Description" null="true" type="string" length="50" key="NoneKey" />
+  </class>
+  <class name="NetRadio.Model.sys_DefaultDisabledAccess" table="sys_DefaultDisabledAccess">
+    <property name="pcID" column="pcID" null="true" type="string" length="4" key="ForeignKey" >
+      <many-to-one parent="plugin_PageConfig.ID" />
+    </property>
+    <property name="Role" column="Role" null="false" type="int" length="4" key="NoneKey" />
+  </class>
+  <class name="NetRadio.Model.sys_Diary" table="sys_Diary">
+    <property name="Id" column="Id" null="false" type="int" length="4" key="PrimaryKey" >
+      <generator class="identity">
+      </generator>
+    </property>
+    <property name="UserId" column="UserId" null="false" type="int" length="4" key="NoneKey" />
+    <property name="TagId" column="TagId" null="false" type="int" length="4" key="NoneKey" />
+    <property name="HostId" column="HostId" null="false" type="int" length="4" key="NoneKey" />
+    <property name="Action" column="Action" null="false" type="string" length="100" key="NoneKey" />
+    <property name="WriteTime" column="WriteTime" null="false" type="datetime" length="8" key="NoneKey" />
+  </class>
+  <class name="NetRadio.Model.sys_DisabledAccess" table="sys_DisabledAccess">
+    <property name="UserName" column="UserName" null="false" type="string" length="24" key="ForeignKey" >
+      <many-to-one parent="sys_User.UserName" />
+    </property>
+    <property name="pcID" column="pcID" null="true" type="string" length="4" key="ForeignKey" >
+      <many-to-one parent="plugin_PageConfig.ID" />
+    </property>
+  </class>
+  <class name="NetRadio.Model.sys_SystemConfig" table="sys_SystemConfig">
+    <property name="Name" column="Name" null="false" type="string" length="50" key="PrimaryKey" >
+    </property>
+    <property name="Value" column="Value" null="true" type="string" length="1000" key="NoneKey" />
+    <property name="GroupId" column="GroupId" null="false" type="byte" length="1" key="NoneKey" />
+    <property name="UIName" column="UIName" null="true" type="string" length="50" key="NoneKey" />
+    <property name="Description" column="Description" null="true" type="string" length="200" key="NoneKey" />
+    <property name="InputMode" column="InputMode" null="false" type="byte" length="1" key="NoneKey" />
+    <property name="Pattern" column="Pattern" null="true" type="string" length="200" key="NoneKey" />
+    <property name="Range" column="Range" null="true" type="string" length="1000" key="NoneKey" />
+  </class>
+  <class name="NetRadio.Model.sys_Task" table="sys_Task">
+    <property name="Id" column="Id" null="false" type="int" length="4" key="PrimaryKey" >
+      <generator class="identity">
+      </generator>
+    </property>
+    <property name="Command" column="Command" null="false" type="byte" length="1" key="NoneKey" />
+    <property name="CommandXml" column="CommandXml" null="true" type="string" length="1000" key="NoneKey" />
+    <property name="Period" column="Period" null="false" type="byte" length="1" key="NoneKey" />
+    <property name="ExecuteTime" column="ExecuteTime" null="false" type="datetime" length="8" key="NoneKey" />
+    <property name="Memo" column="Memo" null="true" type="string" length="200" key="NoneKey" />
+    <property name="WriteTime" column="WriteTime" null="false" type="datetime" length="8" key="NoneKey" />
+  </class>
+  <class name="NetRadio.Model.sys_User" table="sys_User">
+    <property name="Id" column="Id" null="false" type="int" length="4" key="NoneKey" >
+      <generator class="identity">
+      </generator>
+    </property>
+    <property name="UserName" column="UserName" null="false" type="string" length="24" key="PrimaryKey" >
+      <one-to-many child="sys_DisabledAccess.UserName" />
+    </property>
+    <property name="Password" column="Password" null="false" type="string" length="32" key="NoneKey" />
+    <property name="Role" column="Role" null="false" type="int" length="4" key="NoneKey" />
+  </class>
+
+  <class name="NetRadio.Model.DBViewAreaEventLog" view="DBViewAreaEventLog">
+    <property name="Id" column="Id" null="false" type="int" />
+    <property name="AreaEventType" column="AreaEventType" null="false" type="byte" />
+    <property name="WriteTime" column="WriteTime" null="false" type="datetime" />
+    <property name="TagMac" column="TagMac" null="false" type="string" />
+    <property name="TagName" column="TagName" null="false" type="string" />
+    <property name="AreaId" column="AreaId" null="false" type="int" />
+    <property name="AreaName" column="AreaName" null="false" type="string" />
+    <property name="MapId" column="MapId" null="false" type="int" />
+    <property name="FacilityId" column="FacilityId" null="false" type="int" />
+    <property name="FacilityName" column="FacilityName" null="false" type="string" />
+    <property name="HostId" column="HostId" null="false" type="int" />
+    <property name="TagId" column="TagId" null="false" type="int" />
+    <property name="HostExternalId" column="HostExternalId" null="true" type="string" />
+    <property name="HostType" column="HostType" null="true" type="byte" />
+    <property name="HostName" column="HostName" null="true" type="string" />
+  </class>
+  <class name="NetRadio.Model.DBViewGenericEventLog" view="DBViewGenericEventLog">
+    <property name="Id" column="Id" null="false" type="int" />
+    <property name="GenericEventType" column="GenericEventType" null="false" type="int" />
+    <property name="WriteTime" column="WriteTime" null="false" type="datetime" />
+    <property name="TagId" column="TagId" null="false" type="int" />
+    <property name="TagMac" column="TagMac" null="false" type="string" />
+    <property name="TagName" column="TagName" null="false" type="string" />
+    <property name="CoordinatesId" column="CoordinatesId" null="false" type="int" />
+    <property name="CoordinatesName" column="CoordinatesName" null="false" type="string" />
+    <property name="MapId" column="MapId" null="false" type="int" />
+    <property name="FacilityId" column="FacilityId" null="false" type="int" />
+    <property name="FacilityName" column="FacilityName" null="false" type="string" />
+    <property name="HostId" column="HostId" null="false" type="int" />
+    <property name="HostExternalId" column="HostExternalId" null="true" type="string" />
+    <property name="HostType" column="HostType" null="true" type="byte" />
+    <property name="HostName" column="HostName" null="true" type="string" />
+  </class>
+  <class name="NetRadio.Model.DBViewTagAlert" view="DBViewTagAlert">
+    <property name="AlertId" column="AlertId" null="false" type="int" />
+    <property name="TagId" column="TagId" null="false" type="int" />
+    <property name="AlertType" column="AlertType" null="false" type="byte" />
+    <property name="AlertStatus" column="AlertStatus" null="false" type="byte" />
+    <property name="AlertLevel" column="AlertLevel" null="false" type="byte" />
+    <property name="CoordinatesId" column="CoordinatesId" null="false" type="int" />
+    <property name="CoordinatesName" column="CoordinatesName" null="false" type="string" />
+    <property name="MapId" column="MapId" null="false" type="int" />
+    <property name="FacilityName" column="FacilityName" null="false" type="string" />
+    <property name="WriteTime" column="WriteTime" null="false" type="datetime" />
+    <property name="TagName" column="TagName" null="false" type="string" />
+    <property name="TagMac" column="TagMac" null="false" type="string" />
+    <property name="HostExternalId" column="HostExternalId" null="true" type="string" />
+    <property name="HostType" column="HostType" null="true" type="byte" />
+    <property name="HostName" column="HostName" null="true" type="string" />
+    <property name="HostId" column="HostId" null="true" type="int" />
+  </class>
+  <class name="NetRadio.Model.DBViewTagPositionLog" view="DBViewTagPositionLog">
+    <property name="WriteTime" column="WriteTime" null="false" type="datetime" />
+    <property name="TagId" column="TagId" null="false" type="int" />
+    <property name="TagMac" column="TagMac" null="false" type="string" />
+    <property name="CoordinatesId" column="CoordinatesId" null="false" type="int" />
+    <property name="CoordinatesName" column="CoordinatesName" null="false" type="string" />
+    <property name="MapId" column="MapId" null="false" type="int" />
+    <property name="FacilityId" column="FacilityId" null="false" type="int" />
+    <property name="FacilityName" column="FacilityName" null="false" type="string" />
+    <property name="IsDisappeared" column="IsDisappeared" null="false" type="float" />
+    <property name="TagName" column="TagName" null="false" type="string" />
+    <property name="Id" column="Id" null="false" type="int" />
+    <property name="HostId" column="HostId" null="false" type="int" />
+    <property name="HostExternalId" column="HostExternalId" null="true" type="string" />
+    <property name="HostType" column="HostType" null="true" type="byte" />
+    <property name="HostName" column="HostName" null="true" type="string" />
+  </class>
+  <class name="NetRadio.Model.DBViewTagSetting" view="DBViewTagSetting">
+    <property name="Id" column="Id" null="false" type="int" />
+    <property name="TagMac" column="TagMac" null="false" type="string" />
+    <property name="TagName" column="TagName" null="false" type="string" />
+    <property name="ProductType" column="ProductType" null="false" type="byte" />
+    <property name="WorkingStatus" column="WorkingStatus" null="false" type="byte" />
+    <property name="HostId" column="HostId" null="true" type="int" />
+    <property name="HostExternalId" column="HostExternalId" null="true" type="string" />
+    <property name="HostName" column="HostName" null="true" type="string" />
+    <property name="HostType" column="HostType" null="true" type="byte" />
+    <property name="LocatingMode" column="LocatingMode" null="true" type="byte" />
+    <property name="ScanMode" column="ScanMode" null="true" type="byte" />
+    <property name="ScanTarget" column="ScanTarget" null="true" type="byte" />
+    <property name="ScanSsid" column="ScanSsid" null="true" type="string" />
+    <property name="ScanChannels" column="ScanChannels" null="true" type="string" />
+    <property name="ScanInterval" column="ScanInterval" null="true" type="int" />
+    <property name="SurveyGroupId" column="SurveyGroupId" null="true" type="int" />
+    <property name="RssiBackCount" column="RssiBackCount" null="true" type="int" />
+    <property name="CommandState" column="CommandState" null="true" type="byte" />
+    <property name="UpdateTime" column="UpdateTime" null="true" type="datetime" />
+  </class>
+  <class name="NetRadio.Model.view_APLocatorLog" view="view_APLocatorLog">
+    <property name="APLocatorId" column="APLocatorId" null="false" type="int" />
+    <property name="APLocatorStatus" column="APLocatorStatus" null="false" type="byte" />
+    <property name="APMac" column="APMac" null="false" type="string" />
+    <property name="WriteTime" column="WriteTime" null="false" type="datetime" />
+    <property name="APName" column="APName" null="false" type="string" />
+    <property name="CoordinatesId" column="CoordinatesId" null="false" type="int" />
+    <property name="CoordinatesName" column="CoordinatesName" null="false" type="string" />
+    <property name="MapId" column="MapId" null="false" type="int" />
+    <property name="FacilityName" column="FacilityName" null="false" type="string" />
+  </class>
+  <class name="NetRadio.Model.view_CoordinateFacilityView" view="view_CoordinateFacilityView">
+    <property name="Id" column="Id" null="false" type="int" />
+    <property name="MapId" column="MapId" null="false" type="int" />
+    <property name="CoordinatesName" column="CoordinatesName" null="false" type="string" />
+    <property name="X" column="X" null="false" type="float" />
+    <property name="Y" column="Y" null="false" type="float" />
+    <property name="Z" column="Z" null="false" type="float" />
+    <property name="FacilityName" column="FacilityName" null="false" type="string" />
+    <property name="ParentFacilityId" column="ParentFacilityId" null="false" type="int" />
+    <property name="FacilityId" column="FacilityId" null="false" type="int" />
+  </class>
+  <class name="NetRadio.Model.view_Diary" view="view_Diary">
+    <property name="Id" column="Id" null="false" type="int" />
+    <property name="UserId" column="UserId" null="false" type="int" />
+    <property name="Action" column="Action" null="false" type="string" />
+    <property name="WriteTime" column="WriteTime" null="false" type="datetime" />
+    <property name="UserName" column="UserName" null="false" type="string" />
+    <property name="HostName" column="HostName" null="false" type="string" />
+    <property name="TagMac" column="TagMac" null="false" type="string" />
+    <property name="TagId" column="TagId" null="false" type="int" />
+    <property name="HostId" column="HostId" null="false" type="int" />
+  </class>
+  <class name="NetRadio.Model.view_HostPositionStatusView" view="view_HostPositionStatusView">
+    <property name="HostId" column="HostId" null="false" type="int" />
+    <property name="TagId" column="TagId" null="false" type="int" />
+    <property name="HostExternalId" column="HostExternalId" null="true" type="string" />
+    <property name="HostName" column="HostName" null="false" type="string" />
+    <property name="ImagePath" column="ImagePath" null="true" type="string" />
+    <property name="HostGroupId" column="HostGroupId" null="false" type="int" />
+    <property name="HostStatusType" column="HostStatusType" null="false" type="byte" />
+    <property name="ParentGroupId" column="ParentGroupId" null="false" type="int" />
+    <property name="HostType" column="HostType" null="false" type="byte" />
+    <property name="MapId" column="MapId" null="false" type="int" />
+    <property name="CoordinatesId" column="CoordinatesId" null="false" type="int" />
+    <property name="CoordinatesName" column="CoordinatesName" null="false" type="string" />
+    <property name="FacilityName" column="FacilityName" null="false" type="string" />
+    <property name="AlertCount" column="AlertCount" null="false" type="int" />
+    <property name="IsDisappeared" column="IsDisappeared" null="false" type="float" />
+  </class>
+  <class name="NetRadio.Model.view_HostTagGroupStatus" view="view_HostTagGroupStatus">
+    <property name="HostId" column="HostId" null="false" type="int" />
+    <property name="TagId" column="TagId" null="false" type="int" />
+    <property name="HostExternalId" column="HostExternalId" null="true" type="string" />
+    <property name="HostName" column="HostName" null="false" type="string" />
+    <property name="Description" column="Description" null="true" type="string" />
+    <property name="ImagePath" column="ImagePath" null="true" type="string" />
+    <property name="HostGroupId" column="HostGroupId" null="false" type="int" />
+    <property name="HostStatusType" column="HostStatusType" null="false" type="byte" />
+    <property name="HostGroupName" column="HostGroupName" null="false" type="string" />
+    <property name="ParentGroupId" column="ParentGroupId" null="false" type="int" />
+    <property name="HostType" column="HostType" null="false" type="byte" />
+    <property name="TagMac" column="TagMac" null="false" type="string" />
+  </class>
+  <class name="NetRadio.Model.view_TagGroupCounterView" view="view_TagGroupCounterView">
+    <property name="Id" column="Id" null="false" type="int" />
+    <property name="GroupName" column="GroupName" null="false" type="string" />
+    <property name="GroupDescription" column="GroupDescription" null="true" type="string" />
+    <property name="CreateTime" column="CreateTime" null="false" type="datetime" />
+    <property name="TagCount" column="TagCount" null="false" type="int" />
+  </class>
+
+</summer-mapping>

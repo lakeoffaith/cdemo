@@ -1,0 +1,3217 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Summer</name>
+    </assembly>
+    <members>
+        <member name="T:Summer.SummerException">
+            <summary>
+            Summer异常类
+            </summary>
+        </member>
+        <member name="M:Summer.SummerException.#ctor">
+            <summary>
+            无参构造函数
+            </summary>
+        </member>
+        <member name="M:Summer.SummerException.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="message">异常详细信息</param>
+        </member>
+        <member name="M:Summer.SummerException.#ctor(System.String,System.Exception)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="message">异常详细信息</param>
+            <param name="innerException">内部异常</param>
+        </member>
+        <member name="M:Summer.SummerException.Finalize">
+            <summary>
+            析构函数
+            </summary>
+        </member>
+        <member name="M:Summer.SummerException.Dispose">
+            <summary>
+            销毁函数
+            </summary>
+        </member>
+        <member name="T:Summer.NoPrimaryKeyException">
+            <summary>
+            没有主键的异常
+            </summary>
+        </member>
+        <member name="M:Summer.NoPrimaryKeyException.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="message">异常详细信息</param>
+        </member>
+        <member name="T:Summer.SelectBatch`1">
+            <summary>
+            查找批处理
+            </summary>
+        </member>
+        <member name="T:Summer.Batch`1">
+            <summary>
+            批处理抽象基类
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="F:Summer.Batch`1._DataBaseMapping">
+            <summary>
+            映射的数据库
+            </summary>
+        </member>
+        <member name="F:Summer.Batch`1._ClassMapping">
+            <summary>
+            类映射信息
+            </summary>
+        </member>
+        <member name="F:Summer.Batch`1._EntityType">
+            <summary>
+            操作实体的类型
+            </summary>
+        </member>
+        <member name="F:Summer.Batch`1._DbCommand">
+            <summary>
+            对应的SQL执行命令
+            </summary>
+        </member>
+        <member name="F:Summer.Batch`1._Where">
+            <summary>
+            限制条件
+            </summary>
+        </member>
+        <member name="F:Summer.Batch`1._DBUtility">
+            <summary>
+            数据库工具
+            </summary>
+        </member>
+        <member name="M:Summer.Batch`1.#ctor">
+            <summary>
+            无参构造函数
+            </summary>
+        </member>
+        <member name="M:Summer.Batch`1.Finalize">
+            <summary>
+            析构函数
+            </summary>  
+        </member>
+        <member name="M:Summer.Batch`1.Dispose">
+            <summary>
+            销毁函数
+            </summary>
+        </member>
+        <member name="M:Summer.Batch`1.BuildDbCommand">
+            <summary>
+            建立数据库执行命令
+            </summary>
+        </member>
+        <member name="M:Summer.Batch`1.Execute">
+            <summary>
+            执行批处理
+            </summary>
+        </member>
+        <member name="M:Summer.Batch`1.Execute(System.Boolean)">
+            <summary>
+            执行批处理
+            </summary>
+            <param name="IsStart">是否启动事务处理</param>
+            <returns></returns>
+        </member>
+        <member name="P:Summer.Batch`1.EntityType">
+            <summary>
+            获取批处理对应的类型
+            </summary>
+        </member>
+        <member name="P:Summer.Batch`1.ORDataBaseMapping">
+            <summary>
+            批处理映射的数据库
+            </summary>
+        </member>
+        <member name="P:Summer.Batch`1.ORClassMapping">
+            <summary>
+            批处理映射的类
+            </summary>
+        </member>
+        <member name="P:Summer.Batch`1.Where">
+            <summary>
+            获取或设置批处理的限制条件
+            </summary>
+        </member>
+        <member name="P:Summer.Batch`1.DbCommand">
+            <summary>
+            获取批处理对应的数据库命令
+            </summary>
+        </member>
+        <member name="F:Summer.SelectBatch`1._Top">
+            <summary>
+            取前Top条记录，当Top小于0时，获取全部
+            </summary>
+        </member>
+        <member name="F:Summer.SelectBatch`1._Order">
+            <summary>
+            排序方式
+            </summary>
+        </member>
+        <member name="M:Summer.SelectBatch`1.#ctor">
+            <summary>
+            无参构造函数
+            </summary>
+        </member>
+        <member name="M:Summer.SelectBatch`1.Finalize">
+            <summary>
+            析构函数 
+            </summary>
+        </member>
+        <member name="M:Summer.SelectBatch`1.Dispose">
+            <summary>
+            销毁函数
+            </summary>
+        </member>
+        <member name="M:Summer.SelectBatch`1.BuildDbCommand">
+            <summary>
+            创建SQL执行语句
+            </summary>
+        </member>
+        <member name="M:Summer.SelectBatch`1.Execute">
+            <summary>
+            执行批处理
+            </summary>
+        </member>
+        <member name="M:Summer.SelectBatch`1.Execute(System.Boolean)">
+            <summary>
+            执行批处理
+            </summary>
+            <param name="IsStart">是否启动事务处理</param>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.SelectBatch`1.AsDataTable">
+            <summary>
+            作为DataTable形式返回结果
+            </summary>
+        </member>
+        <member name="M:Summer.SelectBatch`1.AsEntity">
+            <summary>
+            作为Entity形式返回结果,如果有多个结果，只返回一个
+            </summary>
+        </member>
+        <member name="M:Summer.SelectBatch`1.AsEntityCollection">
+            <summary>
+            作为EntityCollection 泛型形式返回结果
+            </summary>
+        </member>
+        <member name="M:Summer.SelectBatch`1.Clone">
+            <summary>
+            数据深度克隆
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Summer.SelectBatch`1.Top">
+            <summary>
+            取前Top条记录，当Top小于0时，获取全部
+            </summary>
+        </member>
+        <member name="P:Summer.SelectBatch`1.Order">
+            <summary>
+            排序方式
+            </summary>
+        </member>
+        <member name="T:Summer.MSSQL">
+            <summary>
+            SQL数据库操作类
+            </summary>
+        </member>
+        <member name="T:Summer.DataBaseObject">
+            <summary>
+            数据库操作基类
+            </summary>
+        </member>
+        <member name="F:Summer.DataBaseObject._Connection">
+            <summary>
+            数据库连接
+            </summary>
+        </member>
+        <member name="F:Summer.DataBaseObject._Command">
+            <summary>
+            数据库操作命令
+            </summary>
+        </member>
+        <member name="F:Summer.DataBaseObject._Transaction">
+            <summary>
+            事务处理
+            </summary>
+        </member>
+        <member name="F:Summer.DataBaseObject._Name">
+            <summary>
+            数据库名称
+            </summary>
+        </member>
+        <member name="F:Summer.DataBaseObject._DBUtility">
+            <summary>
+            数据库常用工具
+            </summary>
+        </member>
+        <member name="M:Summer.DataBaseObject.#ctor">
+            <summary>
+            无参构造函数
+            </summary>
+        </member>
+        <member name="M:Summer.DataBaseObject.Finalize">
+            <summary>
+            析构函数
+            </summary>
+        </member>
+        <member name="M:Summer.DataBaseObject.Dispose">
+            <summary>
+            销毁函数
+            </summary>
+        </member>
+        <member name="M:Summer.DataBaseObject.BeginTransaction">
+            <summary>
+            为本连接启动一个事务
+            </summary>
+        </member>
+        <member name="M:Summer.DataBaseObject.Close">
+            <summary>
+            关闭数据库连接
+            </summary>
+        </member>
+        <member name="M:Summer.DataBaseObject.CommitTransaction">
+            <summary>
+            提交本连接的事务
+            </summary>
+        </member>
+        <member name="M:Summer.DataBaseObject.CreateDbCommand">
+            <summary>
+            创建一个数据库命令，该命令并未指定Connection
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.DataBaseObject.CreateParameter">
+            <summary>
+            创建一个数据语句参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.DataBaseObject.GetDataSet(System.Data.IDbCommand)">
+            <summary>
+            通过数据库操作命令返回DataSet
+            </summary>
+            <param name="command">数据库操作命令</param>
+        </member>
+        <member name="M:Summer.DataBaseObject.GetDataTable(System.Data.IDbCommand)">
+            <summary>
+            通过数据库操作命令返回一张表
+            </summary>
+            <param name="command">数据库操作命令</param>
+        </member>
+        <member name="M:Summer.DataBaseObject.GetDataTable(System.Data.IDbCommand,System.Int32)">
+            <summary>
+            通过数据库操作命令返回前n条记录的一张表
+            </summary>
+            <param name="command">数据库命令</param>
+            <param name="n">前n条记录</param>
+        </member>
+        <member name="M:Summer.DataBaseObject.GetDataTable(System.String)">
+            <summary>
+            通过SQL语句返回一张表
+            </summary>
+            <param name="sqlstring">sql语句</param>
+        </member>
+        <member name="M:Summer.DataBaseObject.GetDataTable(System.String,System.Int32)">
+            <summary>
+            通过SQL语句返回前n条记录组成的一张表
+            </summary>
+            <param name="sqlstring">SQL语句</param>
+            <param name="n">前n条记录</param>
+        </member>
+        <member name="M:Summer.DataBaseObject.Open">
+            <summary>
+            打开数据库连接
+            </summary>
+        </member>
+        <member name="M:Summer.DataBaseObject.RollbackTransaction">
+            <summary>
+            回滚本连接的事务
+            </summary>
+        </member>
+        <member name="M:Summer.DataBaseObject.RunCommand(System.Data.IDbCommand)">
+            <summary>
+            执行SQL命令，返回影响的条数
+            </summary>
+        </member>
+        <member name="M:Summer.DataBaseObject.RunSQLString(System.String)">
+            <summary>
+            执行SQL语句，返回影响的条数
+            </summary>
+        </member>
+        <member name="P:Summer.DataBaseObject.Type">
+            <summary>
+            获取数据库类型
+            </summary>
+        </member>
+        <member name="P:Summer.DataBaseObject.Name">
+            <summary>
+            获取数据库名称
+            </summary>
+        </member>
+        <member name="P:Summer.DataBaseObject.Transaction">
+            <summary>
+            获取数据库事务对象
+            </summary>
+        </member>
+        <member name="P:Summer.DataBaseObject.Connection">
+            <summary>
+            获取数据库连接
+            </summary>
+        </member>
+        <member name="P:Summer.DataBaseObject.DBUtility">
+            <summary>
+            数据库常用工具
+            </summary>
+        </member>
+        <member name="M:Summer.MSSQL.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="connectionString">数据库连接字符串</param>
+        </member>
+        <member name="M:Summer.MSSQL.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="name">数据库名称</param>
+            <param name="connectionString">数据库连接字符串</param>
+        </member>
+        <member name="M:Summer.MSSQL.Finalize">
+            <summary>
+            析构函数
+            </summary>
+        </member>
+        <member name="M:Summer.MSSQL.GetDataSet(System.Data.IDbCommand)">
+            <summary>
+            通过数据库操作命令返回DataSet
+            </summary>
+            <param name="command">数据库操作命令</param>
+        </member>
+        <member name="M:Summer.MSSQL.GetDataTable(System.Data.IDbCommand)">
+            <summary>
+            通过数据库操作命令返回一张表
+            </summary>
+            <param name="command">数据库操作命令</param>
+        </member>
+        <member name="M:Summer.MSSQL.GetDataTable(System.Data.IDbCommand,System.Int32)">
+            <summary>
+            通过数据库操作命令返回前n条记录的一张表
+            </summary>
+            <param name="command">数据库命令</param>
+            <param name="n">前n条记录</param>
+        </member>
+        <member name="M:Summer.MSSQL.GetDataTable(System.String)">
+            <summary>
+            通过SQL语句返回一张表
+            </summary>
+            <param name="sqlstring">sql语句</param>
+        </member>
+        <member name="M:Summer.MSSQL.GetDataTable(System.String,System.Int32)">
+            <summary>
+            通过SQL语句返回前n条记录组成的一张表
+            </summary>
+            <param name="sqlstring">SQL语句</param>
+            <param name="n">前n条记录</param>
+        </member>
+        <member name="M:Summer.MSSQL.RunSQLString(System.String)">
+            <summary>
+            执行SQL语句，返回影响的条数
+            </summary>
+        </member>
+        <member name="P:Summer.MSSQL.Type">
+            <summary>
+            获取数据库类型
+            </summary>
+        </member>
+        <member name="T:Summer.ColumnKeyType">
+            <summary>
+            数据库表字段的键类型
+            </summary>
+        </member>
+        <member name="F:Summer.ColumnKeyType.NoneKey">
+            <summary>
+            不是键
+            </summary>
+        </member>
+        <member name="F:Summer.ColumnKeyType.PrimaryKey">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="F:Summer.ColumnKeyType.ForeignKey">
+            <summary>
+            外键
+            </summary>
+        </member>
+        <member name="F:Summer.ColumnKeyType.UniqueKey">
+            <summary>
+            唯一键
+            </summary>
+        </member>
+        <member name="T:Summer.ColumnGenerator">
+            <summary>
+            数据库字段生成策略
+            </summary>
+        </member>
+        <member name="F:Summer.ColumnGenerator.Default">
+            <summary>
+            默认值
+            </summary>
+        </member>
+        <member name="F:Summer.ColumnGenerator.Identity">
+            <summary>
+            自增长
+            </summary>
+        </member>
+        <member name="F:Summer.ColumnGenerator.Sequence">
+            <summary>
+            序列
+            </summary>
+        </member>
+        <member name="F:Summer.ColumnGenerator.Auto">
+            <summary>
+            自动
+            </summary>
+        </member>
+        <member name="F:Summer.ColumnGenerator.Table">
+            <summary>
+            表
+            </summary>
+        </member>
+        <member name="T:Summer.ActionBeforeEventHandler">
+            <summary>
+            执行前操作函数的委托
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:Summer.ActionAfterEventHandler">
+            <summary>
+            执行后操作函数的委托
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:Summer.TransactionTask">
+            <summary>
+            事务的任务
+            </summary>
+        </member>
+        <member name="M:Summer.TransactionTask.#ctor(Summer.TransactionAction,System.Object[])">
+            <summary>
+            构造函数
+            </summary>
+            <param name="action">任务的类型</param>
+            <param name="value">任务的附加参数</param>
+        </member>
+        <member name="P:Summer.TransactionTask.Action">
+            <summary>
+            获取任务的类型
+            </summary>
+        </member>
+        <member name="P:Summer.TransactionTask.Value">
+            <summary>
+            获取任务的附加参数
+            </summary>
+        </member>
+        <member name="T:Summer.Transaction">
+            <summary>
+            事务处理类
+            </summary>
+        </member>
+        <member name="F:Summer.Transaction._DBS">
+            <summary>
+            事务的数据库操作环境
+            </summary>
+        </member>
+        <member name="M:Summer.Transaction.#ctor">
+            <summary>
+            无参构造函数
+            </summary>
+        </member>
+        <member name="M:Summer.Transaction.SaveEntity(Summer.EntityObject)">
+            <summary>
+            向事务中保存实体
+            </summary>
+            <param name="e">实体</param>
+        </member>
+        <member name="M:Summer.Transaction.DeleteEntity(Summer.EntityObject)">
+            <summary>
+            在事务中删除实体
+            </summary>
+            <param name="e">实体</param>
+        </member>
+        <member name="M:Summer.Transaction.SelectEntity(Summer.EntityObject)">
+             <summary>
+            在事务中获取实体
+             </summary>
+             <param name="e">实体</param>
+        </member>
+        <member name="M:Summer.Transaction.InsertEntity(Summer.EntityObject)">
+             <summary>
+            在事务中插入实体
+             </summary>
+             <param name="e">实体</param>
+        </member>
+        <member name="M:Summer.Transaction.UpdateEntity(Summer.EntityObject)">
+             <summary>
+            在事务中更新实体
+             </summary>
+             <param name="e">实体</param>
+        </member>
+        <member name="M:Summer.Transaction.ExecuteSelectBatch``1(Summer.SelectBatch{``0})">
+            <summary>
+            在事务中执行获取批处理
+            </summary>
+            <param name="sc">获取批处理</param>
+        </member>
+        <member name="M:Summer.Transaction.ExecuteUpdateBatch``1(Summer.UpdateBatch{``0})">
+             <summary>
+            在事务中执行更新批处理
+             </summary>
+             <param name="uc">更新批处理</param>
+        </member>
+        <member name="M:Summer.Transaction.ExecuteDeleteBatch``1(Summer.DeleteBatch{``0})">
+            <summary>
+            在事务中执行删除批处理
+            </summary>
+            <param name="dc">删除批处理</param>
+        </member>
+        <member name="M:Summer.Transaction.RunSQLQueryString(System.String,System.String)">
+            <summary>
+            在事务中执行一个查询的SQL语句
+            </summary>
+            <param name="sqlString">非查询的SQL语句</param>
+            <param name="databaseName">数据库名称</param>
+        </member>
+        <member name="M:Summer.Transaction.RunSQLNonQueryString(System.String,System.String)">
+            <summary>
+            在事务中执行一个非查询的SQL语句
+            </summary>
+            <param name="sqlString">非查询的SQL语句</param>
+            <param name="databaseName">数据库名称</param>
+        </member>
+        <member name="M:Summer.Transaction.RunNonQueryDbCommand(System.Data.IDbCommand,System.String)">
+            <summary>
+            在事务中执行一个非查询的数据库命令
+            </summary>
+            <param name="idc">数据库命令</param>
+            <param name="databaseName">数据库名称</param>
+        </member>
+        <member name="M:Summer.Transaction.RunQueryDbCommand(System.Data.IDbCommand,System.String)">
+            <summary>
+            在事务中执行一个查询的数据库命令
+            </summary>
+            <param name="idc">数据库命令</param>
+            <param name="databaseName">数据库名称</param>
+        </member>
+        <member name="M:Summer.Transaction.Commit">
+            <summary>
+            提交事务
+            </summary>
+        </member>
+        <member name="M:Summer.Transaction.Rollback">
+            <summary>
+            回滚事务
+            </summary>
+        </member>
+        <member name="M:Summer.Transaction.Close">
+            <summary>
+            关闭事务中所有的数据库操作环境连接
+            </summary>
+        </member>
+        <member name="P:Summer.Transaction.DBS">
+            <summary>
+            获取或设置事务的数据库操作环境
+            </summary>
+        </member>
+        <member name="T:Summer.PropertyMapping">
+            <summary>
+            数据对象的字段的映射信息
+            </summary>
+        </member>
+        <member name="F:Summer.PropertyMapping._ClassMapping">
+            <summary>
+            实体映射的ClassMapping
+            </summary>
+        </member>
+        <member name="F:Summer.PropertyMapping._Column">
+            <summary>
+            映射的字段名称
+            </summary>
+        </member>
+        <member name="F:Summer.PropertyMapping._Generator">
+            <summary>
+            字段的生成策略
+            </summary>
+        </member>
+        <member name="F:Summer.PropertyMapping._Key">
+            <summary>
+            键的类型
+            </summary>
+        </member>
+        <member name="F:Summer.PropertyMapping._Length">
+            <summary>
+            对应的长度
+            </summary>
+        </member>
+        <member name="F:Summer.PropertyMapping._Name">
+            <summary>
+            类属性名称
+            </summary>
+        </member>
+        <member name="F:Summer.PropertyMapping._Null">
+            <summary>
+            是否允许为空
+            </summary>
+        </member>
+        <member name="F:Summer.PropertyMapping._Type">
+            <summary>
+            类型
+            </summary>
+        </member>
+        <member name="F:Summer.PropertyMapping._sequenceName">
+            <summary>
+            序列名
+            </summary>
+        </member>
+        <member name="F:Summer.PropertyMapping._identity">
+            <summary>
+            是否使用Identity自动增长
+            </summary>
+        </member>
+        <member name="M:Summer.PropertyMapping.#ctor">
+            <summary>
+            无参构造函数
+            </summary>
+        </member>
+        <member name="M:Summer.PropertyMapping.#ctor(Summer.ClassMapping)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="classMapping">类映射</param>
+        </member>
+        <member name="M:Summer.PropertyMapping.Finalize">
+            <summary>
+            析构函数
+            </summary>
+        </member>
+        <member name="M:Summer.PropertyMapping.Dispose">
+            <summary>
+            销毁函数
+            </summary>
+        </member>
+        <member name="P:Summer.PropertyMapping.SequenceName">
+            <summary>
+            序列名
+            </summary>
+        </member>
+        <member name="P:Summer.PropertyMapping.Identity">
+            <summary>
+            是否使用Identity自动增长
+            </summary>
+        </member>
+        <member name="P:Summer.PropertyMapping.Column">
+            <summary>
+            字段名
+            </summary>
+        </member>
+        <member name="P:Summer.PropertyMapping.ClassMapping">
+            <summary>
+            实体所映射的ClassMapping
+            </summary>
+        </member>
+        <member name="P:Summer.PropertyMapping.Generator">
+            <summary>
+            字段的生成策略
+            </summary>
+        </member>
+        <member name="P:Summer.PropertyMapping.Key">
+            <summary>
+            键的类型
+            </summary>
+        </member>
+        <member name="P:Summer.PropertyMapping.Length">
+            <summary>
+            对应的长度
+            </summary>
+        </member>
+        <member name="P:Summer.PropertyMapping.Name">
+            <summary>
+            类属性名称
+            </summary>
+        </member>
+        <member name="P:Summer.PropertyMapping.Null">
+            <summary>
+            是否允许为空
+            </summary>
+        </member>
+        <member name="P:Summer.PropertyMapping.Type">
+            <summary>
+            类型
+            </summary>
+        </member>
+        <member name="P:Summer.PropertyMapping.Parent">
+            <summary>
+            获取或设置字段的父字段
+            </summary>
+        </member>
+        <member name="P:Summer.PropertyMapping.Children">
+            <summary>
+            获取或设置字段的子字段
+            </summary>
+        </member>
+        <member name="T:Summer.EntityObject">
+            <summary>
+            实体的基类
+            </summary>
+        </member>
+        <member name="T:Summer.Serializer">
+            <summary>
+            序列化抽象基类
+            </summary>
+        </member>
+        <member name="M:Summer.Serializer.GetSerializerObject">
+            <summary>
+            返回要序列化的对象
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.Serializer.ToJsonString">
+            <summary>
+            返回对象的Json字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.Serializer.ToJsonString(Summer.JsonSerializerToolType)">
+            <summary>
+            用指定的序列化转换工具返回对象的Json字符串
+            </summary>
+            <param name="tool">使用的JsonSerializerToolType枚举值</param>
+            <returns></returns>       
+        </member>
+        <member name="M:Summer.Serializer.ToJsonString(Summer.JsonSerializerToolType,System.Text.Encoding)">
+            <summary>
+            用指定的字符编码和序列化转换工具返回对象的Json字符串
+            </summary>
+            <param name="tool">使用的JsonSerializerToolType枚举值。</param>
+            <param name="encoding">指定的字符编码，可为null，并且仅当tool=JsonSerializerToolType.DataContractJsonSerializer时有效。</param>        
+            <returns></returns>       
+        </member>
+        <member name="M:Summer.Serializer.DataSetToJsonString(System.Data.DataSet)">
+            <summary>
+            返回DataSet对象的Json字符串
+            </summary>
+            <param name="ds">DataSet对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.Serializer.DataTableToJsonString(System.Data.DataTable)">
+            <summary>
+            返回DataTable对象的Json字符串
+            </summary>
+            <param name="dt">DataTable对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.Serializer.DataRowToJsonString(System.Data.DataRow)">
+            <summary>
+            返回DataRow对象的Json字符串
+            </summary>
+            <param name="dr">DataRow对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.Serializer.DataRowCollectionToJsonString(System.Data.DataRowCollection)">
+            <summary>
+            返回DataRowCollection对象的Json字符串
+            </summary>
+            <param name="drc">DataRowCollection对象</param>
+            <returns></returns>
+        </member>
+        <member name="P:Summer.Serializer.SerializerObject">
+            <summary>
+            获取要序列化的对象
+            </summary>
+        </member>
+        <member name="F:Summer.EntityObject._DataBaseMapping">
+            <summary>
+            对应的映射的数据库
+            </summary>
+        </member>
+        <member name="F:Summer.EntityObject._ClassMapping">
+            <summary>
+            对应的映射类
+            </summary>
+        </member>
+        <member name="M:Summer.EntityObject.GetParametersPrimaryKey">
+            <summary>
+            获取主键的参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.EntityObject.GetParametersForInsert">
+            <summary>
+            获取主键的参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.EntityObject.GetParametersForUpdate">
+            <summary>
+            获取主键的参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.EntityObject.GetFilterExpression">
+            <summary>
+            根据已设置的SDUFilters获取SQL限制表达式，即where后的部分
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.EntityObject.GetFilterExpressionPrimaryKey">
+            <summary>
+            获取主键的SQL限制表达式，即where后的部分
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.EntityObject.GetExpressionForInsert">
+            <summary>
+            获取更新实体的部分表达式，例如：(name,no)values(':paraInsert1',':paraInsert2')
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.EntityObject.GetExpressionForUpdate">
+            <summary>
+            获取更新实体的部分表达式，例如：name=':paraUpdate1',no=':paraUpdate2'
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.EntityObject.#ctor">
+            <summary>
+            无参构造函数
+            </summary>
+        </member>
+        <member name="M:Summer.EntityObject.Delete">
+            <summary>
+            通过SDUFilters或主键，删除实体
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.EntityObject.Select">
+            <summary>
+            通过SDUFilters或主键，获取实体
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.EntityObject.Save">
+            <summary>
+            保存实体，通过SDUFilters或主键搜索实体是否存在，如果存在，那么更新实体。如果不存在，那么增加实体。（所有操作在同一个事务中）
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.EntityObject.Update">
+            <summary>
+            通过SDUFilters或主键，更新实体
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.EntityObject.Insert">
+            <summary>
+            在实体映射的表的结尾插入实体
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.EntityObject.IsExist">
+            <summary>
+            通过实体属性映射的主键字段判断实体是否存在
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.EntityObject.SetPropertyValue(System.String,System.Object)">
+            <summary>
+            通过属性名称设置属性值
+            </summary>
+            <param name="propertyName">属性名称</param>
+            <param name="value">属性值</param>
+        </member>
+        <member name="M:Summer.EntityObject.GetPropertieValue(System.String)">
+            <summary>
+            通过属性名称获取属性值
+            </summary>
+            <param name="propertyName">属性名称</param>
+        </member>
+        <member name="M:Summer.EntityObject.GetParent">
+            <summary>
+            获取实体属性关联的父实体
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.EntityObject.GetChildren">
+            <summary>
+            获取实体属性关联的子实体
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.EntityObject.GetSerializerObject">
+            <summary>
+            获取要序列化的对象
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.EntityObject.Action(Summer.ActionBeforeEventHandler,Summer.ActionAfterEventHandler,Summer.EntityObject.ActionEventHandler,Summer.EntityObject,System.Boolean)">
+            <summary>
+            负责实体增加、更新、保存、删除等操作
+            </summary>
+            <param name="before">操作之前的委托</param>
+            <param name="after">操作之后的委托</param>
+            <param name="action">操作</param>
+            <param name="actionParameters">操作的参数</param>
+            <param name="IsStart">是否启动事务</param>
+            <returns></returns>
+        </member>
+        <member name="P:Summer.EntityObject.PropertyEX">
+            <summary>
+            获取或设置扩展属性值；备注（ EntityObject的一个扩展属性， 在没有映射的情况下，不参与数据库交互。）
+            </summary>
+        </member>
+        <member name="P:Summer.EntityObject.DbCommandForSelect">
+            <summary>
+            创建获取实体命令
+            </summary>
+        </member>
+        <member name="P:Summer.EntityObject.DbCommandForDelete">
+            <summary>
+            创建删除实体命令
+            </summary>
+        </member>
+        <member name="P:Summer.EntityObject.DbCommandForInsert">
+            <summary>
+            创建增加实体命令
+            </summary>
+        </member>
+        <member name="P:Summer.EntityObject.DbCommandForUpdate">
+            <summary>
+            创建更新实体命令
+            </summary>
+        </member>
+        <member name="P:Summer.EntityObject.IUProperties">
+            <summary>
+            要插入、更新时，需要操作的字段映射的类属性，以","分隔
+            </summary>
+        </member>
+        <member name="P:Summer.EntityObject.SDUFilters">
+            <summary>
+            要获取、更新、删除时的限制条件（属性名称），以","分隔
+            </summary>
+        </member>
+        <member name="P:Summer.EntityObject.IsEmptyProperties">
+            <summary>
+            获取字段表达式是否为空
+            </summary>
+        </member>
+        <member name="P:Summer.EntityObject.IsEmptyFilters">
+            <summary>
+            获取限制表达式是否为空
+            </summary>
+        </member>
+        <member name="E:Summer.EntityObject.Selecting">
+            <summary>
+            在调用调用Select方法之前发生的事件
+            </summary>
+        </member>
+        <member name="E:Summer.EntityObject.Selected">
+            <summary>
+            在调用Select方法之后发生的事件
+            </summary>
+        </member>
+        <member name="E:Summer.EntityObject.Deleting">
+            <summary>
+            在调用Delete方法之前发生的事件
+            </summary>
+        </member>
+        <member name="E:Summer.EntityObject.Deleted">
+            <summary>
+            在调用Delete方法之后发生的事件
+            </summary>
+        </member>
+        <member name="E:Summer.EntityObject.Inserting">
+            <summary>
+            在调用Insert方法之前发生的事件
+            </summary>
+        </member>
+        <member name="E:Summer.EntityObject.Inserted">
+            <summary>
+            在调用Insert方法之后发生的事件
+            </summary>
+        </member>
+        <member name="E:Summer.EntityObject.Updating">
+            <summary>
+            在调用Update方法之前发生的事件
+            </summary>
+        </member>
+        <member name="E:Summer.EntityObject.Updated">
+            <summary>
+            在调用Update方法之后发生的事件
+            </summary>
+        </member>
+        <member name="E:Summer.EntityObject.Saving">
+            <summary>
+            在调用Save方法之前发生的事件
+            </summary>
+        </member>
+        <member name="E:Summer.EntityObject.Saved">
+            <summary>
+            在调用Save方法之后发生的事件
+            </summary>
+        </member>
+        <member name="T:Summer.EntityObject.ActionEventHandler">
+            <summary>
+            负责实体增加、更新、保存、删除等操作的委托
+            </summary>
+            <param name="e">实体</param>
+            <param name="IsStart">是否启动事务</param>
+            <returns></returns>
+        </member>
+        <member name="T:Summer.ConfigurationManager">
+            <summary>
+            配置管理者
+            </summary>
+        </member>
+        <member name="F:Summer.ConfigurationManager._ClassMappingTable">
+            <summary>
+            系统的ClassMapping集合
+            </summary>
+        </member>
+        <member name="F:Summer.ConfigurationManager._DataBaseMappingTable">
+            <summary>
+            数据库集合
+            </summary>
+        </member>
+        <member name="F:Summer.ConfigurationManager._Path">
+            <summary>
+            配置文件的路径
+            </summary>
+        </member>
+        <member name="F:Summer.ConfigurationManager.hasLoad">
+            <summary>
+            配置文件是否已经装载
+            </summary>
+        </member>
+        <member name="F:Summer.ConfigurationManager.flagChange">
+            <summary>
+            文件是否被修改
+            </summary>
+        </member>
+        <member name="M:Summer.ConfigurationManager.IsChange(System.String)">
+            <summary>
+            判断文件是否被修改
+            </summary>
+            <param name="dataBaseMappingFile"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.ConfigurationManager.SetFileWatch(System.String)">
+            <summary>
+            设置对文件时间的监视
+            </summary>
+            <param name="dataBaseMappingFile"></param>
+        </member>
+        <member name="F:Summer.ConfigurationManager.fileWatch">
+            <summary>
+            文件的相关时间
+            </summary>
+        </member>
+        <member name="M:Summer.ConfigurationManager.Load">
+            <summary>
+            装载配置文件，若已经装载的配置文件没有更新，再次装载，则或略。
+            </summary>
+        </member>
+        <member name="M:Summer.ConfigurationManager.GetDataBaseMappings(System.String)">
+            <summary>
+            从XML文件中读取数据库映射信息
+            </summary>
+            <param name="databaseMappingFile">数据库映射文件</param>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.ConfigurationManager.GetDataBaseMappings(System.String,System.Boolean)">
+            <summary>
+            从XML文件中读取数据库映射信息
+            </summary>
+            <param name="databaseMappingFile">数据库映射文件</param>
+            <param name="replace">
+            <para>如果数据字典中已经存在同名的DataBaseMapping，replace为false：忽略，保留原数据。（默认值false）</para>
+            <para>replace为true：替换原数据。</para>
+            </param>        
+        </member>
+        <member name="M:Summer.ConfigurationManager.GetClassMappings(Summer.DataBaseMapping,System.String)">
+            <summary>
+            从XML文件中读取数据表的映射信息
+            </summary>
+            <param name="databaseMapping">数据库映射信息，方法返回结果的ClassMapping的数据库信息</param>
+            <param name="cassMappingFile">数据表 映射文件</param>
+        </member>
+        <member name="M:Summer.ConfigurationManager.GetClassMappings(Summer.DataBaseMapping,System.String,System.Boolean)">
+            <summary>
+            从XML文件中读取数据表的映射信息
+            </summary>
+            <param name="databaseMapping">数据库映射信息，方法返回结果的ClassMapping的数据库信息</param>
+            <param name="cassMappingFile">数据表 映射文件</param>
+            <param name="replace">
+            <para>如果DataBaseMapping数据字典中已经存在同名的ClassMapping，replace为false：忽略，保留原数据。（默认值false）</para>
+            <para>replace为true：替换原数据。</para>
+            </param> 
+        </member>
+        <member name="M:Summer.ConfigurationManager.GetPropertyMapping(System.Xml.XmlReader,Summer.ClassMapping)">
+            <summary>
+            根据XmlReader（读取property节点）和ClassMapping得到一个的PropertyMapping
+            </summary>
+            <param name="xr">读取property节点的XmlReader</param>
+            <param name="cm">PropertyMapping对象的ClassMapping</param>
+            <returns></returns>
+        </member>
+        <member name="P:Summer.ConfigurationManager.ClassMappingTable">
+            <summary>
+            系统的ClassMapping集合
+            </summary>
+        </member>
+        <member name="P:Summer.ConfigurationManager.DataBaseMappingTable">
+            <summary>
+            数据库集合
+            </summary>
+        </member>
+        <member name="P:Summer.ConfigurationManager.Path">
+            <summary>
+            获取和设置配置文件的路径
+            </summary>
+        </member>
+        <member name="E:Summer.ConfigurationManager.Loading">
+            <summary>
+            加载配置文件前发生的事件
+            </summary>
+        </member>
+        <member name="E:Summer.ConfigurationManager.Loaded">
+            <summary>
+            加载配置文件后发生的事件
+            </summary>
+        </member>
+        <member name="T:Summer.ConfigurationManager.FileWatch">
+            <summary>
+            存储文件创建和修改时间
+            </summary>
+        </member>
+        <member name="T:Summer.ConfigurationManager.WatcherFactory">
+            <summary>
+            文件监视类工厂
+            </summary>
+        </member>
+        <member name="T:Summer.ConfigurationManager.LoadConfigHandler">
+            <summary>
+            加载文件前后执行方法的委托
+            </summary>
+        </member>
+        <member name="T:Summer.Sort">
+            <summary>
+            排序类型
+            </summary>
+        </member>
+        <member name="F:Summer.Sort.ASC">
+            <summary>
+            升序
+            </summary>
+        </member>
+        <member name="F:Summer.Sort.DESC">
+            <summary>
+            降序
+            </summary>
+        </member>
+        <member name="T:Summer.JsonSerializerToolType">
+            <summary>
+            常用json序列化工具
+            </summary>
+        </member>
+        <member name="F:Summer.JsonSerializerToolType.JsonForData">
+            <summary>
+            序列化DataSet、DataTable、DataRow、DataRowCollection等特殊对象专用
+            </summary>
+        </member>
+        <member name="F:Summer.JsonSerializerToolType.DataContractJsonSerializer">
+            <summary>
+            <para>1.标记Serializable特性时，</para>
+            <para>只序列化字段（包括私有字段和公共字段），如果属性没有对应的字段，则自动为其生成私有字段然后序列化。</para>
+            <para>2.标记Datacontract特性时，</para>
+            <para>只序列化标记为DataMember的字段或者属性（包括私有的和公共的）</para>
+            </summary>
+        </member>
+        <member name="F:Summer.JsonSerializerToolType.JsonQueryStringConverter">
+            <summary>
+            <para>1.标记Serializable特性时，</para>
+            <para>只序列化字段（包括私有字段和公共字段），如果属性没有对应的字段，则自动为其生成私有字段。</para>
+            <para>2.标记Datacontract特性时，</para>
+            <para>只序列化标记为DataMember的字段或者属性（包括私有的和公共的）</para>
+            </summary>
+        </member>
+        <member name="F:Summer.JsonSerializerToolType.JavaScriptSerializer">
+            <summary>
+            <para>1.标记Serializable特性时，</para>
+            <para>序列化公共的字段或者属性</para>
+            <para>2.标记Datacontract特性时，</para>
+            <para>序列化公共的字段或者属性，不管是否标记DataMember（如果私有字段标记了DataMember也不会序列化，同样，如果公共字段没有标记DataMember也会被序列化）</para>
+            </summary>
+        </member>
+        <member name="T:Summer.Oracle">
+            <summary>
+            Oracle数据库操作类
+            </summary>
+        </member>
+        <member name="M:Summer.Oracle.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="connectionString">数据库连接字符串</param>
+        </member>
+        <member name="M:Summer.Oracle.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="name">数据库名称</param>
+            <param name="connectionString">数据库连接字符串</param>
+        </member>
+        <member name="M:Summer.Oracle.Finalize">
+            <summary>
+            析构函数
+            </summary>
+        </member>
+        <member name="M:Summer.Oracle.GetDataSet(System.Data.IDbCommand)">
+            <summary>
+            通过数据库操作命令返回DataSet
+            </summary>
+            <param name="command">数据库操作命令</param>
+        </member>
+        <member name="M:Summer.Oracle.GetDataTable(System.Data.IDbCommand)">
+            <summary>
+            通过数据库操作命令返回一张表
+            </summary>
+            <param name="command">数据库操作命令</param>
+        </member>
+        <member name="M:Summer.Oracle.GetDataTable(System.Data.IDbCommand,System.Int32)">
+            <summary>
+            通过数据库操作命令返回前n条记录的一张表
+            </summary>
+            <param name="command">数据库命令</param>
+            <param name="n">前n条记录</param>
+        </member>
+        <member name="M:Summer.Oracle.GetDataTable(System.String)">
+            <summary>
+            通过SQL语句返回一张表
+            </summary>
+            <param name="sqlstring">sql语句</param>
+        </member>
+        <member name="M:Summer.Oracle.GetDataTable(System.String,System.Int32)">
+            <summary>
+            通过SQL语句返回前n条记录组成的一张表
+            </summary>
+            <param name="sqlstring">SQL语句</param>
+            <param name="n">前n条记录</param>
+        </member>
+        <member name="M:Summer.Oracle.RunSQLString(System.String)">
+            <summary>
+            执行SQL语句，返回影响的条数
+            </summary>
+        </member>
+        <member name="P:Summer.Oracle.Type">
+            <summary>
+            获取数据库类型
+            </summary>
+        </member>
+        <member name="T:Summer.Broker">
+            <summary>
+            负责与数据库交互的类
+            </summary>
+        </member>
+        <member name="M:Summer.Broker.SelectEntity(Summer.EntityObject,Summer.DataBaseObject,System.Boolean)">
+            <summary>
+            在指定的数据库操作环境中，获取一个实体
+            </summary>
+            <param name="entityObject">实体</param>
+            <param name="dbo">数据库操作环境</param>
+            <param name="IsStart">是否启动事务</param>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.Broker.SaveEntity(Summer.EntityObject,Summer.DataBaseObject,System.Boolean)">
+            <summary>
+            在指定的数据库操作环境中，保存一个实体
+            </summary>
+            <param name="entityObject">实体</param>
+            <param name="dbo">数据库操作环境</param>
+            <param name="IsStart">是否启动事务</param>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.Broker.DeleteEntity(Summer.EntityObject,Summer.DataBaseObject,System.Boolean)">
+            <summary>
+            在指定的数据库操作环境中，删除一个实体
+            </summary>
+            <param name="entityObject">实体</param>
+            <param name="dbo">数据库操作环境</param>
+            <param name="IsStart">是否启动事务</param>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.Broker.UpdateEntity(Summer.EntityObject,Summer.DataBaseObject,System.Boolean)">
+            <summary>
+            在指定的数据库操作环境中，更新一个实体
+            </summary>
+            <param name="entityObject">实体</param>
+            <param name="dbo">数据库操作环境</param>
+            <param name="IsStart">是否启动事务</param>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.Broker.InsertEntity(Summer.EntityObject,Summer.DataBaseObject,System.Boolean)">
+            <summary>
+            在指定的数据库操作环境中，插入一个实体
+            </summary>
+            <param name="entityObject">实体</param>
+            <param name="dbo">数据库操作环境</param>
+            <param name="IsStart">是否启动事务</param>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.Broker.RunSelectBatch(System.Object,Summer.DataBaseObject,System.Boolean)">
+            <summary>
+            在指定的数据库操作环境中，执行获取批处理
+            </summary>
+            <param name="batch">获取批处理</param>
+            <param name="dbo">数据库操作环境</param>
+            <param name="IsStart">是否启动事务</param>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.Broker.RunUpdateBatch(System.Object,Summer.DataBaseObject,System.Boolean)">
+            <summary>
+            在指定的数据库操作环境中，执行更新批处理
+            </summary>
+            <param name="batch">更新批处理</param>
+            <param name="dbo">数据库操作环境</param>
+            <param name="IsStart">是否启动事务</param>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.Broker.RunDeleteBatch(System.Object,Summer.DataBaseObject,System.Boolean)">
+            <summary>
+            在指定的数据库操作环境中，执行删除批处理
+            </summary>
+            <param name="batch">删除批处理</param>
+            <param name="dbo">数据库操作环境</param>
+            <param name="IsStart">是否启动事务</param>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.Broker.RunNonQueryString(System.String,System.String,Summer.DataBaseObject,System.Boolean)">
+            <summary>
+            在指定的数据库操作环境中，执行非查询的SQL语句
+            </summary>
+            <param name="SQLString">非查询的SQL语句</param>
+            <param name="databaseName">数据库名称</param>
+            <param name="dbo">数据库操作环境</param>
+            <param name="IsStart">是否启动事务</param>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.Broker.RunQueryString(System.String,System.String,Summer.DataBaseObject,System.Boolean)">
+            <summary>
+            在指定的数据库操作环境中，执行查询的SQL语句
+            </summary>
+            <param name="SQLString">非查询的SQL语句</param>
+            <param name="databaseName">数据库名称</param>
+            <param name="dbo">数据库操作环境</param>
+            <param name="IsStart">是否启动事务</param>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.Broker.RunNonQueryDbCommand(System.Data.IDbCommand,System.String,Summer.DataBaseObject,System.Boolean)">
+            <summary>
+            在指定的数据库操作环境中，执行非查询的数据库命令
+            </summary>
+            <param name="dbCommand">数据库命令</param>
+            <param name="databaseName">数据库名称</param>
+            <param name="dbo">数据库操作环境</param>
+            <param name="IsStart">是否启动事务</param>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.Broker.RunQueryDbCommand(System.Data.IDbCommand,System.String,Summer.DataBaseObject,System.Boolean)">
+            <summary>
+            在指定的数据库操作环境中，执行非查询的数据库命令
+            </summary>
+            <param name="dbCommand">数据库命令</param>
+            <param name="databaseName">数据库名称</param>
+            <param name="dbo">数据库操作环境</param>
+            <param name="IsStart">是否启动事务</param>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.Broker.RunProcedure(System.String,System.Data.IDataParameter[],System.String,Summer.DataBaseObject,System.Boolean)">
+            <summary>
+            在指定的数据库操作环境中，执行存储过程
+            </summary>
+            <param name="procedureName">存储过程名称</param>
+            <param name="parameters">参数</param>
+            <param name="databaseName">数据库名称</param>
+            <param name="dbo">数据库操作环境</param>
+            <param name="IsStart">是否启动事务</param>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.Broker.SelectEntity(Summer.EntityObject,Summer.DataBaseObject@,System.Boolean)">
+            <summary>
+            执行获取实体操作，并返回数据库操作环境
+            </summary>
+            <param name="entityObject">实体</param>
+            <param name="dbo">数据库操作环境</param>
+            <param name="IsStart">是否启动事务</param>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.Broker.SaveEntity(Summer.EntityObject,Summer.DataBaseObject@,System.Boolean)">
+            <summary>
+            保存一个实体，并返回数据库操作环境
+            </summary>
+            <param name="entityObject">实体</param>
+            <param name="dbo">数据库操作环境</param>
+            <param name="IsStart">是否启动事务</param>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.Broker.DeleteEntity(Summer.EntityObject,Summer.DataBaseObject@,System.Boolean)">
+            <summary>
+            删除一个实体，并返回数据库操作环境
+            </summary>
+            <param name="entityObject">实体</param>
+            <param name="dbo">数据库操作环境</param>
+            <param name="IsStart">是否启动事务</param>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.Broker.UpdateEntity(Summer.EntityObject,Summer.DataBaseObject@,System.Boolean)">
+            <summary>
+            更新一个实体，并返回数据库操作环境
+            </summary>
+            <param name="entityObject">实体</param>
+            <param name="dbo">数据库操作环境</param>
+            <param name="IsStart">是否启动事务</param>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.Broker.InsertEntity(Summer.EntityObject,Summer.DataBaseObject@,System.Boolean)">
+            <summary>
+            插入一个实体，并返回数据库操作环境
+            </summary>
+            <param name="entityObject">实体</param>
+            <param name="dbo">数据库操作环境</param>
+            <param name="IsStart">是否启动事务</param>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.Broker.RunSelectBatch(System.Object,Summer.DataBaseObject@,System.Boolean)">
+            <summary>
+            执行获取批处理，并返回数据库操作环境
+            </summary>
+            <param name="batch">获取批处理</param>
+            <param name="dbo">数据库操作环境</param>
+            <param name="IsStart">是否启动事务</param>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.Broker.RunUpdateBatch(System.Object,Summer.DataBaseObject@,System.Boolean)">
+            <summary>
+            执行更新批处理，并返回数据库操作环境
+            </summary>
+            <param name="batch">更新批处理</param>
+            <param name="dbo">数据库操作环境</param>
+            <param name="IsStart">是否启动事务</param>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.Broker.RunDeleteBatch(System.Object,Summer.DataBaseObject@,System.Boolean)">
+            <summary>
+            执行删除批处理，并返回数据库操作环境
+            </summary>
+            <param name="batch">删除批处理</param>
+            <param name="dbo">数据库操作环境</param>
+            <param name="IsStart">是否启动事务</param>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.Broker.RunNonQueryString(System.String,System.String,Summer.DataBaseObject@,System.Boolean)">
+            <summary>
+            执行非查询的SQL语句，并返回数据库操作环境
+            </summary>
+            <param name="SQLString">非查询的SQL语句</param>
+            <param name="databaseName">数据库名称</param>
+            <param name="dbo">数据库操作环境</param>
+            <param name="IsStart">是否启动事务</param>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.Broker.RunQueryString(System.String,System.String,Summer.DataBaseObject@,System.Boolean)">
+            <summary>
+            执行查询的SQL语句，并返回数据库操作环境
+            </summary>
+            <param name="SQLString">非查询的SQL语句</param>
+            <param name="databaseName">数据库名称</param>
+            <param name="dbo">数据库操作环境</param>
+            <param name="IsStart">是否启动事务</param>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.Broker.RunNonQueryDbCommand(System.Data.IDbCommand,System.String,Summer.DataBaseObject@,System.Boolean)">
+            <summary>
+            执行非查询的数据库命令，并返回数据库操作环境
+            </summary>
+            <param name="dbCommand">数据库命令</param>
+            <param name="databaseName">数据库名称</param>
+            <param name="dbo">数据库操作环境</param>
+            <param name="IsStart">是否启动事务</param>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.Broker.RunQueryDbCommand(System.Data.IDbCommand,System.String,Summer.DataBaseObject@,System.Boolean)">
+            <summary>
+            执行查询的数据库命令，并返回数据库操作环境
+            </summary>
+            <param name="dbCommand">数据库命令</param>
+            <param name="databaseName">数据库名称</param>
+            <param name="dbo">数据库操作环境</param>
+            <param name="IsStart">是否启动事务</param>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.Broker.RunProcedure(System.String,System.Data.IDataParameter[],System.String,Summer.DataBaseObject@,System.Boolean)">
+            <summary>
+            执行存储过程，并返回数据库操作环境
+            </summary>
+            <param name="procedureName">存储过程名称</param>
+            <param name="parameters">参数</param>
+            <param name="databaseName">数据库名称</param>
+            <param name="dbo">数据库操作环境</param>
+            <param name="IsStart">是否启动事务</param>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.Broker.GetDataBaseMapping(System.String)">
+            <summary>
+            根据名称查找DataBaseMapping
+            </summary>
+            <param name="databaseName">名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.Broker.GetClassMapping(System.String)">
+            <summary>
+            根据名称查找ClassMapping
+            </summary>
+            <param name="classMappingName">名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.Broker.GetClassMapping(System.String,System.String)">
+            <summary>
+            根据映射的数据库和表名称查找ClassMapping
+            </summary>
+             <param name="databaseName">数据库名称</param>
+            <param name="tableName">表名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.Broker.GetPropertyMapping(Summer.ClassMapping,System.String)">
+            <summary>
+            在指定的ClassMapping中，根据名称查找PropertyMapping对象
+            </summary>
+            <param name="classMapping">ClassMapping对象</param>
+            <param name="propertyMappingName">PropertyMapping对象的名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.Broker.GetPropertyMapping(System.String,System.String)">
+            <summary>
+            在指定名称的ClassMapping中，根据PropertyMapping对象的名称查找PropertyMapping对象
+            </summary>
+            <param name="classMappingName">ClassMapping对象的名称</param>
+            <param name="propertyMappingName">PropertyMapping对象的名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.Broker.GetPropertyMapping(System.String,System.String,System.String)">
+            <summary>
+            根据映射的数据库、表、字段名称查找PropertyMapping
+            </summary>
+            <param name="databaseName">数据库名称</param>
+            <param name="tableName">表名称</param>
+            <param name="columnName">字段名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.Broker.ExecuteSelectBatch``1(Summer.SelectBatch{``0},System.Boolean)">
+            <summary>
+            执行获取批处理，返回实体对应的DataTable
+            </summary>
+            <typeparam name="T">要获取的实体类型</typeparam>
+            <param name="batch">执行的获取批处理</param>
+            <param name="IsStart">是否启动事务处理</param>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.Broker.ExecuteUpdateBatch``1(Summer.UpdateBatch{``0},System.Boolean)">
+            <summary>
+            执行更新批处理，返回被更新的实体数目
+            </summary>
+            <typeparam name="T">要更新的实体类型</typeparam>
+            <param name="batch">执行的更新批处理</param>
+            <param name="IsStart">是否启动事务处理</param>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.Broker.ExecuteDeleteBatch``1(Summer.DeleteBatch{``0},System.Boolean)">
+            <summary>
+            执行删除批处理，返回被删除的实体数目
+            </summary>
+            <typeparam name="T">要删除的实体类型</typeparam>
+            <param name="batch">执行的删除批处理</param>
+            <param name="IsStart">是否启动事务处理</param>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.Broker.ExecuteDeleteEntity(Summer.EntityObject,System.Boolean)">
+            <summary>
+            执行删除实体操作（通过主键删除）
+            </summary>
+            <param name="entityObject">被删除的实体</param>
+            <param name="IsStart">是否启动事务处理</param>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.Broker.ExecuteUpdateEntity(Summer.EntityObject,System.Boolean)">
+            <summary>
+            执行更新实体操作（通过主键更新）
+            </summary>
+            <param name="entityObject">被更新的实体</param>
+            <param name="IsStart">是否启动事务处理</param>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.Broker.ExecuteInsertEntity(Summer.EntityObject,System.Boolean)">
+            <summary>
+            执行插入实体操作
+            </summary>
+            <param name="entityObject">被插入的实体</param>
+            <param name="IsStart">是否启动事务处理</param>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.Broker.ExecuteSelectEntity(Summer.EntityObject,System.Boolean)">
+            <summary>
+            执行获取实体操作（通过主键获取）
+            </summary>
+            <param name="entityObject">被删除的实体</param>
+            <param name="IsStart">是否启动事务处理</param>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.Broker.ExecuteSaveEntity(Summer.EntityObject,System.Boolean)">
+            <summary>
+            执行保存实体操作（通过主键搜索实体是否存在，如果存在，那么更新实体。如果不存在，那么增加实体。）
+            </summary>
+            <param name="entityObject">要保存的实体</param>
+            <param name="IsStart">是否启动事务处理</param>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.Broker.ExecuteTransaction(Summer.Transaction,Summer.TransactionTask)">
+            <summary>
+            执行一个事务
+            </summary>
+            <param name="transaction">事务</param>
+            <param name="task">任务</param>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.Broker.RunQueryString(System.String,System.String)">
+            <summary>
+            执行查询的SQL语句，并以DataTable返回结果
+            </summary>
+            <param name="SQLString">非查询的SQL语句</param>
+            <param name="databaseName">数据库名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.Broker.RunQueryDbCommand(System.Data.IDbCommand,System.String)">
+            <summary>
+            执行查询的数据库命令，并以DataTable返回结果
+            </summary>
+            <param name="dbCommand">数据库命令</param>
+            <param name="databaseName">数据库名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.Broker.RunProcedure(System.String,System.Data.IDataParameter[],System.String)">
+            <summary>
+            执行存储过程，并以DataSet返回结果
+            </summary>
+            <param name="procedureName">存储过程名称</param>
+            <param name="parameters">参数</param>
+            <param name="databaseName">数据库名称</param>
+            <returns></returns>
+        </member>
+        <member name="P:Summer.Broker.ClassMappingTable">
+            <summary>
+            系统的ClassMapping集合
+            </summary>
+        </member>
+        <member name="P:Summer.Broker.DataBaseMappingTable">
+            <summary>
+            数据库集合
+            </summary>
+        </member>
+        <member name="T:Summer.Condition`1">
+            <summary>
+            限制条件类
+            </summary>
+        </member>
+        <member name="F:Summer.Condition`1._DataBaseMapping">
+            <summary>
+            映射的数据库
+            </summary>
+        </member>
+        <member name="F:Summer.Condition`1._ClassMapping">
+            <summary>
+            类映射信息
+            </summary>
+        </member>
+        <member name="F:Summer.Condition`1._EntityType">
+            <summary>
+            操作实体的类型
+            </summary>
+        </member>
+        <member name="F:Summer.Condition`1._alSQL">
+            <summary>
+            自身的条件
+            </summary>
+        </member>
+        <member name="F:Summer.Condition`1._alParameters">
+            <summary>
+            自身的参数
+            </summary>
+        </member>
+        <member name="F:Summer.Condition`1.Parameter">
+            <summary>
+            SQL语句参数
+            </summary>
+        </member>
+        <member name="F:Summer.Condition`1._DBUtility">
+            <summary>
+            数据库基本工具
+            </summary>
+        </member>
+        <member name="M:Summer.Condition`1.InitParameter">
+            <summary>
+            初始化SQL语句参数
+            </summary>
+        </member>
+        <member name="M:Summer.Condition`1.#ctor">
+            <summary>
+            无参构造函数
+            </summary>
+        </member>
+        <member name="M:Summer.Condition`1.Finalize">
+            <summary>
+            析构函数
+            </summary>
+        </member>
+        <member name="M:Summer.Condition`1.Dispose">
+            <summary>
+            销毁函数
+            </summary>
+        </member>
+        <member name="M:Summer.Condition`1.GetFilterSQL">
+            <summary>
+            返回sql语句，（包含着特殊字符）
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.Condition`1.EqualTo(System.String,System.Object)">
+            <summary>
+            属性值等于某值（例如：x=1）
+            </summary>
+            <param name="name">属性名</param>
+            <param name="value">值</param>
+        </member>
+        <member name="M:Summer.Condition`1.EqualTo(System.String,System.Object[])">
+            <summary>
+            属性值等于某些值（例如：x=1 or x=2）
+            </summary>
+            <param name="name">属性名</param>
+            <param name="value">某些值</param>
+        </member>
+        <member name="M:Summer.Condition`1.NotEqualTo(System.String,System.Object)">
+            <summary>
+            属性值不等于某值（例如：x!=1）
+            </summary>
+            <param name="name">属性名</param>
+            <param name="value">值</param>
+        </member>
+        <member name="M:Summer.Condition`1.NotEqualTo(System.String,System.Object[])">
+            <summary>
+            属性值不等于某些值（例如：x!=1 and x!=2）
+            </summary>
+            <param name="name">属性名</param>
+            <param name="value">某些值</param>
+        </member>
+        <member name="M:Summer.Condition`1.GreaterThan(System.String,System.Object)">
+            <summary>
+            属性值大于某个值（例如：x>1）
+            </summary>
+            <param name="name">属性名</param>
+            <param name="value">值</param>
+        </member>
+        <member name="M:Summer.Condition`1.LessThan(System.String,System.Object)">
+            <summary>
+            属性值小于某个值（例如：x小于1）
+            </summary>
+            <param name="name">属性名</param>
+            <param name="value">值</param>
+        </member>
+        <member name="M:Summer.Condition`1.GreaterThanOrEqualTo(System.String,System.Object)">
+            <summary>
+            属性值大于等于某个值（例如：x>=1）
+            </summary>
+            <param name="name">属性名</param>
+            <param name="value">值</param>
+        </member>
+        <member name="M:Summer.Condition`1.LessThanOrEqualTo(System.String,System.Object)">
+            <summary>
+            属性值小于等于某个值（例如：x小于等于1）
+            </summary>
+            <param name="name">属性名</param>
+            <param name="value">值</param>
+        </member>
+        <member name="M:Summer.Condition`1.Between(System.String,System.Object,System.Object)">
+            <summary>
+            属性值在某两个值之间（例如：x between 1 and 2）
+            </summary>
+            <param name="name">属性名</param>
+            <param name="value1">值（较小值）</param>
+            <param name="value2">值（较大值）</param>
+        </member>
+        <member name="M:Summer.Condition`1.In(System.String,System.Object[])">
+            <summary>
+            属性值在某些值之中（例如：x in (1,2,3,4) ）
+            </summary>
+            <param name="name">属性名</param>
+            <param name="value">值</param>
+        </member>
+        <member name="M:Summer.Condition`1.NotIn(System.String,System.Object[])">
+            <summary>
+            属性值在某些值之中（例如：x in (1,2,3,4) ）
+            </summary>
+            <param name="name">属性名</param>
+            <param name="value">值</param>
+        </member>
+        <member name="M:Summer.Condition`1.Like(System.String,System.String)">
+            <summary>
+            属性值进行匹配，例如（name like '%刘永志%'）
+            </summary>
+            <param name="name">属性名</param>
+            <param name="value">值（例如：%刘永志%）</param>
+        </member>
+        <member name="M:Summer.Condition`1.orEqualTo(System.String,System.Object)">
+            <summary>
+            或者属性值等于某值（例如：x=1）
+            </summary>
+            <param name="name">属性名</param>
+            <param name="value">值</param>
+        </member>
+        <member name="M:Summer.Condition`1.orEqualTo(System.String,System.Object[])">
+            <summary>
+            或者属性值等于某些值（例如：x=1 or x=2）
+            </summary>
+            <param name="name">属性名</param>
+            <param name="value">某些值</param>
+        </member>
+        <member name="M:Summer.Condition`1.orNotEqualTo(System.String,System.Object)">
+            <summary>
+            或者属性值不等于某值（例如：x!=1）
+            </summary>
+            <param name="name">属性名</param>
+            <param name="value">值</param>
+        </member>
+        <member name="M:Summer.Condition`1.orNotEqualTo(System.String,System.Object[])">
+            <summary>
+            或者属性值不等于某些值（例如：x!=1 and x!=2）
+            </summary>
+            <param name="name">属性名</param>
+            <param name="value">某些值</param>
+        </member>
+        <member name="M:Summer.Condition`1.orGreaterThan(System.String,System.Object)">
+            <summary>
+            或者属性值大于某个值（例如：x>1）
+            </summary>
+            <param name="name">属性名</param>
+            <param name="value">值</param>
+        </member>
+        <member name="M:Summer.Condition`1.orLessThan(System.String,System.Object)">
+            <summary>
+            或者属性值小于某个值（例如：x小于1）
+            </summary>
+            <param name="name">属性名</param>
+            <param name="value">值</param>
+        </member>
+        <member name="M:Summer.Condition`1.orGreaterThanOrEqualTo(System.String,System.Object)">
+            <summary>
+            或者属性值大于等于某个值（例如：x>=1）
+            </summary>
+            <param name="name">属性名</param>
+            <param name="value">值</param>
+        </member>
+        <member name="M:Summer.Condition`1.orLessThanOrEqualTo(System.String,System.Object)">
+            <summary>
+            或者属性值小于等于某个值（例如：x小于等于1）
+            </summary>
+            <param name="name">属性名</param>
+            <param name="value">值</param>
+        </member>
+        <member name="M:Summer.Condition`1.orBetween(System.String,System.Object,System.Object)">
+            <summary>
+            或者属性值在某两个值之间（例如：x between 1 and 2）
+            </summary>
+            <param name="name">属性名</param>
+            <param name="value1">值（较小值）</param>
+            <param name="value2">值（较大值）</param>
+        </member>
+        <member name="M:Summer.Condition`1.orIn(System.String,System.Object[])">
+            <summary>
+            或者属性值在某些值之中（例如：x in (1,2,3,4) ）
+            </summary>
+            <param name="name">属性名</param>
+            <param name="value">值</param>
+        </member>
+        <member name="M:Summer.Condition`1.orNotIn(System.String,System.Object[])">
+            <summary>
+            或者属性值在某些值之中（例如：x in (1,2,3,4) ）
+            </summary>
+            <param name="name">属性名</param>
+            <param name="value">值</param>
+        </member>
+        <member name="M:Summer.Condition`1.orLike(System.String,System.String)">
+            <summary>
+            或者属性值进行匹配，例如（name like '%刘永志%'）
+            </summary>
+            <param name="name">属性名</param>
+            <param name="value">值（例如：%刘永志%）</param>
+        </member>
+        <member name="M:Summer.Condition`1._OR_(Summer.Condition{`0})">
+            <summary>
+            与另外一个条件or连接
+            </summary>
+            <param name="otherCondition"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.Condition`1._AND_(Summer.Condition{`0})">
+            <summary>
+            与另外一个条件and连接
+            </summary>
+            <param name="otherCondition"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.Condition`1.Merger(Summer.Condition{`0},Summer.Both)">
+            <summary>
+            将条件与另一个条件进行合并
+            </summary>
+            <param name="condition">另一个条件</param>
+            <param name="AndOr">两个条件之间的关系</param>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.Condition`1.GetFilterExpression">
+            <summary>
+            返回限制条件最后生成的SQL语句（包含参数）
+            </summary>
+        </member>
+        <member name="M:Summer.Condition`1.GetFilterParameters">
+            <summary>
+            返回条件语句中对应的参数集合
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Summer.DataBaseType">
+            <summary>
+            数据库类型
+            </summary>
+        </member>
+        <member name="F:Summer.DataBaseType.MSSQL">
+            <summary>
+            微软SQL数据库
+            </summary>
+        </member>
+        <member name="F:Summer.DataBaseType.Oracle">
+            <summary>
+            Oracle数据库
+            </summary>
+        </member>
+        <member name="F:Summer.DataBaseType.Access">
+            <summary>
+            微软Access数据库
+            </summary>
+        </member>
+        <member name="T:Summer.Both">
+            <summary>
+            条件间关系
+            </summary>
+        </member>
+        <member name="F:Summer.Both.And">
+            <summary>
+            并且关系
+            </summary>
+        </member>
+        <member name="F:Summer.Both.Or">
+            <summary>
+            或者关系
+            </summary>
+        </member>
+        <member name="T:Summer.DataBaseUtility">
+            <summary>
+            数据库常用工具类
+            </summary>
+        </member>
+        <member name="F:Summer.DataBaseUtility._DataBaseType">
+            <summary>
+            数据库类型
+            </summary>
+        </member>
+        <member name="M:Summer.DataBaseUtility.#ctor(Summer.DataBaseType)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="databaseType">数据库类型</param>
+        </member>
+        <member name="M:Summer.DataBaseUtility.CreateParameter">
+            <summary>
+            创建一个SQL语句参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.DataBaseUtility.CreateDbCommand">
+            <summary>
+            创建一个数据库命令
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.DataBaseUtility.CreateDataBaseObject(System.String,System.String)">
+            <summary>
+            创建一个数据库操作环境
+            </summary>
+            <param name="Name">数据库名称</param>
+            <param name="ConnectionString">数据库连接字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.DataBaseUtility.ReplaceString(System.String,System.String)">
+            <summary>
+            替换字符串中的特殊字符
+            </summary>
+            <param name="filter">需要替换的字符串</param>
+            <param name="newString">新字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.DataBaseUtility.GetTopSQLQueryString(System.String,System.Int32)">
+            <summary>
+            通过原SQL查询语句得到前多少条记录的SQL语句
+            </summary>
+            <param name="querySQLString">原SQL查询语句</param>
+            <param name="top">前多少条记录</param>
+            <returns></returns>
+        </member>
+        <member name="P:Summer.DataBaseUtility.ParaUpdate">
+            <summary>
+            更新语句中的参数特殊字符串
+            </summary>
+        </member>
+        <member name="P:Summer.DataBaseUtility.ParaWhere">
+            <summary>
+            Where语句中的参数特殊字符串
+            </summary>
+        </member>
+        <member name="P:Summer.DataBaseUtility.ParaInsert">
+            <summary>
+            插入语句中值的参数特殊字符串
+            </summary>
+        </member>
+        <member name="T:Summer.Access">
+            <summary>
+            Access数据库操作类
+            </summary>
+        </member>
+        <member name="M:Summer.Access.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="connectionString">数据库连接字符串</param>
+        </member>
+        <member name="M:Summer.Access.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="name">数据库名称</param>
+            <param name="connectionString">数据库连接字符串</param>
+        </member>
+        <member name="M:Summer.Access.Finalize">
+            <summary>
+            析构函数
+            </summary>
+        </member>
+        <member name="M:Summer.Access.GetDataSet(System.Data.IDbCommand)">
+            <summary>
+            通过数据库操作命令返回DataSet
+            </summary>
+            <param name="command">数据库操作命令</param>
+        </member>
+        <member name="M:Summer.Access.GetDataTable(System.Data.IDbCommand)">
+            <summary>
+            通过数据库操作命令返回一张表
+            </summary>
+            <param name="command">数据库操作命令</param>
+        </member>
+        <member name="M:Summer.Access.GetDataTable(System.Data.IDbCommand,System.Int32)">
+            <summary>
+            通过数据库操作命令返回前n条记录的一张表
+            </summary>
+            <param name="command">数据库命令</param>
+            <param name="n">前n条记录</param>
+        </member>
+        <member name="M:Summer.Access.GetDataTable(System.String)">
+            <summary>
+            通过SQL语句返回一张表
+            </summary>
+            <param name="sqlstring">sql语句</param>
+        </member>
+        <member name="M:Summer.Access.GetDataTable(System.String,System.Int32)">
+            <summary>
+            通过SQL语句返回前n条记录组成的一张表
+            </summary>
+            <param name="sqlstring">SQL语句</param>
+            <param name="n">前n条记录</param>
+        </member>
+        <member name="M:Summer.Access.RunSQLString(System.String)">
+            <summary>
+            执行SQL语句，返回影响的条数
+            </summary>
+        </member>
+        <member name="P:Summer.Access.Type">
+            <summary>
+            获取数据库类型
+            </summary>
+        </member>
+        <member name="T:Summer.EntityCollection`1">
+            <summary>
+            实体集合类
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:Summer.EntityCollection`1.#ctor">
+            <summary>
+            无参构造函数
+            </summary>
+        </member>
+        <member name="M:Summer.EntityCollection`1.#ctor(`0[])">
+            <summary>
+            构造函数
+            </summary>
+            <param name="eo">eo被复制到新列表中</param>
+        </member>
+        <member name="M:Summer.EntityCollection`1.Add(`0)">
+            <summary>
+            向集合中添加元素
+            </summary>
+            <param name="entityObjects"></param>
+        </member>
+        <member name="M:Summer.EntityCollection`1.Remove(`0)">
+            <summary>
+            从集合中移除元素
+            </summary>
+            <param name="entityObjects">元素</param>
+        </member>
+        <member name="M:Summer.EntityCollection`1.GetSerializerObject">
+            <summary>
+            获取要序列化的对象
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.EntityCollection`1.GetEnumerator">
+            <summary>
+            获取IEnumerator泛型对象
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Summer.EntityCollection`1.Count">
+            <summary>
+            集合中元素的个数
+            </summary>
+        </member>
+        <member name="P:Summer.EntityCollection`1.Item(System.Int32)">
+            <summary>
+            通过索引值得到EntityObject
+            </summary>
+            <param name="index">索引值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.EntityCollection`1.EntityCollectionEnumerator.Dispose">
+            <summary>
+            销毁函数
+            </summary>
+        </member>
+        <member name="T:Summer.DeleteBatch`1">
+            <summary>
+            删除批处理
+            </summary>
+        </member>
+        <member name="M:Summer.DeleteBatch`1.#ctor">
+            <summary>
+            无参构造函数
+            </summary>
+        </member>
+        <member name="M:Summer.DeleteBatch`1.Finalize">
+            <summary>
+            析构函数
+            </summary>
+        </member>
+        <member name="M:Summer.DeleteBatch`1.Dispose">
+            <summary>
+            销毁函数
+            </summary>
+        </member>
+        <member name="M:Summer.DeleteBatch`1.BuildDbCommand">
+            <summary>
+            创建SQL执行语句
+            </summary>
+        </member>
+        <member name="M:Summer.DeleteBatch`1.Execute">
+            <summary>
+            在事务中执行批处理
+            </summary>
+        </member>
+        <member name="M:Summer.DeleteBatch`1.Execute(System.Boolean)">
+            <summary>
+            执行批处理
+            </summary>
+            <param name="IsStart">是否启动事务处理</param>
+            <returns></returns>
+        </member>
+        <member name="E:Summer.DeleteBatch`1.BeforeExecute">
+            <summary>
+            执行删除批处理之前的事件
+            </summary>
+        </member>
+        <member name="E:Summer.DeleteBatch`1.AfterExecute">
+            <summary>
+            执行删除批处理之后的事件
+            </summary>
+        </member>
+        <member name="T:Summer.Query">
+            <summary>
+            查询类，自定义SQL语句及数据库命令进行查询
+            </summary>
+        </member>
+        <member name="M:Summer.Query.RunQuerySQLString(System.String,System.String)">
+            <summary>
+            通过SQL查询语句，以DataTable返回查询结果
+            </summary>
+            <param name="sqlString">SQL查询语句</param>
+            <param name="databaseName">数据库名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.Query.RunQueryDbCommand(System.Data.IDbCommand,System.String)">
+            <summary>
+            通过数据库查询命令，以DataTable返回查询结果
+            </summary>
+            <param name="dbCommand">数据库命令</param>
+            <param name="databaseName">数据库名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.Query.RunProcedure(System.String,System.Data.IDataParameter[],System.String)">
+            <summary>
+            执行存储过程，并以DataSet返回结果
+            </summary>
+            <param name="procedureName">存储过程名称</param>
+            <param name="parameters">参数</param>
+            <param name="databaseName">数据库名称</param>
+            <returns></returns>
+        </member>
+        <member name="T:Summer.InsertCommander">
+            <summary>
+            数据库插入命令
+            </summary>
+        </member>
+        <member name="T:Summer.Commander">
+            <summary>
+            数据库执行命令的基类
+            </summary>
+        </member>
+        <member name="M:Summer.Commander.#ctor">
+            <summary>
+            无参构造函数
+            </summary>
+        </member>
+        <member name="M:Summer.Commander.Finalize">
+            <summary>
+            析构函数
+            </summary>
+        </member>
+        <member name="M:Summer.Commander.Dispose">
+            <summary>
+            销毁函数
+            </summary>
+        </member>
+        <member name="M:Summer.InsertCommander.#ctor">
+            <summary>
+            无参构造函数
+            </summary>
+        </member>
+        <member name="M:Summer.InsertCommander.Finalize">
+            <summary>
+            析构函数
+            </summary>
+        </member>
+        <member name="M:Summer.InsertCommander.Dispose">
+            <summary>
+            销毁函数
+            </summary>
+        </member>
+        <member name="M:Summer.InsertCommander.BuildCommandForInsertEntity(Summer.EntityObject)">
+            <summary>
+            创建插入批处理的数据库命令对象
+            </summary>
+            <param name="entityObject"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Summer.Children">
+            <summary>
+            孩子类
+            </summary>
+        </member>
+        <member name="M:Summer.Children.#ctor(Summer.EntityObject)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="entityObject">实体</param>
+        </member>
+        <member name="P:Summer.Children.Item(System.String,System.String,System.String)">
+            <summary>
+            获取实体属性映射的孩子实体
+            </summary>
+            <param name="propertyName">实体属性名称</param>
+            <param name="childTypeFullName">孩子实体的类型</param>
+            <param name="childPropertyName">孩子实体属性名称</param>
+            <returns></returns>
+        </member>
+        <member name="T:Summer.UpdateCommander">
+            <summary>
+            数据库更新命令
+            </summary>
+        </member>
+        <member name="M:Summer.UpdateCommander.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:Summer.UpdateCommander.Finalize">
+            <summary>
+            析构函数
+            </summary>
+        </member>
+        <member name="M:Summer.UpdateCommander.Dispose">
+            <summary>
+            销毁函数
+            </summary>
+        </member>
+        <member name="M:Summer.UpdateCommander.BuildCommandForUpdateBatch``1(Summer.UpdateBatch{``0})">
+            <summary>
+            创建更新批处理的数据库命令对象
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="batch"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.UpdateCommander.BuildCommandForUpdateEntity(Summer.EntityObject)">
+            <summary>
+            创建更新实体的数据库命令对象
+            </summary>
+            <param name="entityObject"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Summer.Parent">
+            <summary>
+            父亲类
+            </summary>
+        </member>
+        <member name="M:Summer.Parent.#ctor(Summer.EntityObject)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="entityObject">实体对象</param>
+        </member>
+        <member name="P:Summer.Parent.Item(System.String)">
+            <summary>
+            获取实体属性映射的父亲实体
+            </summary>
+            <param name="propertyName">实体属性名称</param>
+            <returns></returns>
+        </member>
+        <member name="T:Summer.QueryExtension">
+            <summary>
+            查询扩展类
+            </summary>
+        </member>
+        <member name="M:Summer.QueryExtension.GetPageDataTableForMSSQL(System.String,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            获取由表中分页记录组成的新表，该函数需要存储过程PageProcedure的支持。（该方法只对MSSQL数据库有效）
+            </summary>
+            <param name="databaseName">数据库名称</param>
+            <param name="SqlStr">sql语句</param>
+            <param name="CurrentPage">当前第几页</param>
+            <param name="PageSize">每页行数</param>
+            <param name="PageCount">总页数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.QueryExtension.GetPageDataTableForOracle(System.String,System.String,System.Int32,System.Int32,System.Int32@,System.Int32@)">
+            <summary>
+            获取由表中分页记录组成的新表，该函数需要PagePackage包中存储过程PageProcedure的支持。（该方法只对Oracle数据库有效）
+            </summary>
+            <param name="databaseName">数据库名称</param>
+            <param name="SqlStr">sql语句</param>
+            <param name="CurrentPage">当前第几页</param>
+            <param name="PageSize">每页行数</param>
+            <param name="PageCount">总页数</param>
+            <param name="RecordCount">记录总数</param>
+            <returns></returns>
+        </member>
+        <member name="T:Summer.PropertyMappingCollection">
+            <summary>
+            属性映射的集合类
+            </summary>
+        </member>
+        <member name="M:Summer.PropertyMappingCollection.#ctor">
+            <summary>
+            无参构造函数
+            </summary>
+        </member>
+        <member name="M:Summer.PropertyMappingCollection.#ctor(Summer.MappingTable{Summer.PropertyMapping})">
+            <summary>
+            构造函数
+            </summary>
+            <param name="propertyMappings">PropertyMapping的键/值对集合</param>
+        </member>
+        <member name="M:Summer.PropertyMappingCollection.Add(Summer.PropertyMapping)">
+            <summary>
+            向集合中添加元素
+            </summary>
+            <param name="propertyMapping"></param>
+        </member>
+        <member name="M:Summer.PropertyMappingCollection.Remove(System.String)">
+            <summary>
+            从集合中移除元素
+            </summary>
+            <param name="name">元素的键名称</param>
+        </member>
+        <member name="M:Summer.PropertyMappingCollection.Contains(System.String)">
+            <summary>
+            检查是否有相同name的PropertyMapping对象在集合中存在
+            </summary>
+            <param name="name">PropertyMapping对象的名称</param>
+        </member>
+        <member name="M:Summer.PropertyMappingCollection.GetEnumerator">
+            <summary>
+            获取IEnumerator泛型PropertyMapping对象
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Summer.PropertyMappingCollection.Count">
+            <summary>
+            集合中PropertyMapping元素的个数
+            </summary>
+        </member>
+        <member name="P:Summer.PropertyMappingCollection.Item(System.String)">
+            <summary>
+            通过属性的名称得到PropertyMapping
+            </summary>
+            <param name="name">属性的名称</param>
+            <returns></returns>
+            
+        </member>
+        <member name="P:Summer.PropertyMappingCollection.Item(System.Int32)">
+            <summary>
+            通过索引值得到PropertyMapping
+            </summary>
+            <param name="index">索引值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.PropertyMappingCollection.PropertyMappingCollectionEnumerator.Dispose">
+            <summary>
+            销毁函数
+            </summary>
+        </member>
+        <member name="T:Summer.DataBaseMapping">
+            <summary>
+            数据库的映射信息类
+            </summary>
+        </member>
+        <member name="F:Summer.DataBaseMapping._ClassMappingFile">
+            <summary>
+            ClassMapping文件路径
+            </summary>
+        </member>
+        <member name="F:Summer.DataBaseMapping._Name">
+            <summary>
+            数据库名称
+            </summary>
+        </member>
+        <member name="F:Summer.DataBaseMapping._Parameters">
+            <summary>
+            数据库配置参数
+            </summary>
+        </member>
+        <member name="F:Summer.DataBaseMapping._Type">
+            <summary>
+            数据库类型
+            </summary>
+        </member>
+        <member name="M:Summer.DataBaseMapping.#ctor(System.String)">
+            <summary>
+            构造参数
+            </summary>
+            <param name="name">数据库名称</param>
+        </member>
+        <member name="M:Summer.DataBaseMapping.#ctor(System.String,Summer.DataBaseType)">
+            <summary>
+            构造参数
+            </summary>
+            <param name="name">数据库名称</param>
+            <param name="type">数据库类型</param>
+        </member>
+        <member name="M:Summer.DataBaseMapping.Finalize">
+            <summary>
+            析构函数
+            </summary>
+        </member>
+        <member name="M:Summer.DataBaseMapping.Dispose">
+            <summary>
+            销毁函数
+            </summary>
+        </member>
+        <member name="M:Summer.DataBaseMapping.AddParameter(System.String,System.String)">
+            <summary>
+            增加数据库映射的配置参数
+            </summary>
+            <param name="name">参数名称</param>
+            <param name="value">参数值</param>
+        </member>
+        <member name="M:Summer.DataBaseMapping.AddClassMappingFile(System.String)">
+            <summary>
+            增加classmapping文件
+            </summary>
+            <param name="path">文件路径</param>
+        </member>
+        <member name="M:Summer.DataBaseMapping.GetValue(System.String)">
+            <summary>
+            根据参数名称获取参数值
+            </summary>
+            <param name="name">参数名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.DataBaseMapping.CreateDataBaseObject">
+            <summary>
+            创建一个数据库操作环境
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Summer.DataBaseMapping.ConnectionString">
+            <summary>
+            获取数据库连接字符串
+            </summary>
+        </member>
+        <member name="P:Summer.DataBaseMapping.ClassMappingFiles">
+            <summary>
+            获取ClassMapping文件路径
+            </summary>
+        </member>
+        <member name="P:Summer.DataBaseMapping.Parameters">
+            <summary>
+            获取配置参数
+            </summary>
+        </member>
+        <member name="P:Summer.DataBaseMapping.Name">
+            <summary>
+            获取或设置数据库名称
+            </summary>
+        </member>
+        <member name="P:Summer.DataBaseMapping.Type">
+            <summary>
+            获取或设置数据库类型
+            </summary>
+        </member>
+        <member name="T:Summer.ClassMapping">
+            <summary>
+            数据库的数据对象的映射信息
+            </summary>
+        </member>
+        <member name="F:Summer.ClassMapping._Name">
+            <summary>
+            类名
+            </summary>
+        </member>
+        <member name="F:Summer.ClassMapping._Table">
+            <summary>
+            类映射的表
+            </summary>
+        </member>
+        <member name="F:Summer.ClassMapping._View">
+            <summary>
+            类对应的视图
+            </summary>
+        </member>
+        <member name="F:Summer.ClassMapping._DataBaseMapping">
+            <summary>
+            实体所在数据库的DataBaseMapping
+            </summary>
+        </member>
+        <member name="F:Summer.ClassMapping._PropertyMappings">
+            <summary>
+            类的所有PropertyMapping
+            </summary>        
+        </member>
+        <member name="F:Summer.ClassMapping._DataObjectType">
+            <summary>
+            实体所映射数据对象的DataObjectType
+            </summary>
+        </member>
+        <member name="M:Summer.ClassMapping.GetPropertyMappingCollection(System.String[])">
+            <summary>
+            根据属性名称获取PropertyMapping
+            </summary>
+        </member>
+        <member name="M:Summer.ClassMapping.#ctor">
+            <summary>
+            无参构造函数
+            </summary>
+        </member>
+        <member name="M:Summer.ClassMapping.#ctor(System.String,Summer.DataObjectType,System.String,Summer.DataBaseMapping)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="name">类的名字</param>
+            <param name="dataObjectType">类映射的表还是视图</param>
+            <param name="objectName">类映射的表或视图的名称</param>
+            <param name="databaseMapping">类映射的数据对象所在的数据库映射</param>
+        </member>
+        <member name="M:Summer.ClassMapping.Finalize">
+            <summary>
+            获取ClassMapping中PropertyMapping的个数
+            </summary>
+        </member>
+        <member name="M:Summer.ClassMapping.Dispose">
+            <summary>
+            销毁函数
+            </summary>
+        </member>
+        <member name="P:Summer.ClassMapping.DataBase">
+            <summary>
+            获取类对应的表所在的数据库名
+            </summary>
+        </member>
+        <member name="P:Summer.ClassMapping.Name">
+            <summary>
+            获取类的名字
+            </summary>
+        </member>
+        <member name="P:Summer.ClassMapping.Table">
+            <summary>
+            获取类映射的表名
+            </summary>
+        </member>
+        <member name="P:Summer.ClassMapping.View">
+            <summary>
+            获取类映射的视图
+            </summary>
+        </member>
+        <member name="P:Summer.ClassMapping.DataObject">
+            <summary>
+            数据对象的名称，一般是表名称或视图名称
+            </summary>
+        </member>
+        <member name="P:Summer.ClassMapping.HasPrimaryKey">
+            <summary>
+            获取类映射的表是否有主键
+            </summary>
+        </member>
+        <member name="P:Summer.ClassMapping.HasAutoCreateColumn">
+            <summary>
+            获取类映射的表是否有自动生成的字段
+            </summary>
+        </member>
+        <member name="P:Summer.ClassMapping.DataBaseMapping">
+            <summary>
+            实体所在数据库的DataBaseMapping
+            </summary>
+        </member>
+        <member name="P:Summer.ClassMapping.PropertyMappings">
+            <summary>
+            获取类的所有PropertyMapping
+            </summary>
+        </member>
+        <member name="P:Summer.ClassMapping.PropertyMappingsForPrimaryKey">
+            <summary>
+            获取主键中包含的PropertyMapping
+            </summary>
+        </member>
+        <member name="P:Summer.ClassMapping.DataObjectType">
+            <summary>
+            实体所映射数据对象的DataObjectType
+            </summary>
+        </member>
+        <member name="T:Summer.MappingTable`1">
+            <summary>
+            映射数据的存储表
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:Summer.MappingTable`1.Add(System.String,`0)">
+            <summary>
+            增加键值对
+            </summary>
+            <param name="name">名称</param>
+            <param name="value">值</param>
+        </member>
+        <member name="M:Summer.MappingTable`1.Contains(System.String)">
+            <summary>
+            是否包含某键值对
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.MappingTable`1.ContainsKey(System.String)">
+            <summary>
+            是否包含某键值对
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.MappingTable`1.ContainsValue(`0)">
+            <summary>
+            是否包含某值
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.MappingTable`1.Remove(System.String)">
+            <summary>
+            移除某键值对
+            </summary>
+            <param name="name"></param>
+        </member>
+        <member name="P:Summer.MappingTable`1.Item(System.String)">
+            <summary>
+            根据名称获取值
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Summer.Gradation`1">
+            <summary>
+            实体字段排序类
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="F:Summer.Gradation`1._DataBaseMapping">
+            <summary>
+            映射的数据库
+            </summary>
+        </member>
+        <member name="F:Summer.Gradation`1._ClassMapping">
+            <summary>
+            类映射信息
+            </summary>
+        </member>
+        <member name="F:Summer.Gradation`1._EntityType">
+            <summary>
+            操作实体的类型
+            </summary>
+        </member>
+        <member name="M:Summer.Gradation`1.#ctor">
+            <summary>
+            无参构造函数
+            </summary>
+        </member>
+        <member name="M:Summer.Gradation`1.#ctor(System.String,Summer.Sort)">
+            <summary>
+            构造函数，构造一个排序方式
+            </summary>
+            <param name="name">需要排序的属性名称</param>
+            <param name="order">排序的方式</param>
+        </member>
+        <member name="M:Summer.Gradation`1.Add(System.String,Summer.Sort)">
+            <summary>
+            增加排序字段
+            </summary>
+            <param name="name"></param>
+            <param name="order"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.Gradation`1.Remove(System.String)">
+            <summary>
+            删除排除字段
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.Gradation`1.GetOrderExpression">
+            <summary>
+            获取排序的表达式
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Summer.Gradation`1.Cout">
+            <summary>
+            排序字段的个数
+            </summary>
+        </member>
+        <member name="T:Summer.ActionBeforeEventArgs">
+            <summary>
+            操作执行前参数
+            </summary>
+        </member>
+        <member name="P:Summer.ActionBeforeEventArgs.Cancel">
+            <summary>
+            是否取消操作
+            </summary>
+        </member>
+        <member name="T:Summer.ActionAfterEventArgs">
+            <summary>
+            操作执行后参数
+            </summary>
+        </member>
+        <member name="M:Summer.ActionAfterEventArgs.#ctor(System.Object)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="result">操作的结果</param>
+        </member>
+        <member name="P:Summer.ActionAfterEventArgs.Result">
+            <summary>
+            获取操作的返回结果
+            </summary>
+        </member>
+        <member name="T:Summer.DataObjectType">
+            <summary>
+            数据对象类型
+            </summary>
+        </member>
+        <member name="F:Summer.DataObjectType.Table">
+            <summary>
+            表
+            </summary>
+        </member>
+        <member name="F:Summer.DataObjectType.View">
+            <summary>
+            视图
+            </summary>
+        </member>
+        <member name="T:Summer.SummerType">
+            <summary>
+            Summer封装的对Type对象的一些操作
+            </summary>
+        </member>
+        <member name="M:Summer.SummerType.SetPropertyValue(System.Object,System.String,System.Object)">
+            <summary>
+            给某对象的某属性赋值
+            </summary>
+            <param name="target"></param>
+            <param name="propertyName"></param>
+            <param name="propertyValue"></param>
+        </member>
+        <member name="M:Summer.SummerType.GetPropertieValue(System.Object,System.String)">
+            <summary>
+            获取某对象的某属性值
+            </summary>
+            <param name="target"></param>
+            <param name="propertyName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Summer.SummerConvert">
+            <summary>
+            Summer数据转换类
+            </summary>
+        </member>
+        <member name="M:Summer.SummerConvert.ToInt32(System.Object,System.Int32)">
+            <summary>
+            将某对象转换为Int32数据类型
+            </summary>
+            <param name="obj"></param>
+            <param name="noResult"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.SummerConvert.ChangeType(System.Object,System.Type)">
+            <summary>
+            将某对象转换为其它数据类型
+            </summary>
+            <param name="value"></param>
+            <param name="conversionType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.SummerConvert.IsColumnKeyType(System.Object)">
+            <summary>
+            将对象转为ColumnKeyType类型
+            </summary>
+            <param name="obj">要转换的对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.SummerConvert.ConvertToColumnKeyType(System.Object)">
+            <summary>
+            将对象转为ColumnKeyType类型
+            </summary>
+            <param name="obj">要转换的对象</param>
+            <returns></returns>
+        </member>
+        <member name="T:Summer.TransactionAction">
+            <summary>
+            事务的任务类型
+            </summary>
+        </member>
+        <member name="F:Summer.TransactionAction.SaveEntity">
+            <summary>
+            保存实体
+            </summary>
+        </member>
+        <member name="F:Summer.TransactionAction.SelectEntity">
+            <summary>
+            获取实体
+            </summary>
+        </member>
+        <member name="F:Summer.TransactionAction.DeleteEntity">
+            <summary>
+            删除实体
+            </summary>
+        </member>
+        <member name="F:Summer.TransactionAction.InsertEntity">
+            <summary>
+            增加实体
+            </summary>
+        </member>
+        <member name="F:Summer.TransactionAction.UpdateEntity">
+            <summary>
+            更新实体
+            </summary>
+        </member>
+        <member name="F:Summer.TransactionAction.SelectBatch">
+            <summary>
+            批量获取
+            </summary>
+        </member>
+        <member name="F:Summer.TransactionAction.UpdateBatch">
+            <summary>
+            批量更新
+            </summary>
+        </member>
+        <member name="F:Summer.TransactionAction.DeleteBatch">
+            <summary>
+            批量删除
+            </summary>
+        </member>
+        <member name="F:Summer.TransactionAction.SQLQueryString">
+            <summary>
+            执行查询字符串
+            </summary>
+        </member>
+        <member name="F:Summer.TransactionAction.SQLNonQueryString">
+            <summary>
+            执行非查询字符串
+            </summary>
+        </member>
+        <member name="F:Summer.TransactionAction.QueryDbCommand">
+            <summary>
+            执行查询命令
+            </summary>
+        </member>
+        <member name="F:Summer.TransactionAction.NonQueryDbCommand">
+            <summary>
+            执行非查询命令
+            </summary>
+        </member>
+        <member name="T:Summer.SelectCommander">
+            <summary>
+            数据库获取命令
+            </summary>
+        </member>
+        <member name="M:Summer.SelectCommander.#ctor">
+            <summary>
+            无参构造函数
+            </summary>
+        </member>
+        <member name="M:Summer.SelectCommander.Finalize">
+            <summary>
+            析构函数
+            </summary>
+        </member>
+        <member name="M:Summer.SelectCommander.Dispose">
+            <summary>
+            销毁函数
+            </summary>
+        </member>
+        <member name="M:Summer.SelectCommander.BuildCommandForSelectBatch``1(Summer.SelectBatch{``0})">
+            <summary>
+            创建获取批处理的数据库命令对象
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="batch"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.SelectCommander.BuildCommandForSelectEntity(Summer.EntityObject)">
+            <summary>
+            创建获取实体的数据库命令对象
+            </summary>
+            <param name="entityObject"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Summer.DeleteCommander">
+            <summary>
+            数据库删除命令
+            </summary>
+        </member>
+        <member name="M:Summer.DeleteCommander.#ctor">
+            <summary>
+            无参构造函数
+            </summary>
+        </member>
+        <member name="M:Summer.DeleteCommander.Finalize">
+            <summary>
+            析构函数
+            </summary>
+        </member>
+        <member name="M:Summer.DeleteCommander.Dispose">
+            <summary>
+            销毁函数
+            </summary>
+        </member>
+        <member name="M:Summer.DeleteCommander.BuildCommandForDeleteBatch``1(Summer.DeleteBatch{``0})">
+            <summary>
+            创建删除批处理的数据库命令对象
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="batch"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.DeleteCommander.BuildCommandForDeleteEntity(Summer.EntityObject)">
+            <summary>
+            创建删除实体的数据库命令对象
+            </summary>
+            <param name="entityObject"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Summer.UpdateBatch`1">
+            <summary>
+            更新批处理
+            </summary>
+        </member>
+        <member name="F:Summer.UpdateBatch`1.Parameter">
+            <summary>
+            SQL语句参数
+            </summary>
+        </member>
+        <member name="M:Summer.UpdateBatch`1.#ctor">
+            <summary>
+            无参构造函数
+            </summary>
+        </member>
+        <member name="M:Summer.UpdateBatch`1.Finalize">
+            <summary>
+            析构函数
+            </summary>
+        </member>
+        <member name="M:Summer.UpdateBatch`1.InitParameter">
+            <summary>
+            初始化SQL语句参数
+            </summary>
+        </member>
+        <member name="M:Summer.UpdateBatch`1.Dispose">
+            <summary>
+            销毁函数
+            </summary>
+        </member>
+        <member name="M:Summer.UpdateBatch`1.BuildDbCommand">
+            <summary>
+            创建SQL执行语句
+            </summary>
+        </member>
+        <member name="F:Summer.UpdateBatch`1.htProperty">
+            <summary>
+            要更新的属性(键值/对集合)
+            </summary>
+        </member>
+        <member name="M:Summer.UpdateBatch`1.SetProperty(System.String,System.Object)">
+            <summary>
+            设置属性的新值
+            </summary>
+            <param name="name">属性的名称</param>
+            <param name="value">值</param>
+        </member>
+        <member name="M:Summer.UpdateBatch`1.GetUpdateExpression">
+            <summary>
+            获取SET部分的sql语句
+            </summary>
+        </member>
+        <member name="M:Summer.UpdateBatch`1.GetUpdateParameters">
+            <summary>
+            获取SET部分的sql语句的参数
+            </summary>
+        </member>
+        <member name="M:Summer.UpdateBatch`1.Execute">
+            <summary>
+            在事务中执行批处理
+            </summary>
+        </member>
+        <member name="M:Summer.UpdateBatch`1.Execute(System.Boolean)">
+            <summary>
+            执行批处理
+            </summary>
+            <param name="IsStart">是否启动事务处理</param>
+            <returns></returns>
+        </member>
+        <member name="E:Summer.UpdateBatch`1.BeforeExecute">
+            <summary>
+            执行更新批处理之前的事件
+            </summary>
+        </member>
+        <member name="E:Summer.UpdateBatch`1.AfterExecute">
+            <summary>
+            执行更新批处理之后的事件
+            </summary>
+        </member>
+        <member name="T:Summer.Utility">
+            <summary>
+            工具类
+            </summary>
+        </member>
+        <member name="M:Summer.Utility.DataRowToEntity``1(System.Data.DataRow,System.Boolean)">
+            <summary>
+            将行转换为映射的实体，不能转换时返回null。
+            </summary>
+            <typeparam name="T">目标实体</typeparam>
+            <param name="dr">行</param>
+            <param name="check">行转换为映射的实体时，是否检查实体属性映射的字段在行映射的表中存在，若检查到不存在，将会抛出异常。默认值“否”</param>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.Utility.DataRowToEntity``1(System.Data.DataRow)">
+            <summary>
+            将行转换为对应的实体，不能转换时返回null。
+            </summary>
+            <typeparam name="T">目标实体</typeparam>
+            <param name="dr">行</param>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.Utility.DataTableToEntityCollection``1(System.Data.DataTable,System.Boolean)">
+            <summary>
+            将表转换为对应的实体集，（对于行来言，若表中的行不能转换为实体时返回null。）
+            </summary>
+            <typeparam name="T">目标实体</typeparam>
+            <param name="dt">表</param>
+            <param name="check">表中的行转换为映射的实体时，是否检查实体属性映射的字段在行映射的表中存在，若检查到不存在，将会抛出异常。默认值“否”</param>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.Utility.DataTableToEntityCollection``1(System.Data.DataTable)">
+            <summary>
+            将表转换为对应的实体集，（对于行来言，若表中的行不能转换为实体时返回null。）
+            </summary>
+            <typeparam name="T">目标实体</typeparam>
+            <param name="dt">表</param>       
+            <returns></returns>
+        </member>
+        <member name="M:Summer.Utility.JsonStringToEntity``1(System.String)">
+            <summary>
+            将Json字符串转换为实体
+            </summary>
+            <typeparam name="T">转换的目标实体类型</typeparam>
+            <param name="jsonString">源json字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Summer.Utility.JsonStringToEntity``1(System.String,Summer.JsonSerializerToolType)">
+            <summary>
+            将Json字符串转换为实体
+            </summary>
+            <typeparam name="T">转换的目标实体类型</typeparam>
+            <param name="jsonString">源json字符串</param>
+            <param name="tool">Json序列化工具</param>
+            <returns></returns>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

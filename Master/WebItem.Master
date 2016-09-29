@@ -1,0 +1,41 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="WebItem.master.cs" Inherits="NetRadio.LocatingMonitor.WebItem" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+     <input id="hidTitle" runat="server" type="hidden" sign="false" />
+        <div id="rightTD">
+                       <div id="pageheader">
+                            <div id="website">
+                                <asp:Label ID="labWebSite" runat="server" Text="Label" Sign="false"></asp:Label>
+                            </div>
+                        </div>
+                        <div id="pagetemplate">
+                            <div id="pagecontent">
+                                <asp:ContentPlaceHolder ID="CphRight" runat="server">
+                                </asp:ContentPlaceHolder>
+                            </div>
+                        </div>
+            </div>
+    </div>
+    </form>
+     <script>
+   var _window_Load= window.onload;
+window.onload=function()
+{
+    if(_window_Load!=null)
+    {
+      _window_Load();
+    }
+    if(typeof(page_Load)!="undefined")
+    {
+      page_Load();
+    }
+} 
+    </script>
+</body>
+</html>

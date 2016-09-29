@@ -1,0 +1,177 @@
+﻿/* Weixing.Assistant.Web.Controls.CollapseView */
+.cv {
+}
+.cv div.header {
+	padding: 5px 5px 8px 2px;
+	overflow: hidden;
+	background: url(../images/template/hline.jpg) center 25px no-repeat;
+}
+.cv div.header_empty {
+	height: 4px;
+	background: url(../images/template/hline.jpg) center no-repeat;
+}
+.cv h2.caption {
+	float: left;
+	margin: 0;
+	font-size: 12px;
+	font-weight: bold;
+}
+.cv h3.subcaption {
+	float: right;
+	margin: 0;
+	font-size: 12px;
+	font-weight: normal;
+	top: -1px;
+	position: relative;
+}
+.cv img.switch {
+	float: left;
+	margin-top: 3px;
+	margin-right: 3px;
+	cursor: pointer;
+}
+.cv div.content {
+}
+.cv_footer {
+	width: 0;
+	height: 16px;
+}
+
+
+/* Weixing.Assistant.Web.Controls.TabView */
+.tabs {
+}
+ul.tabmenu 
+{
+	color:Red;
+	margin: 0;
+	padding-left: 30px;
+	overflow: hidden;
+	background: url(../images/control/tabs_bottom.gif) left bottom no-repeat;
+}
+ul.tabmenu li {
+	cursor: pointer;
+	float: left;
+	display: block;
+	margin-left: -1px;
+	background: url(../images/control/tabs_back.gif) left 0 no-repeat;
+	top: -1px;
+}
+ul.tabmenu li a {
+	display: block;
+	color: #111111;
+	padding: 10px 25px 3px 25px;
+	text-decoration: none;
+	background: url(../images/control/tabs_back.gif) right -35px no-repeat;
+}
+ul.tabmenu li.linktab a:hover {
+	color: #8eb0e9;
+}
+ul.tabmenu li.selected {
+	margin-right: 1px;
+	background: url(../images/control/tabs_back.gif) left -70px no-repeat;
+	position: static;
+}
+ul.tabmenu li.selected a {
+	color: #1e60e9;
+	background: url(../images/control/tabs_back.gif) right -105px no-repeat;
+	padding: 9px 25px 4px 25px;
+}
+.tabs div.tabitem, .tabitem {
+	padding: 18px 10px;
+	background: white;
+	margin-bottom: 10px;
+	overflow: hidden;
+}
+
+
+/* Weixing.Assistant.Web.Controls.Sitemap */
+.sitemap_separator {
+	color: #666666;
+	font-family: tahoma, simsun, sans-serif;
+	font-size:  11px;
+	padding-left: 8px;
+	padding-right: 8px;
+}
+
+/* Weixing.Assistant.Web.Controls.SortButton */
+.sortbutton_arrow {
+	color: Red;
+	font-family: SimSun, Sans-Serif;
+	font-size: 12px;
+	margin-left: 2px;
+}
+
+
+/* Weixing.Assistant.Web.Controls.Pagination */
+.p_left .p_navigates {
+	float: left;	
+	padding: 2px 3px 2px 0;
+}
+.p_right .p_navigates {
+	float: right;	
+	padding: 2px 0 2px 3px;
+}
+.p_left .p_navigates a {
+	margin-right: 7px;
+}
+.p_right .p_navigates a {
+	margin-left: 7px;
+}
+.p_left .p_stat {
+	float: right;
+	padding: 2px 0 3px 3px;
+}
+.p_right .p_stat {
+	float: left;
+	padding: 2px 3px 3px 0;
+}
+.p_navigates a {
+	font-family: 'Courier New';
+	padding: 1px 5px 1px 5px;
+	border: 1px solid #aaa;
+	text-decoration: none !important;
+}
+.p_navigates a:hover {
+	color: Red;
+	border-color: Red;
+}
+.p_current, .p_current:hover {
+	color: #ff6600 !important;
+	border-color: #ff9900 !important;
+	text-decoration: none !important;
+}
+.p_counter {
+	color: Red;	
+}
+
+
+/* Weixing.Assistant.Web.Controls.Remind */
+.remind {
+	margin: 0;
+	padding: 8px 10px 9px 10px;
+	list-style: none;
+	border: 1px solid #ddd;
+	background: #ffffcc;
+	z-index:1000;
+	font-family: Simsun, Segoe UI, Tahoma, Sans-Serif;
+	font-size: 12px;
+}
+.remind * {
+	line-height: 17px;
+}
+.remind li.error {
+	color: Red;
+	padding: 0 0 0 18px;
+	background: url(../images/control/remind_error.gif) 0 3px no-repeat;
+}
+.remind li.warning {
+	color: #FF6600;
+	padding: 0 0 0 18px;
+	background: url(../images/control/remind_warning.gif) 0 3px no-repeat;
+}
+.remind li.prompt {
+	color: Green;
+	padding: 0 0 0 18px;
+	background: url(../images/control/remind_prompt.gif) 0 3px no-repeat;
+}

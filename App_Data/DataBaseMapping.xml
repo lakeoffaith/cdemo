@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<summer-configuration>
+  <database name="LocatingMonitor" type="mssql">
+    <!--<parameter name="server" value="."></parameter>
+    <parameter name="database" value="db_s"></parameter>    
+    <parameter name="uid" value="sa"></parameter>
+    <parameter name="pwd" value="sa"></parameter>-->
+    <!--<parameter name="connectionstring" value="Data Source=(local);Initial Catalog=neimeng;User ID=sa;Password=dbmaster"></parameter>-->
+    <classmappingfile path="ClassMapping.xml"></classmappingfile>
+  </database>
+</summer-configuration>

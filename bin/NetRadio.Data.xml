@@ -1,0 +1,941 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NetRadio.Data</name>
+    </assembly>
+    <members>
+        <member name="M:NetRadio.Data.TagPositionLog.Insert_OLD(System.Int32,System.Int32,System.Int32,System.Double,System.Double,System.Double)">
+            <summary>
+            新增一条标签位置历史记录
+            </summary>
+            <param name="tagId"></param>
+            <param name="mapId"></param>
+            <param name="coordinateId"></param>
+            <param name="x"></param>
+            <param name="y"></param>
+            <param name="z"></param>
+        </member>
+        <member name="M:NetRadio.Data.TagPositionLog.DeleteMany(System.String,System.Int32,System.DateTime,System.DateTime)">
+            <summary>
+            根据条件删除多条历史记录
+            </summary>
+            <param name="tagNameKeyword"></param>
+            <param name="mapId"></param>
+            <param name="fromTime"></param>
+            <param name="toTime"></param>
+        </member>
+        <member name="M:NetRadio.Data.TagPositionLog.Count(System.String,System.Int32,System.DateTime,System.DateTime)">
+            <summary>
+            根据条件统计符合条件的标签数量
+            </summary>
+            <param name="tagNameKeyword"></param>
+            <param name="mapId"></param>
+            <param name="fromTime"></param>
+            <param name="toTime"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetRadio.Data.TagPositionLog.SelectTagPostionsLog(System.String,System.DateTime,System.DateTime)">
+            <summary>
+            根据条件查询标签历史记录列表
+            </summary>
+            <param name="tagMac"></param>
+            <param name="fromTime"></param>
+            <param name="toTime"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetRadio.Data.FacilityMap.SelectFacilityMapByFacilityId(System.Int32)">
+            <summary>
+            根据场地的编号获得场地对应的地图信息
+            </summary>
+            <param name="facilityId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetRadio.Data.FacilityMap.SelectFacilityMapById(System.Int32)">
+            <summary>
+            根据地图编号获得地图信息
+            </summary>
+            <param name="mapId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetRadio.Data.APCoverage.EditApCoverage(System.Int32,System.Int32,NetRadio.Operation)">
+            <summary>
+            设置AP覆盖地图的关联信息
+            </summary>
+            <param name="apId">ap编号</param>
+            <param name="mapId">受该ap覆盖的地图编号</param>
+            <param name="op">操作类型（枚举）</param>
+        </member>
+        <member name="M:NetRadio.Data.AlertProcessLog.Insert(System.Int32,System.Int32,NetRadio.AlertStatusType,System.String)">
+            <summary>
+            新增一条报警处理历史记录
+            </summary>
+            <param name="tagId"></param>
+            <param name="mapId"></param>
+            <param name="coordinateId"></param>
+            <param name="x"></param>
+            <param name="y"></param>
+            <param name="z"></param>
+        </member>
+        <member name="M:NetRadio.Data.HostTagView.AddHostGroup(System.Int32)">
+            <summary>
+            在内存中增加未保存的组别
+            </summary>
+            <param name="GroupID"></param>
+        </member>
+        <member name="M:NetRadio.Data.HostTagView.RemoveHostGroup(System.Int32)">
+            <summary>
+            在内存中除去已保存的组
+            </summary>
+            <param name="GroupID"></param>
+        </member>
+        <member name="M:NetRadio.Data.Facility.Insert(NetRadio.Data.Facility)">
+            <summary>
+            新增一个场地信息
+            </summary>
+            <param name="facility"></param>
+        </member>
+        <member name="M:NetRadio.Data.Facility.GetNameByMapId(System.Int32)">
+            <summary>
+            根据场地的ID获得名称
+            </summary>
+            <param name="mapId"></param>
+            <returns></returns>
+        </member>
+        <member name="P:NetRadio.Data.Facility.All">
+            <summary>
+            获得所有场地信息 (已在内部实现缓存)
+            </summary>
+        </member>
+        <member name="M:NetRadio.Data.APStatus.InsertWithDefault(System.Int32)">
+            <summary>
+            新增AP时，插入一行数据到AP状态表，各属性均为默认值
+            </summary>
+            <param name="apId"></param>
+        </member>
+        <member name="M:NetRadio.Data.AP.Insert(NetRadio.Data.AP)">
+            <summary>
+            新增AP
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:NetRadio.Data.AP.DeleteAP(System.Int32)">
+            <summary>
+            删除AP
+            </summary>
+            <param name="apId"></param>
+        </member>
+        <member name="M:NetRadio.Data.AP.UpdateAP(NetRadio.Data.AP)">
+            <summary>
+            更新AP信息
+            </summary>
+            <param name="entityNew"></param>
+        </member>
+        <member name="M:NetRadio.Data.AP.TotalCount">
+            <summary>
+            统计所有AP数量
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:NetRadio.Data.AP.ChangeMac(System.String,System.String)">
+            <summary>
+            更换标签MAC
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:NetRadio.Data.AP.All">
+            <summary>
+            返回所有AP的列表 (已在内部实现缓存)
+            </summary>
+        </member>
+        <member name="M:NetRadio.Data.AreaEventLog.Insert_OLD(System.Int32,System.Int32,NetRadio.AreaEventType)">
+            <summary>
+            新增一条区域警告记录
+            </summary>
+            <param name="tagId"></param>
+            <param name="areaId"></param>
+            <param name="areaEventType"></param>
+        </member>
+        <member name="M:NetRadio.Data.AreaEventLog.Insert(System.Int32,System.Int32,System.Int32,NetRadio.AreaEventType)">
+            <summary>
+            新增一条区域警告记录
+            </summary>
+            <param name="tagId"></param>
+            <param name="areaId"></param>
+            <param name="areaEventType"></param>
+        </member>
+        <member name="M:NetRadio.Data.AreaEventLog.DeleteMany(System.String,System.Int32,System.DateTime,System.DateTime)">
+            <summary>
+            根据条件删除多条区域警告记录
+            </summary>
+            <param name="tagNameKeyword"></param>
+            <param name="mapId"></param>
+            <param name="fromTime"></param>
+            <param name="toTime"></param>
+        </member>
+        <member name="M:NetRadio.Data.AreaEventLog.Count(System.String,System.Int32,System.DateTime,System.DateTime)">
+            <summary>
+            根据条件统计行数
+            </summary>
+            <param name="tagNameKeyword"></param>
+            <param name="mapId"></param>
+            <param name="fromTime"></param>
+            <param name="toTime"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetRadio.Data.TagLocateSetting.StartLocating(System.Int32[],NetRadio.Data.TagLocateSetting)">
+            <summary>
+            设置定位参数到对应的多个标签 （仅设置好参数，需要调用API发出通知来执行）
+            </summary>
+            <param name="tagIdArray"></param>
+            <param name="useSettingModel"></param>
+        </member>
+        <member name="M:NetRadio.Data.TagLocateSetting.QuickStartLocating(System.Int32)">
+            <summary>
+            如果某标签以前开启过定位，通过该方法可以按照上一次定位的参数快速设置定位 （仅设置好参数，需要调用API发出通知来执行）
+            </summary>
+            <param name="tagId"></param>
+        </member>
+        <member name="M:NetRadio.Data.TagLocateSetting.StopLocating(System.Int32)">
+            <summary>
+            停止定位 （仅设置好参数，需要调用API发出通知来执行）
+            </summary>
+            <param name="tagId"></param>
+        </member>
+        <member name="M:NetRadio.Data.TagLocateSetting.ChangeCommandStateToExecuted(System.Int32)">
+            <summary>
+            更改通知命令状态
+            </summary>
+            <param name="tagId"></param>
+        </member>
+        <member name="M:NetRadio.Data.TagLocateSetting.StopLocating(System.Int32[])">
+            <summary>
+            停止定位 （仅设置好参数，需要调用API发出通知来执行）
+            </summary>
+            <param name="tagIdArray"></param>
+        </member>
+        <member name="M:NetRadio.Data.TagLocateSetting.GetWaitingOrdersTag">
+            <summary>
+            获得等待执行命令的标签列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:NetRadio.Data.TagLocateSetting.GetInLocatingTag">
+            <summary>
+            获得正在定位的标签定位参数列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:NetRadio.Data.AreaWarningRule.SelectRuleByAreaId(System.Int32)">
+            <summary>
+            根据Area的编号查询该地图区域所有的警告条件
+            </summary>
+            <param name="areaId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetRadio.Data.AreaWarningRule.InsertAndReturnId(NetRadio.Data.AreaWarningRule)">
+            <summary>
+            新增一行区域警告条件，并返回ID
+            </summary>
+            <param name="rule"></param>
+            <returns>新警告条件的ID</returns>
+        </member>
+        <member name="M:NetRadio.Data.AreaWarningRule.InsertWarningRule(NetRadio.Data.AreaWarningRule)">
+            <summary>
+            进行保存
+            </summary>
+            <param name="rule"></param>
+        </member>
+        <member name="M:NetRadio.Data.AreaWarningRule.Delete(System.Int32)">
+            <summary>
+            删除一行警告条件
+            </summary>
+            <param name="deleteRuleId"></param>
+        </member>
+        <member name="M:NetRadio.Data.AreaWarningRule.SelectAllAreaWarningRule">
+            <summary>
+            获得所有区域警告条件 (已在内部实现缓存)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:NetRadio.Data.BackupLogConfig.All">
+            <summary>
+            返回备份设置信息
+            </summary>
+        </member>
+        <member name="M:NetRadio.Data.TagAlert.AddOrUpdateAlert(System.Int32,System.Int32,NetRadio.SupportEvent,NetRadio.AlertStatusType,NetRadio.AlertLevelType,System.Int32,System.Int32,System.Boolean@)">
+            <summary>
+            设置标签的某项事件的状态
+            </summary>
+            <param name="tagId">标签编号</param>
+            <param name="onEvent">事件类型</param>
+            <param name="statusValue">状态</param>
+        </member>
+        <member name="M:NetRadio.Data.TagAlert.DeleteTagAlerts(System.Int32)">
+            <summary>
+             
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetRadio.Data.SystemConfig.SetConfig(System.String,System.String)">
+            <summary>
+            设置某项系统配置信息值
+            </summary>
+            <param name="name"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:NetRadio.Data.SystemConfig.SetSystemConfig(System.String,System.String)">
+            <summary>
+            设置某项系统配置信息值
+            </summary>
+            <param name="name"></param>
+            <param name="value"></param>
+        </member>
+        <member name="P:NetRadio.Data.SystemConfig.All">
+            <summary>
+            获得所有系统配置信息 (已在内部实现缓存)
+            </summary>
+        </member>
+        <member name="M:NetRadio.Data.TagGroupCoverage.GetBelongsGroupIdArray(System.Int32)">
+            <summary>
+            根据标签编号获得该标签所属分组的编号数组
+            </summary>
+            <param name="tagId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetRadio.Data.TagGroupCoverage.GetBelongsGroupNameArray(System.Int32)">
+            <summary>
+            根据标签编号获得该标签所属分组的名称数组
+            </summary>
+            <param name="tagId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetRadio.Data.TagGroupCoverage.GetCoveredTagIdArray(System.Int32[])">
+            <summary>
+            根据分组ID数组，获得属于这些这些组的标签ID数组
+            </summary>
+            <param name="tagGroupIdArray"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetRadio.Data.TagGroupCoverage.RemoveByGroupId(System.Int32)">
+            <summary>
+            根据组ID删除与该组有关的标签关联
+            </summary>
+            <param name="tagGroupId"></param>
+        </member>
+        <member name="M:NetRadio.Data.TagGroupCoverage.RemoveByTagId(System.Int32)">
+            <summary>
+            根据标签ID删除与该标签有关的分组关联
+            </summary>
+            <param name="tagId"></param>
+        </member>
+        <member name="M:NetRadio.Data.TagGroupCoverage.SetGroupCoverage(System.Int32,System.Int32[])">
+            <summary>
+            设置新的分组关联信息，将某些标签加入的某一组
+            </summary>
+            <param name="tagGroupId"></param>
+            <param name="tagIdArrayBelongs"></param>
+        </member>
+        <member name="M:NetRadio.Data.TagGroupCoverage.SetTagBelongGroups(System.Int32,System.Int32[])">
+            <summary>
+            设置新的标签分组关联信息，将某一个标签同时加入多个组
+            </summary>
+            <param name="tagId"></param>
+            <param name="belongToGroupsIdArray"></param>
+        </member>
+        <member name="P:NetRadio.Data.TagGroupCoverage.All">
+            <summary>
+            获得所有标签分组与标签覆盖关系的列表  (已在内部实现缓存)
+            </summary>
+        </member>
+        <member name="M:NetRadio.Data.AreaWarningRuleCoverage.SetCoverage(System.Int32,System.Int32[])">
+            <summary>
+            设置区域警告条件对标签的生效范围
+            </summary>
+            <param name="ruleId">区域警告条件编号</param>
+            <param name="tagIdArray">被生效的标签ID数组</param>
+        </member>
+        <member name="M:NetRadio.Data.AreaWarningRuleCoverage.SelectAllAreaWarningRuleCoverages">
+            <summary>
+            获得所有区域警告条件对标签生效范围的列表 (已在内部实现缓存)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:NetRadio.Data.Coordinates.Insert(NetRadio.Data.Coordinates)">
+            <summary>
+            新增一个坐标点
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:NetRadio.Data.Coordinates.GetName(System.Int32)">
+            <summary>
+            根据坐标编号返回坐标名称
+            </summary>
+            <param name="coordinatesId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetRadio.Data.Coordinates.ReplaceParentId(System.Int32,System.Int32)">
+            <summary>
+            重新设置坐标点所属的父点（坐标点类型有ap点、采样点和位置点，父点只能是位置点）
+            </summary>
+            <param name="oldId"></param>
+            <param name="newId"></param>
+        </member>
+        <member name="P:NetRadio.Data.Coordinates.All">
+            <summary>
+            获得所有坐标信息 (已在内部实现缓存)
+            </summary>
+        </member>
+        <member name="P:NetRadio.Data.Coordinates.AllParents">
+            <summary>
+            获得所有坐标信息 (已在内部实现缓存)
+            </summary>
+        </member>
+        <member name="M:NetRadio.Data.User.Select(System.Int32)">
+            <summary>
+            根据编号获得用户信息
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetRadio.Data.User.Insert(NetRadio.Data.User)">
+            <summary>
+            新增用户信息
+            </summary>
+            <param name="user"></param>
+        </member>
+        <member name="M:NetRadio.Data.User.IsNameExsit(System.String)">
+            <summary>
+            查询用户名字是否已存在
+            </summary>
+            <param name="userName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetRadio.Data.User.Delete(System.Int32)">
+            <summary>
+            根据编号删除用户
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetRadio.Data.User.UpdateById(System.Int32,System.String,System.Int32)">
+            <summary>
+            更改用户信息
+            </summary>
+            <param name="userId"></param>
+            <param name="md5Password"></param>
+            <param name="userRole"></param>
+        </member>
+        <member name="M:NetRadio.Data.User.ChangePassword(System.Int32,System.String)">
+            <summary>
+            更改用户密码
+            </summary>
+            <param name="userId"></param>
+            <param name="newMd5Password"></param>
+        </member>
+        <member name="M:NetRadio.Data.GenericEventLog.Insert_OLD(System.Int32,NetRadio.SupportEvent,System.Int32,System.Int32)">
+            <summary>
+            插入一条通用历史记录
+            </summary>
+            <param name="tagId">标签类型</param>
+            <param name="onEvent">事件类型</param>
+            <param name="mapId">地图编号</param>
+            <param name="coordinatesId">坐标点编号</param>
+        </member>
+        <member name="M:NetRadio.Data.GenericEventLog.Insert(System.Int32,System.Int32,NetRadio.SupportEvent,System.Int32,System.Int32)">
+            <summary>
+            插入一条通用历史记录
+            </summary>
+            <param name="tagId">标签类型</param>
+            <param name="onEvent">事件类型</param>
+            <param name="mapId">地图编号</param>
+            <param name="coordinatesId">坐标点编号</param>
+        </member>
+        <member name="M:NetRadio.Data.GenericEventLog.DeleteMany(System.String,System.DateTime,System.DateTime,NetRadio.SupportEvent)">
+            <summary>
+            根据条件删除多条历史记录
+            </summary>
+            <param name="tagNameKeyword"></param>
+            <param name="fromTime"></param>
+            <param name="toTime"></param>
+            <param name="onEvent"></param>
+        </member>
+        <member name="M:NetRadio.Data.GenericEventLog.Count(System.String,System.DateTime,System.DateTime,NetRadio.SupportEvent)">
+            <summary>
+            根据条件统计符合条件的行数
+            </summary>
+            <param name="tagNameKeyword"></param>
+            <param name="fromTime"></param>
+            <param name="toTime"></param>
+            <param name="onEvent"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetRadio.Data.TagGroup.Select(System.Int32)">
+            <summary>
+            获得单个标签分组信息
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetRadio.Data.TagGroup.GetGroupName(System.Int32)">
+            <summary>
+            根据编号获得分组的名称
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetRadio.Data.TagGroup.DeleteGroupAndRemoveCoverages(System.Int32)">
+            <summary>
+            删除一个标签分组
+            </summary>
+            <param name="tagGroupId"></param>
+        </member>
+        <member name="M:NetRadio.Data.TagGroup.Insert(System.String,System.String,System.Int32[])">
+            <summary>
+            新增一个标签分组
+            </summary>
+            <param name="groupName"></param>
+            <param name="groupDescription"></param>
+            <param name="tagIdArrayBelongs"></param>
+        </member>
+        <member name="M:NetRadio.Data.TagGroup.UpdateById(System.Int32,System.String,System.String,System.Int32[])">
+            <summary>
+            根据编号更新标签分组信息
+            </summary>
+            <param name="tagGroupId"></param>
+            <param name="groupName"></param>
+            <param name="groupDescription"></param>
+            <param name="tagIdArrayBelongs"></param>
+        </member>
+        <member name="P:NetRadio.Data.TagGroup.All">
+            <summary>
+            获得所有标签分组 (已在内部实现缓存)
+            </summary>
+        </member>
+        <member name="P:NetRadio.Data.Config.MinRssiBackCount">
+            <summary>
+            返回多少个Rssi才列入计算
+            </summary>
+        </member>
+        <member name="P:NetRadio.Data.Config.TagOutRangeRssi">
+            <summary>
+            RSSI最小可用值
+            </summary>
+        </member>
+        <member name="P:NetRadio.Data.Config.RssiTooSmallLimiteQty">
+            <summary>
+            一个扫描中,最多能存在的小于可用值的个数
+            </summary>
+        </member>
+        <member name="P:NetRadio.Data.Config.AverageHumanBlockDB">
+            <summary>
+            被遮挡时,RSSI值差额(绝对值)
+            </summary>
+        </member>
+        <member name="P:NetRadio.Data.Config.IsUsingBlockedCheck">
+            <summary>
+            是否启用遮挡判断
+            </summary>
+        </member>
+        <member name="P:NetRadio.Data.Config.IsUsingStrongestBlockedCheck">
+            <summary>
+            是否启用最强RSSI被遮挡判断
+            </summary>
+        </member>
+        <member name="P:NetRadio.Data.Config.IsTransitForAPPosition">
+            <summary>
+            如果存在最强的AP,是否显示过度
+            </summary>
+        </member>
+        <member name="P:NetRadio.Data.Config.ForNonExistMaxRSSIValue">
+            <summary>
+            不包含当前采样点的最大Rssi值的AP,那么给当前的扫锚的rssi加入的虚拟值
+            </summary>
+        </member>
+        <member name="P:NetRadio.Data.Config.ForNonExistAPValueInSample">
+            <summary>
+            以实际回传RSSI的AP数据为基准,比较采样数据,如果采样数据对应的AP不存在,填充采样数据中的AP数据的值
+            </summary>
+        </member>
+        <member name="P:NetRadio.Data.Config.IsCheckedStrongestAPRFValue">
+            <summary>
+            是否在RF值运算结果中检查最强AP是否对应
+            </summary>
+        </member>
+        <member name="P:NetRadio.Data.Config.CheckedStrongestAPLimitedRssi">
+            <summary>
+            在RF值运算结果中检查最强AP是否对应,最强AP至少需要达到的RSSI
+            </summary>
+        </member>
+        <member name="P:NetRadio.Data.Config.IsCheckStrongestRssiDiff">
+            <summary>
+            是否判断采样值最强RSSI和当前最强RSSI的差值
+            </summary>
+        </member>
+        <member name="P:NetRadio.Data.Config.CheckedStrongestRssiDiffLimitedRssi">
+            <summary>
+            判断采样值最强RSSI和当前最强RSSI的最多可接受的差值
+            </summary>
+        </member>
+        <member name="P:NetRadio.Data.Config.IsCheckOldRfDiff">
+            <summary>
+            是否判断原先的RF值和当前RF值的差额
+            </summary>
+        </member>
+        <member name="P:NetRadio.Data.Config.CheckOldRfDiffLimitedValue">
+            <summary>
+            判断原先的RF值和当前RF值的差额 最多可以接受的差值
+            </summary>
+        </member>
+        <member name="M:NetRadio.Data.MapAreaCoverage.SelectByAreaId(System.Int32)">
+            <summary>
+            根据区域编号获得属于这个区域的坐标点列表
+            </summary>
+            <param name="AreaId"></param>
+            <returns></returns>
+        </member>
+        <member name="P:NetRadio.Data.MapAreaCoverage.All">
+            <summary>
+            获得所有地图区域和坐标点之间的关系列表 (已在内部实现缓存)
+            </summary>
+        </member>
+        <member name="T:NetRadio.Data.TagStatusView">
+            <summary>
+            标签详细信息状态对象
+            </summary>
+        </member>
+        <member name="M:NetRadio.Data.TagStatusView.SelectFullTagStatusView">
+            <summary>
+            建立标签实时信息表，包括位置及事件报警状态
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:NetRadio.Data.PositionRecord.Insert(NetRadio.Data.PositionRecord)">
+            <summary>
+            新增AP
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="P:NetRadio.Data.PositionRecord.All">
+            <summary>
+            返回所有的记录
+            </summary>
+        </member>
+        <member name="M:NetRadio.Data.Task.NextTime(System.DateTime,NetRadio.TaskRepeat)">
+            <summary>
+            根据首次执行时间和周期，获得下一次执行时间
+            </summary>
+            <param name="originalTime"></param>
+            <param name="period"></param>
+            <returns></returns>
+        </member>
+        <member name="P:NetRadio.Data.Task.CurrentQueue">
+            <summary>
+            当前的计划任务队列，按执行时间排列
+            </summary>
+        </member>
+        <member name="T:NetRadio.Data.TagEventStatus">
+            <summary>
+            标签状态表
+            </summary>
+        </member>
+        <member name="M:NetRadio.Data.TagEventStatus.Set(System.Int32,NetRadio.SupportEvent,NetRadio.EventStatus)">
+            <summary>
+            设置标签的某项事件的状态
+            </summary>
+            <param name="tagId">标签编号</param>
+            <param name="onEvent">事件类型</param>
+            <param name="statusValue">状态</param>
+        </member>
+        <member name="M:NetRadio.Data.TagEventStatus.ClearStatusOfTag(System.Int32)">
+            <summary>
+            清除状态编号
+            </summary>
+            <param name="tagId"></param>
+        </member>
+        <member name="M:NetRadio.Data.TagEventStatus.ClearAll">
+            <summary>
+            清除所有标签状态
+            </summary>
+        </member>
+        <member name="M:NetRadio.Data.HostTag.AddOrUpdateHostTag(System.Int32,System.Int32,System.String,System.String,System.Int32,System.String,System.String)">
+            <summary>
+            设置或更新标签携带者的信息
+            </summary>
+            <param name="tagId"></param>
+            <param name="hostName"></param>
+            <param name="hostType"></param>
+            <param name="hostDescription"></param>
+            <param name="imageUrl"></param>
+        </member>
+        <member name="M:NetRadio.Data.HostTag.DisableHostTag(System.Int32)">
+            <summary>
+            解除标签HOST
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetRadio.Data.HostTag.DeleteHostTag(System.Int32)">
+            <summary>
+            删除标签HOST
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetRadio.Data.HostTag.GetById(System.Int32)">
+            <summary>
+            根据HostId获得标签HOST信息
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetRadio.Data.HostTag.GetByTagId(System.Int32)">
+            <summary>
+            根据TagId获得标签HOST信息
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetRadio.Data.HostTag.GetByName(System.String)">
+            <summary>
+            根据HostName获得标签HOST信息
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetRadio.Data.HostTag.SetHostGroup(System.Int32,System.Int32)">
+            <summary>
+            设置标签HostGroup
+            </summary>
+        </member>
+        <member name="M:NetRadio.Data.HostTag.RemoveHostGroupByHostId(System.Int32)">
+            <summary>
+            除去标签HostGroup
+            </summary>
+        </member>
+        <member name="M:NetRadio.Data.HostTag.SetHostStatus(System.Int32,System.Int32)">
+            <summary>
+            设置标签Host状态
+            </summary>
+        </member>
+        <member name="M:NetRadio.Data.HostTag.RemoveHostStatus(System.Int32)">
+            <summary>
+            除去标签Host状态
+            </summary>
+        </member>
+        <member name="P:NetRadio.Data.HostTag.All">
+            <summary>
+            获得所有标签Host
+            </summary>
+        </member>
+        <member name="P:NetRadio.Data.HostTag.AllActive">
+            <summary>
+            获得所有有效的标签Host
+            </summary>
+        </member>
+        <member name="M:NetRadio.Data.APSetting.UpdateAPSetting(System.String,NetRadio.Data.APSetting)">
+            <summary>
+            更新AP设置
+            </summary>
+            <param name="apMac">ap的mac地址</param>
+            <param name="item">ap的设置属性</param>
+        </member>
+        <member name="M:NetRadio.Data.APSetting.SelectAPSetting(System.Int32)">
+            <summary>
+            根据ap的id获得ap的设置
+            </summary>
+            <param name="apId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetRadio.Data.APSetting.SelectAlllAPSetting">
+            <summary>
+            获得所有AP设置 (已在内部实现缓存)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:NetRadio.Data.APSetting.InsertWithDefault(System.Int32)">
+            <summary>
+            新增一个AP到系统时，插入一行AP设置信息，各设置均为默认值
+            </summary>
+            <param name="apId"></param>
+        </member>
+        <member name="M:NetRadio.Data.Tag.Select(System.Int32)">
+            <summary>
+            根据id获得标签信息
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetRadio.Data.Tag.Select(System.String)">
+            <summary>
+            根据mac获得标签信息
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetRadio.Data.Tag.UpdateTagNameAndSerialNo(System.Int32,System.String,System.String)">
+            <summary>
+            根据id更新标签名称和序号
+            </summary>
+            <param name="id"></param>
+            <param name="tagName"></param>
+            <param name="serialNo"></param>
+        </member>
+        <member name="M:NetRadio.Data.Tag.AddNewTag(System.String)">
+            <summary>
+            新增一个标签，各项参数为默认值
+            </summary>
+            <param name="tagMac"></param>
+        </member>
+        <member name="M:NetRadio.Data.Tag.TotalCount">
+            <summary>
+            获得标签总数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:NetRadio.Data.Tag.All">
+            <summary>
+            返回所有TAG的列表 (已在内部实现缓存)
+            </summary>
+        </member>
+        <member name="M:NetRadio.Data.WarningRecord.Insert(NetRadio.Data.WarningRecord)">
+            <summary>
+            新增AP
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="P:NetRadio.Data.WarningRecord.All">
+            <summary>
+            返回所有的记录
+            </summary>
+        </member>
+        <member name="M:NetRadio.Data.TagSetting.InsertWithDefaultValues(System.Int32)">
+            <summary>
+            插入新的标签参数信息，各项属性均为默认值
+            </summary>
+            <param name="tagId"></param>
+        </member>
+        <member name="M:NetRadio.Data.TagSetting.ChangeTagWorkingStatus(System.Int32,NetRadio.TagWorkingStatus)">
+            <summary>
+            设置标签工作状态
+            </summary>
+            <param name="tagId"></param>
+            <param name="workingStatus"></param>
+        </member>
+        <member name="M:NetRadio.Data.TagSetting.GetTagSetting(System.Int32)">
+            <summary>
+            获取标签配置信息
+            </summary>
+        </member>
+        <member name="M:NetRadio.Data.TagSetting.UpdateButtonMessasge(System.String,System.String)">
+            <summary>
+            更新标签的按钮信息内容设置
+            </summary>
+            <param name="tagMac"></param>
+            <param name="buttonMessage"></param>
+        </member>
+        <member name="M:NetRadio.Data.TagSetting.Update(System.Int32,NetRadio.Data.TagSetting)">
+            <summary>
+            将一个参数设置模板更新到某个标签
+            </summary>
+            <param name="tagId"></param>
+            <param name="settingsDataModel"></param>
+        </member>
+        <member name="M:NetRadio.Data.TagSetting.GetTagSettingByMac(System.String)">
+            <summary>
+            获取指定Mac地址的标签的tagsetting信息
+            </summary>
+            <param name="tagId"></param>
+            <param name="settingsDataModel"></param>
+        </member>
+        <member name="M:NetRadio.Data.TagPositionStatus.ChangePosition(System.Int32,System.Int32,System.Int32,System.Double,System.Double,System.Double)">
+            <summary>
+            改变标签位置状态
+            </summary>
+            <param name="tagId"></param>
+            <param name="mapId"></param>
+            <param name="coordinatesId"></param>
+            <param name="x"></param>
+            <param name="y"></param>
+            <param name="z"></param>
+        </member>
+        <member name="M:NetRadio.Data.MapArea.Select(System.Int32)">
+            <summary>
+            根据id获得地图区域
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetRadio.Data.MapArea.SelectByMapId(System.Int32)">
+            <summary>
+            根据地图编号获得属于这个地图的区域列表
+            </summary>
+            <param name="mapId"></param>
+            <returns></returns>
+        </member>
+        <member name="P:NetRadio.Data.MapArea.All">
+            <summary>
+            获得所有地图区域 (已在内部实现缓存)
+            </summary>
+        </member>
+        <member name="T:NetRadio.Data.APStatusView">
+            <summary>
+            AP 详细状态信息对象
+            </summary>
+        </member>
+        <member name="M:NetRadio.Data.LatestEvent.EditLatestEvent(NetRadio.Data.TagStatusView,NetRadio.SupportEvent,NetRadio.ResolveFlag)">
+            <summary>
+            添加或更新最新警告信息
+            </summary>
+            <param name="newlatestEvent"></param>
+        </member>
+        <member name="M:NetRadio.Data.HostGroupInfo.AddHostGroupInfo(System.Int32,System.String,System.String,System.Int32)">
+            <summary>
+            新增一个组
+            </summary>
+            <param name="groupName"></param>
+            <param name="description"></param>
+            <param name="parentId"></param>
+        </member>
+        <member name="M:NetRadio.Data.HostGroupInfo.UpdateHostGroupInfo(System.Int32,System.String,System.String,System.Int32)">
+            <summary>
+            更新一个组
+            </summary>
+            <param name="id"></param>
+            <param name="groupName"></param>
+            <param name="description"></param>
+            <param name="parentId"></param>
+        </member>
+        <member name="M:NetRadio.Data.HostGroupInfo.DeleteGroup(System.Int32)">
+            <summary>
+            删除一个组
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:NetRadio.Data.HostGroupInfo.GetById(System.Int32)">
+            <summary>
+            获得一个组
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:NetRadio.Data.HostGroupInfo.GetByParentId(System.Int32)">
+            <summary>
+            获得一个组下的子组
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:NetRadio.Data.HostGroupInfo.GetGroupNameByProjectType(System.Int32)">
+            <summary>
+            按项目获取组信息
+            3//内蒙警察//2 /扬州 警察犯人
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="P:NetRadio.Data.HostGroupInfo.All">
+            <summary>
+            获得所有组
+            </summary>
+            <param name="id"></param>
+        </member>
+    </members>
+</doc>
